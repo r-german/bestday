@@ -1,0 +1,125 @@
+.corporate-events-section2 {
+    padding: 60px 0 63px 0;
+    .container {
+        width: fit-content;
+        padding: 0 15px;
+        h4 {
+            transition: opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+            line-height: 110%;
+            text-align: center;
+            max-width: 580px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            color: $red2;
+        }
+        .cost-table2 {
+            grid-template-columns: 1fr 1fr;
+            .cost-table2__column {
+                div {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .corporate-events-section2 {
+        padding: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                 calc(33px + (63 - 33) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            h4 {
+                max-width: calc(290px + (580 - 290) * ((100vw - 321px) / (1300 - 321)));
+                margin-top: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)));
+                margin-bottom: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+            }
+            .cost-table2 {
+                .cost-table2__column {
+                    div {
+                        padding-left: calc(6px + (30 - 6) * ((100vw - 321px) / (1300 - 321)));
+                        padding-right: calc(6px + (30 - 6) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.9px) and (min-width: 321px) {
+    .corporate-events-section2 {
+        .container {
+            .cost-table2 {
+                .cost-table2__column {
+                    div {height: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        padding-bottom: calc(4px + (6 - 4) * ((100vw - 321px) / (991 - 321)));
+                        margin-bottom: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));
+                    }
+                }
+                .cost-table2__column:nth-child(2) {
+                    div {
+                        padding-top: calc(4px + (6 - 4) * ((100vw - 321px) / (991 - 321)));
+                        margin-top: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    .corporate-events-section2 {
+        .container {
+            .cost-table2 {
+                grid-template-columns: 1fr;
+                .cost-table2__column {
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+                }
+                .cost-table2__column:first-child {
+                    div {align-items: end;}
+                }
+                .cost-table2__column:nth-child(2) {
+                    div {align-items: start;}
+                }
+                .cost-table2__column:not(.cost-table2__column:last-child) {border-right: 0;}
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .corporate-events-section2 {
+        padding: 30px 0 33px 0;
+        .container {
+            h4 {
+                margin-top: 25px;
+                margin-bottom: 20px;
+            }
+            .cost-table2 {
+                .cost-table2__column {
+                    div {
+                        height: 30px;
+                        padding-left: 6px;
+                        padding-right: 6px;
+                    }
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        padding-bottom: 4px;
+                        margin-bottom: 30px;
+                    }
+                }
+                .cost-table2__column:nth-child(2) {
+                    div {
+                        padding-top: 4px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

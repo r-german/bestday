@@ -1,0 +1,210 @@
+.anniversaries-and-birthdays-section4 {
+    .container {
+        padding: 60px;
+        h4 {color: $red2;}
+        ul {
+            max-width: 780px;
+            margin: 35px auto 47px auto;
+            li {
+                list-style: none;
+                position: relative;
+                line-height: 120%;
+                padding-left: 37px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 23px;
+                    height: 20px;
+                    background: url('../img/about-company_section9.svg') center / cover;
+                }
+            }
+            li:not(li:first-child) {margin-top: 20px;}
+        }
+        .transparency {transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;}
+    }
+}
+
+.anniversaries-and-birthdays-section5, .anniversaries-and-birthdays-section6 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .cost-table2 {
+            grid-template-columns: 1fr 1fr;
+            max-width: 1040px;
+            margin: 40px auto 0 auto;
+            .cost-table2__column {
+                div {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+.anniversaries-and-birthdays-section5 {
+    .container {
+        .transparency {
+            transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;
+            margin-top: 48px;
+        }
+    }
+}
+
+.anniversaries-and-birthdays-section6 {padding: 60px 0 70px 0;}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .anniversaries-and-birthdays-section4 {
+        .container {
+            padding: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)))
+                     calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            ul {
+                max-width: calc(390px + (780 - 390) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(15px + (35 - 15) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(21px + (47 - 21) * ((100vw - 321px) / (1300 - 321))) auto;
+                li {
+                    padding-left: calc(22px + (37 - 22) * ((100vw - 321px) / (1300 - 321)));
+                    &::before {
+                        width: calc(12px + (23 - 12) * ((100vw - 321px) / (1300 - 321)));
+                        height: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                }
+                li:not(li:first-child) {margin-top: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));}
+            }
+        }
+    }
+    .anniversaries-and-birthdays-section5, .anniversaries-and-birthdays-section6 {
+        .container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .cost-table2 {
+                max-width: calc(694px + (1040 - 694) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
+                .cost-table2__column {
+                    div {
+                        padding-left: calc(6px + (30 - 6) * ((100vw - 321px) / (1300 - 321)));
+                        padding-right: calc(6px + (30 - 6) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                }
+            }
+        }
+    }
+    .anniversaries-and-birthdays-section5 {
+        .container {
+            .transparency {margin-top: calc(25px + (48 - 25) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .anniversaries-and-birthdays-section6 {
+        padding: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                 calc(35px + (70 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
+    }
+}
+
+@media (max-width: 991.9px) and (min-width: 321px) {
+    .anniversaries-and-birthdays-section6 {
+        .container {
+            .cost-table2 {
+                .cost-table2__column {
+                    div {height: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        padding-bottom: calc(4px + (6 - 4) * ((100vw - 321px) / (991 - 321)));
+                        margin-bottom: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));
+                    }
+                }
+                .cost-table2__column:nth-child(2) {
+                    div {
+                        padding-top: calc(4px + (6 - 4) * ((100vw - 321px) / (991 - 321)));
+                        margin-top: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    .anniversaries-and-birthdays-section6 {
+        .container {
+            .cost-table2 {
+                grid-template-columns: 1fr;
+                .cost-table2__column {
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+                }
+                .cost-table2__column:first-child {
+                    div {align-items: end;}
+                }
+                .cost-table2__column:nth-child(2) {
+                    div {align-items: start;}
+                }
+                .cost-table2__column:not(.cost-table2__column:last-child) {border-right: 0;}
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .anniversaries-and-birthdays-section4 {
+        .container {
+            padding: 30px 15px;
+            ul {
+                margin: 15px auto 21px auto;
+                li {
+                    padding-left: 22px;
+                    &::before {
+                        width: 12px;
+                        height: 10px;
+                    }
+                }
+                li:not(li:first-child) {margin-top: 10px;}
+            }
+        }
+    }
+    .anniversaries-and-birthdays-section5, .anniversaries-and-birthdays-section6 {
+        .container {
+            padding: 0 15px;
+            .cost-table2 {
+                margin: 20px auto 0 auto;
+                .cost-table2__column {
+                    div {
+                        padding-left: 6px;
+                        padding-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .anniversaries-and-birthdays-section5 {
+        .container {
+            .transparency {margin-top: 25px;}
+        }
+    }
+    .anniversaries-and-birthdays-section6 {
+        padding: 30px 0 35px 0;
+        .container {
+            .cost-table2 {
+                .cost-table2__column {
+                    div {height: 30px;}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        padding-bottom: 4px;
+                        margin-bottom: 30px;
+                    }
+                }
+                .cost-table2__column:nth-child(2) {
+                    div {
+                        padding-top: 4px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

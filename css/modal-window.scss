@@ -1,0 +1,184 @@
+.modal-window {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s, visibility 0.3s;
+    overflow: auto;
+    background-color: rgba(49, 44, 59, 0.6);
+    .modal-window-container {
+        .modal-window__form-wrapper, .modal-window__service-list-wrapper {
+            padding: 50px 60px 60px 60px;
+            margin: 93px auto;
+            position: relative;
+            border: 1px solid $violet2;
+            border-radius: 5px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+            .form-wrapper__cross, .service-list-wrapper__cross {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 47px;
+                height: 47px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                svg {width: 27px;}
+            }
+            @media (hover: hover) and (pointer: fine) {
+                .form-wrapper__cross, .service-list-wrapper__cross {
+                    transform: translate3d(0, 0, 0);
+                    svg {
+                        path {transition: stroke 0.3s;}
+                    }
+                }
+                .form-wrapper__cross:hover, .service-list-wrapper__cross:hover {
+                    svg {
+                        path {stroke: $red2;}
+                    }
+                }
+            }
+        }
+        .modal-window__form-wrapper {
+            width: fit-content;
+            background-color: $white2;
+            h4 {
+                text-align: center;
+                color: $violet2;
+            }
+        }
+        .modal-window__service-list-wrapper {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $white;
+            .service-list-wrapper__text {
+                font-size: 32px;
+                text-transform: capitalize;
+                color: $violet1;
+            }
+            ul {
+                display: none;
+                margin: 25px 0 35px 0;
+                li {
+                    list-style: none;
+                    position: relative;
+                    line-height: 120%;
+                    padding-left: 18px;
+                    &::before {
+                        content: "•";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                li:not(li:first-child) {margin-top: 8px;}
+            }
+            .form-open-btn {box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);}
+        }
+    }
+}
+
+.modal-window:not(._visible) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .modal-window {
+        .modal-window-container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {
+                padding: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)))
+                        calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)))
+                        calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)))
+                        calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+                .form-wrapper__cross, .service-list-wrapper__cross {
+                    top: calc(3px + (30 - 3) * ((100vw - 321px) / (1300 - 321)));
+                    right: calc(3px + (30 - 3) * ((100vw - 321px) / (1300 - 321)));
+                    width: calc(40px + (47 - 40) * ((100vw - 321px) / (1300 - 321)));
+                    height: calc(40px + (47 - 40) * ((100vw - 321px) / (1300 - 321)));
+                    svg {width: calc(16px + (27 - 16) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+            .modal-window__service-list-wrapper {
+                .service-list-wrapper__text {font-size: calc(16px + (32 - 16) * ((100vw - 321px) / (1300 - 321)));}
+                ul {
+                    margin: calc(15px + (25 - 15) * ((100vw - 321px) / (1300 - 321))) 0
+                            calc(20px + (35 - 20) * ((100vw - 321px) / (1300 - 321))) 0;
+                    li {padding-left: calc(9px + (18 - 9) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 992px) {
+    .modal-window {
+        .modal-window-container {
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {margin: calc(72px + (93 - 72) * ((100vw - 992px) / (1300 - 992))) auto;}
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    .modal-window {
+        .modal-window-container {
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {margin: 72px auto;}
+        }
+    }
+}
+
+@media (max-width: 767.9px) {
+    .modal-window {
+        .modal-window-container {
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {margin: 60px auto;}
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .modal-window {
+        .modal-window-container {
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {margin: 54px auto;}
+            .modal-window__form-wrapper {width: 100%;}
+        }
+    }
+}
+
+@media (max-width: 360.9px) {
+    .modal-window {
+        .modal-window-container {
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {margin: 52px auto;}
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .modal-window {
+        .modal-window-container {
+            padding: 0 15px;
+            .modal-window__form-wrapper, .modal-window__service-list-wrapper {
+                padding: 25px 15px 30px 15px;
+                .form-wrapper__cross, .service-list-wrapper__cross {
+                    top: 3px;
+                    right: 3px;
+                    width: 40px;
+                    height: 40px;
+                    svg {width: 16px;}
+                }
+            }
+            .modal-window__service-list-wrapper {
+                .service-list-wrapper__text {font-size: 16px;}
+                ul {
+                    margin: 15px 0 20px 0;
+                    li {padding-left: 9px;}
+                }
+            }
+        }
+    }
+}
