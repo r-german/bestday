@@ -194,7 +194,8 @@ h4:not(.modal-window h4) {
   transform: translate3d(0, 0, 0);
 }
 
-h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4, .modal-window h4, .corporate-events-section2 h4) {
+h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4,
+.modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4) {
   width: fit-content;
   transition: opacity 0.8s, visibility 0.8s;
 }
@@ -325,7 +326,7 @@ picture .position-top {
   padding: 27px 0 32px 0;
   line-height: 160%;
 }
-.text-with-lines p:not(.about-company-section9 p) {
+.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p, .child-holiday-section3 p) {
   text-align: justify;
 }
 
@@ -414,19 +415,25 @@ picture .position-top {
 }
 .cost-table2 .cost-table2__column:first-child div span, .cost-table2 .anniversary-organization-formats div span {
   font-size: 15px;
-  line-height: 120%;
 }
 .cost-table2 .cost-table2__column:first-child div span a, .cost-table2 .anniversary-organization-formats div span a {
   color: #ED6F59;
 }
 @media (hover: hover) and (pointer: fine) {
   .cost-table2 .cost-table2__column:first-child div span a, .cost-table2 .anniversary-organization-formats div span a {
-    display: inline-block;
     transform: translate3d(0, 0, 0);
     transition: color 0.3s;
   }
   .cost-table2 .cost-table2__column:first-child div span a:hover, .cost-table2 .anniversary-organization-formats div span a:hover {
     color: rgba(148, 1, 29, 0.8);
+  }
+}
+.cost-table2 .cost-table2__column:first-child div span:not(.host-and-dj span), .cost-table2 .anniversary-organization-formats div span:not(.host-and-dj span) {
+  line-height: 120%;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cost-table2 .cost-table2__column:first-child div span:not(.host-and-dj span) a, .cost-table2 .anniversary-organization-formats div span:not(.host-and-dj span) a {
+    display: inline-block;
   }
 }
 .cost-table2 .cost-table2__column:not(.cost-table2__column:last-child) {
@@ -549,6 +556,25 @@ picture .position-top {
 }
 .service-packages-container .service-packages .service-package a.service-package__cost {
   padding-bottom: 5px;
+}
+
+.orange-marker li {
+  list-style: none;
+  position: relative;
+  line-height: 120%;
+  padding-left: 37px;
+}
+.orange-marker li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 20px;
+  background: url("../img/about-company_section9.svg") center/cover;
+}
+.orange-marker li:not(li:first-child) {
+  margin-top: 20px;
 }
 
 input, button, textarea {
@@ -791,10 +817,20 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .service-packages-container .service-packages .service-package a.service-package__cost {
     padding-bottom: calc(3px + 2 * (100vw - 321px) / 979);
   }
+  .orange-marker li {
+    padding-left: calc(22px + 15 * (100vw - 321px) / 979);
+  }
+  .orange-marker li::before {
+    width: calc(12px + 11 * (100vw - 321px) / 979);
+    height: calc(10px + 10 * (100vw - 321px) / 979);
+  }
+  .orange-marker li:not(li:first-child) {
+    margin-top: calc(10px + 10 * (100vw - 321px) / 979);
+  }
   .padding-60 {
     padding: calc(12px + 5 * (100vw - 321px) / 979) calc(24px + 36 * (100vw - 321px) / 979) calc(14px + 6 * (100vw - 321px) / 979) calc(24px + 36 * (100vw - 321px) / 979);
   }
-  .padding-30 button {
+  .padding-30 button, .padding-30 a {
     padding: calc(12px + 5 * (100vw - 321px) / 979) calc(12px + 18 * (100vw - 321px) / 979) calc(14px + 6 * (100vw - 321px) / 979) calc(12px + 18 * (100vw - 321px) / 979);
   }
   .h3-wrapper {
@@ -1059,10 +1095,20 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .service-packages-container .service-packages .service-package a.service-package__cost {
     padding-bottom: 3px;
   }
+  .orange-marker li {
+    padding-left: 22px;
+  }
+  .orange-marker li::before {
+    width: 12px;
+    height: 10px;
+  }
+  .orange-marker li:not(li:first-child) {
+    margin-top: 10px;
+  }
   .padding-60 {
     padding: 12px 24px 14px 24px;
   }
-  .padding-30 button {
+  .padding-30 button, .padding-30 a {
     padding: 12px 12px 14px 12px;
   }
   h2 {

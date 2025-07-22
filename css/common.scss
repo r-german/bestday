@@ -179,7 +179,8 @@ h4 {font-size: 48px;}
 
 h4:not(.modal-window h4) {transform: translate3d(0, 0, 0);}
 
-h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4, .modal-window h4, .corporate-events-section2 h4) {
+h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4,
+       .modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4) {
     width: fit-content;
     transition: opacity 0.8s, visibility 0.8s;
 }
@@ -264,7 +265,7 @@ picture {
         padding: 27px 0 32px 0;
         line-height: 160%;
     }
-    p:not(.about-company-section9 p) {text-align: justify;}
+    p:not(.about-company-section9 p, .wedding-organization-section2 p) {text-align: justify;}
 }
 
 .dividing-line {
@@ -355,15 +356,19 @@ picture {
         div {
             span {
                 font-size: 15px;
-                line-height: 120%;
                 a {color: $red1;}
                 @media (hover: hover) and (pointer: fine) {
                     a {
-                        display: inline-block;
                         transform: translate3d(0, 0, 0);
                         transition: color 0.3s;
                     }
                     a:hover {color: $red2;}
+                }
+            }
+            span:not(.host-and-dj span) {
+                line-height: 120%;
+                @media (hover: hover) and (pointer: fine) {
+                    a {display: inline-block;}
                 }
             }
         }
@@ -481,6 +486,25 @@ picture {
             a.service-package__cost {padding-bottom: 5px;}
         }
     }
+}
+
+.orange-marker {
+    li {
+        list-style: none;
+        position: relative;
+        line-height: 120%;
+        padding-left: 37px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 23px;
+            height: 20px;
+            background: url('../img/about-company_section9.svg') center / cover;
+        }
+    }
+    li:not(li:first-child) {margin-top: 20px;}
 }
 
 input, button, textarea {font: inherit;}
@@ -709,6 +733,16 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
                 a.service-package__cost {padding-bottom: calc(3px + (5 - 3) * ((100vw - 321px) / (1300 - 321)));}
             }
         }
+    }
+    .orange-marker {
+        li {
+            padding-left: calc(22px + (37 - 22) * ((100vw - 321px) / (1300 - 321)));
+            &::before {
+                width: calc(12px + (23 - 12) * ((100vw - 321px) / (1300 - 321)));
+                height: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
+            }
+        }
+        li:not(li:first-child) {margin-top: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));}
     }
     .padding-60 {
         padding: calc(12px + (17 - 12) * ((100vw - 321px) / (1300 - 321)))
@@ -969,6 +1003,16 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
                 a.service-package__cost {padding-bottom: 3px;}
             }
         }
+    }
+    .orange-marker {
+        li {
+            padding-left: 22px;
+            &::before {
+                width: 12px;
+                height: 10px;
+            }
+        }
+        li:not(li:first-child) {margin-top: 10px;}
     }
     .padding-60 {padding: 12px 24px 14px 24px;}
     .padding-30 {

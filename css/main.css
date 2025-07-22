@@ -195,7 +195,8 @@ h4:not(.modal-window h4) {
   transform: translate3d(0, 0, 0);
 }
 
-h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4, .modal-window h4, .corporate-events-section2 h4) {
+h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4,
+.modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4) {
   width: fit-content;
   transition: opacity 0.8s, visibility 0.8s;
 }
@@ -326,7 +327,7 @@ picture .position-top {
   padding: 27px 0 32px 0;
   line-height: 160%;
 }
-.text-with-lines p:not(.about-company-section9 p) {
+.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p) {
   text-align: justify;
 }
 
@@ -415,19 +416,25 @@ picture .position-top {
 }
 .cost-table2 .cost-table2__column:first-child div span, .cost-table2 .anniversary-organization-formats div span {
   font-size: 15px;
-  line-height: 120%;
 }
 .cost-table2 .cost-table2__column:first-child div span a, .cost-table2 .anniversary-organization-formats div span a {
   color: #ED6F59;
 }
 @media (hover: hover) and (pointer: fine) {
   .cost-table2 .cost-table2__column:first-child div span a, .cost-table2 .anniversary-organization-formats div span a {
-    display: inline-block;
     transform: translate3d(0, 0, 0);
     transition: color 0.3s;
   }
   .cost-table2 .cost-table2__column:first-child div span a:hover, .cost-table2 .anniversary-organization-formats div span a:hover {
     color: rgba(148, 1, 29, 0.8);
+  }
+}
+.cost-table2 .cost-table2__column:first-child div span:not(.host-and-dj span), .cost-table2 .anniversary-organization-formats div span:not(.host-and-dj span) {
+  line-height: 120%;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cost-table2 .cost-table2__column:first-child div span:not(.host-and-dj span) a, .cost-table2 .anniversary-organization-formats div span:not(.host-and-dj span) a {
+    display: inline-block;
   }
 }
 .cost-table2 .cost-table2__column:not(.cost-table2__column:last-child) {
@@ -550,6 +557,25 @@ picture .position-top {
 }
 .service-packages-container .service-packages .service-package a.service-package__cost {
   padding-bottom: 5px;
+}
+
+.orange-marker li {
+  list-style: none;
+  position: relative;
+  line-height: 120%;
+  padding-left: 37px;
+}
+.orange-marker li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 20px;
+  background: url("../img/about-company_section9.svg") center/cover;
+}
+.orange-marker li:not(li:first-child) {
+  margin-top: 20px;
 }
 
 input, button, textarea {
@@ -791,6 +817,16 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   }
   .service-packages-container .service-packages .service-package a.service-package__cost {
     padding-bottom: calc(3px + 2 * (100vw - 321px) / 979);
+  }
+  .orange-marker li {
+    padding-left: calc(22px + 15 * (100vw - 321px) / 979);
+  }
+  .orange-marker li::before {
+    width: calc(12px + 11 * (100vw - 321px) / 979);
+    height: calc(10px + 10 * (100vw - 321px) / 979);
+  }
+  .orange-marker li:not(li:first-child) {
+    margin-top: calc(10px + 10 * (100vw - 321px) / 979);
   }
   .padding-60 {
     padding: calc(12px + 5 * (100vw - 321px) / 979) calc(24px + 36 * (100vw - 321px) / 979) calc(14px + 6 * (100vw - 321px) / 979) calc(24px + 36 * (100vw - 321px) / 979);
@@ -1059,6 +1095,16 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   }
   .service-packages-container .service-packages .service-package a.service-package__cost {
     padding-bottom: 3px;
+  }
+  .orange-marker li {
+    padding-left: 22px;
+  }
+  .orange-marker li::before {
+    width: 12px;
+    height: 10px;
+  }
+  .orange-marker li:not(li:first-child) {
+    margin-top: 10px;
   }
   .padding-60 {
     padding: 12px 24px 14px 24px;
@@ -4478,24 +4524,6 @@ form .orange-btn {
   max-width: 780px;
   margin: 35px auto 47px auto;
 }
-.anniversaries-and-birthdays-section4 .container ul li {
-  list-style: none;
-  position: relative;
-  line-height: 120%;
-  padding-left: 37px;
-}
-.anniversaries-and-birthdays-section4 .container ul li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 23px;
-  height: 20px;
-  background: url("../img/about-company_section9.svg") center/cover;
-}
-.anniversaries-and-birthdays-section4 .container ul li:not(li:first-child) {
-  margin-top: 20px;
-}
 .anniversaries-and-birthdays-section4 .container .transparency {
   transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;
 }
@@ -4533,16 +4561,6 @@ form .orange-btn {
   .anniversaries-and-birthdays-section4 .container ul {
     max-width: calc(390px + 390 * (100vw - 321px) / 979);
     margin: calc(15px + 20 * (100vw - 321px) / 979) auto calc(21px + 26 * (100vw - 321px) / 979) auto;
-  }
-  .anniversaries-and-birthdays-section4 .container ul li {
-    padding-left: calc(22px + 15 * (100vw - 321px) / 979);
-  }
-  .anniversaries-and-birthdays-section4 .container ul li::before {
-    width: calc(12px + 11 * (100vw - 321px) / 979);
-    height: calc(10px + 10 * (100vw - 321px) / 979);
-  }
-  .anniversaries-and-birthdays-section4 .container ul li:not(li:first-child) {
-    margin-top: calc(10px + 10 * (100vw - 321px) / 979);
   }
   .anniversaries-and-birthdays-section5 .container, .anniversaries-and-birthdays-section6 .container {
     padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
@@ -4600,16 +4618,6 @@ form .orange-btn {
   .anniversaries-and-birthdays-section4 .container ul {
     margin: 15px auto 21px auto;
   }
-  .anniversaries-and-birthdays-section4 .container ul li {
-    padding-left: 22px;
-  }
-  .anniversaries-and-birthdays-section4 .container ul li::before {
-    width: 12px;
-    height: 10px;
-  }
-  .anniversaries-and-birthdays-section4 .container ul li:not(li:first-child) {
-    margin-top: 10px;
-  }
   .anniversaries-and-birthdays-section5 .container, .anniversaries-and-birthdays-section6 .container {
     padding: 0 15px;
   }
@@ -4636,5 +4644,283 @@ form .orange-btn {
   .anniversaries-and-birthdays-section6 .container .cost-table2 .cost-table2__column:nth-child(2) div {
     padding-top: 4px;
     margin-top: 30px;
+  }
+}
+.wedding-organization-section2 .text-with-lines p {
+  text-align: center;
+}
+.wedding-organization-section2 .text-with-lines p a {
+  color: #ED6F59;
+}
+@media (hover: hover) and (pointer: fine) {
+  .wedding-organization-section2 .text-with-lines p a {
+    display: inline-block;
+    transform: translate3d(0, 0, 0);
+    transition: color 0.3s;
+  }
+  .wedding-organization-section2 .text-with-lines p a:hover {
+    color: rgba(148, 1, 29, 0.8);
+  }
+}
+
+.new-year-section3 .container, .new-year-section4 .container {
+  padding: 0 60px;
+}
+.new-year-section3 .container h4, .new-year-section4 .container h4 {
+  text-align: center;
+  color: rgba(148, 1, 29, 0.8);
+}
+.new-year-section3 .container .cost-table2, .new-year-section4 .container .cost-table2 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1040px;
+  margin: 40px auto 42px auto;
+}
+.new-year-section3 .container .cost-table2 .cost-table2__column div, .new-year-section4 .container .cost-table2 .cost-table2__column div {
+  padding: 0 30px;
+}
+.new-year-section3 .container ul, .new-year-section4 .container ul {
+  max-width: 786px;
+  margin: 0 auto;
+}
+
+.new-year-section3 .container .cost-table2 .cost-table2__column div:last-child {
+  height: 190px;
+}
+.new-year-section3 .container .cost-table2 .cost-table2__column:first-child div span a {
+  display: block;
+}
+.new-year-section3 .container .cost-table2 .cost-table2__column:first-child div span a:not(a:first-child) {
+  margin-top: 10px;
+}
+.new-year-section3 .container .cost-table2 .cost-table2__column:first-child div span a:last-child:not(a:first-child) {
+  margin-bottom: 2px;
+}
+.new-year-section3 .container .transparency {
+  margin-top: 44px;
+  transition: opacity 0.8s 1.7s, visibility 0.8s 1.7s;
+}
+
+.new-year-section4 {
+  padding: 55px 0 45px 0;
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+  .new-year-section3 .container, .new-year-section4 .container {
+    padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .new-year-section3 .container .cost-table2, .new-year-section4 .container .cost-table2 {
+    max-width: calc(694px + 346 * (100vw - 321px) / 979);
+    margin: calc(20px + 20 * (100vw - 321px) / 979) auto calc(24px + 18 * (100vw - 321px) / 979) auto;
+  }
+  .new-year-section3 .container .cost-table2 .cost-table2__column div, .new-year-section4 .container .cost-table2 .cost-table2__column div {
+    padding: 0 calc(6px + 24 * (100vw - 321px) / 979);
+  }
+  .new-year-section3 .container ul, .new-year-section4 .container ul {
+    max-width: calc(393px + 393 * (100vw - 321px) / 979);
+  }
+  .new-year-section3 .container .cost-table2 .cost-table2__column div:last-child {
+    height: calc(138px + 52 * (100vw - 321px) / 979);
+  }
+  .new-year-section3 .container .cost-table2 .cost-table2__column:first-child div span a:not(a:first-child) {
+    margin-top: calc(8px + 2 * (100vw - 321px) / 979);
+  }
+  .new-year-section3 .container .transparency {
+    margin-top: calc(24px + 20 * (100vw - 321px) / 979);
+  }
+  .new-year-section4 {
+    padding: calc(30px + 25 * (100vw - 321px) / 979) 0 calc(25px + 20 * (100vw - 321px) / 979) 0;
+  }
+}
+@media (max-width: 480.9px) and (min-width: 321px) {
+  .new-year-section3 .container h4, .new-year-section3 .container ul, .new-year-section4 .container h4, .new-year-section4 .container ul {
+    padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
+  }
+}
+@media (max-width: 480.9px) {
+  .new-year-section3 .container, .new-year-section4 .container {
+    padding: 0;
+  }
+  .new-year-section3 .container .cost-table2, .new-year-section4 .container .cost-table2 {
+    border-radius: 0;
+  }
+}
+@media (max-width: 320.9px) {
+  .new-year-section3 .container .cost-table2, .new-year-section4 .container .cost-table2 {
+    margin: 20px auto 24px auto;
+  }
+  .new-year-section3 .container .cost-table2 .cost-table2__column div, .new-year-section4 .container .cost-table2 .cost-table2__column div {
+    padding: 0 6px;
+  }
+  .new-year-section3 .container h4, .new-year-section3 .container ul, .new-year-section4 .container h4, .new-year-section4 .container ul {
+    padding: 0 15px;
+  }
+  .new-year-section3 .container .cost-table2 .cost-table2__column div:last-child {
+    height: 138px;
+  }
+  .new-year-section3 .container .cost-table2 .cost-table2__column:first-child div span a:not(a:first-child) {
+    margin-top: 8px;
+  }
+  .new-year-section3 .container .transparency {
+    margin-top: 24px;
+  }
+  .new-year-section4 {
+    padding: 30px 0 25px 0;
+  }
+}
+.child-holiday-section2, .child-holiday-section3 {
+  margin-bottom: 50px;
+}
+.child-holiday-section2 .container, .child-holiday-section3 .container {
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.child-holiday-section2 .container h4, .child-holiday-section3 .container h4 {
+  text-align: center;
+  color: rgba(148, 1, 29, 0.8);
+}
+.child-holiday-section2 .container .cost-table2, .child-holiday-section3 .container .cost-table2 {
+  width: 100%;
+  max-width: 1040px;
+  margin-bottom: 50px;
+}
+.child-holiday-section2 .container .text-with-lines p, .child-holiday-section3 .container .text-with-lines p {
+  color: #4B2F32;
+}
+
+.child-holiday-section2 {
+  margin-top: 60px;
+}
+.child-holiday-section2 .container h4 {
+  transition: opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+.child-holiday-section2 .container .cost-table2 {
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 45px;
+}
+.child-holiday-section2 .container .cost-table2 .cost-table2__column:first-child div {
+  padding: 0 6px;
+}
+.child-holiday-section2 .container .text-with-lines {
+  max-width: 650px;
+}
+
+.child-holiday-section3 .container h4 {
+  max-width: 628px;
+}
+.child-holiday-section3 .container .cost-table2 {
+  grid-template-columns: 1fr auto;
+  margin-top: 40px;
+}
+.child-holiday-section3 .container .cost-table2 .cost-table2__column div {
+  padding: 0 50px;
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+  .child-holiday-section2, .child-holiday-section3 {
+    margin-bottom: calc(24px + 26 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container, .child-holiday-section3 .container {
+    padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container .cost-table2, .child-holiday-section3 .container .cost-table2 {
+    max-width: calc(694px + 346 * (100vw - 321px) / 979);
+    margin-bottom: calc(26px + 24 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 {
+    margin-top: calc(30px + 30 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container h4 {
+    margin-top: calc(25px + 25 * (100vw - 321px) / 979);
+    margin-bottom: calc(15px + 20 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container .cost-table2 {
+    margin-top: calc(22px + 23 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container .text-with-lines {
+    max-width: calc(325px + 325 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section3 .container h4 {
+    max-width: calc(314px + 314 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section3 .container .cost-table2 {
+    margin-top: calc(20px + 20 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section3 .container .cost-table2 .cost-table2__column div {
+    padding: 0 calc(6px + 44 * (100vw - 321px) / 979);
+  }
+}
+@media (max-width: 600.9px) and (min-width: 321px) {
+  .child-holiday-section2 .container h4, .child-holiday-section2 .container .text-with-lines, .child-holiday-section3 .container h4, .child-holiday-section3 .container .text-with-lines {
+    margin-left: calc(15px + 45 * (100vw - 321px) / 979);
+    margin-right: calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container .cost-table2 .cost-table2__column .font-size-24, .child-holiday-section3 .container .cost-table2 .cost-table2__column .font-size-24 {
+    font-size: calc(9px + 4 * (100vw - 321px) / 279);
+  }
+  .child-holiday-section2 .container .cost-table2 .cost-table2__column:first-child div span, .child-holiday-section3 .container .cost-table2 .cost-table2__column:first-child div span {
+    font-size: calc(9px + 4 * (100vw - 321px) / 279);
+  }
+  .child-holiday-section2 .container ul {
+    margin-left: calc(15px + 45 * (100vw - 321px) / 979);
+    margin-right: calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .child-holiday-section2 .container .cost-table2 .cost-table2__column:not(.cost-table2__column:first-child) div:first-child {
+    font-size: calc(9px + 4 * (100vw - 321px) / 279);
+  }
+}
+@media (max-width: 600.9px) {
+  .child-holiday-section2 .container, .child-holiday-section3 .container {
+    padding: 0;
+  }
+  .child-holiday-section2 .container .cost-table2, .child-holiday-section3 .container .cost-table2 {
+    border-radius: 0;
+  }
+  .child-holiday-section2 .container .cost-table2 {
+    grid-template-columns: auto repeat(4, 1fr);
+  }
+}
+@media (max-width: 320.9px) {
+  .child-holiday-section2, .child-holiday-section3 {
+    margin-bottom: 24px;
+  }
+  .child-holiday-section2 .container h4, .child-holiday-section2 .container .text-with-lines, .child-holiday-section3 .container h4, .child-holiday-section3 .container .text-with-lines {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .child-holiday-section2 .container .cost-table2, .child-holiday-section3 .container .cost-table2 {
+    margin-bottom: 26px;
+  }
+  .child-holiday-section2 .container .cost-table2 .cost-table2__column .font-size-24, .child-holiday-section3 .container .cost-table2 .cost-table2__column .font-size-24 {
+    font-size: 9px;
+  }
+  .child-holiday-section2 .container .cost-table2 .cost-table2__column:first-child div span, .child-holiday-section3 .container .cost-table2 .cost-table2__column:first-child div span {
+    font-size: 9px;
+  }
+  .child-holiday-section2 {
+    margin-top: 30px;
+  }
+  .child-holiday-section2 .container h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  .child-holiday-section2 .container ul {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .child-holiday-section2 .container .cost-table2 {
+    margin-top: 22px;
+  }
+  .child-holiday-section2 .container .cost-table2 .cost-table2__column:not(.cost-table2__column:first-child) div:first-child {
+    font-size: 9px;
+  }
+  .child-holiday-section3 .container .cost-table2 {
+    margin-top: 20px;
+  }
+  .child-holiday-section3 .container .cost-table2 .cost-table2__column div {
+    padding: 0 6px;
   }
 }

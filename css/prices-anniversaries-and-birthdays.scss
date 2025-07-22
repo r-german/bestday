@@ -5,22 +5,6 @@
         ul {
             max-width: 780px;
             margin: 35px auto 47px auto;
-            li {
-                list-style: none;
-                position: relative;
-                line-height: 120%;
-                padding-left: 37px;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 23px;
-                    height: 20px;
-                    background: url('../img/about-company_section9.svg') center / cover;
-                }
-            }
-            li:not(li:first-child) {margin-top: 20px;}
         }
         .transparency {transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;}
     }
@@ -67,14 +51,6 @@
                 max-width: calc(390px + (780 - 390) * ((100vw - 321px) / (1300 - 321)));
                 margin: calc(15px + (35 - 15) * ((100vw - 321px) / (1300 - 321))) auto
                         calc(21px + (47 - 21) * ((100vw - 321px) / (1300 - 321))) auto;
-                li {
-                    padding-left: calc(22px + (37 - 22) * ((100vw - 321px) / (1300 - 321)));
-                    &::before {
-                        width: calc(12px + (23 - 12) * ((100vw - 321px) / (1300 - 321)));
-                        height: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
-                    }
-                }
-                li:not(li:first-child) {margin-top: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));}
             }
         }
     }
@@ -153,17 +129,7 @@
     .anniversaries-and-birthdays-section4 {
         .container {
             padding: 30px 15px;
-            ul {
-                margin: 15px auto 21px auto;
-                li {
-                    padding-left: 22px;
-                    &::before {
-                        width: 12px;
-                        height: 10px;
-                    }
-                }
-                li:not(li:first-child) {margin-top: 10px;}
-            }
+            ul {margin: 15px auto 21px auto;}
         }
     }
     .anniversaries-and-birthdays-section5, .anniversaries-and-birthdays-section6 {
