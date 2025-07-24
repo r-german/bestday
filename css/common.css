@@ -326,14 +326,17 @@ picture .position-top {
   padding: 27px 0 32px 0;
   line-height: 160%;
 }
-.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p, .child-holiday-section3 p) {
+.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p) {
   text-align: justify;
 }
 
 .dividing-line {
-  width: 40%;
   height: 1px;
   background: linear-gradient(to right, #E2DAF3, #7A68A7, #E8E2F8);
+}
+
+.dividing-line:not(.team-section3 .dividing-line) {
+  width: 40%;
 }
 
 .cost-tables-container {

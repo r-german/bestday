@@ -223,7 +223,7 @@ h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-5
         opacity: 1;
         visibility: visible;
     }
-    .left-to-right-12, .left-to-right-25, .left-to-right-50, .bottom-up-15, .bottom-up-25,
+    .left-to-right-12, .left-to-right-25, .left-to-right-50, .bottom-up-15, .bottom-up-25:not(.team-section3__teammate),
     .bottom-up-50:not(.centered-card), .bottom-up-100 {
         transform: translate3d(0, 0, 0);
     }
@@ -269,10 +269,11 @@ picture {
 }
 
 .dividing-line {
-    width: 40%;
     height: 1px;
     background: linear-gradient(to right, #E2DAF3, #7A68A7, #E8E2F8);
 }
+
+.dividing-line:not(.team-section3 .dividing-line) {width: 40%;}
 
 .cost-tables-container {
     padding: 0 60px;
