@@ -194,7 +194,7 @@
                      calc(15px + (90 - 15) * ((100vw - 321px) / (1300 - 321)));
             p {
                 margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
-                font-size: calc(12px + (22 - 12) * ((100vw - 321px) / (1300 - 321)));
+                font-size: calc(14px + (22 - 14) * ((100vw - 321px) / (1300 - 321)));
             }
         }
     }
@@ -280,7 +280,7 @@
         .container:nth-child(7), .container:nth-child(8), .container:nth-child(9), .container:nth-child(10), .container:nth-child(11) {
             padding: 0 calc(15px + (90 - 15) * ((100vw - 321px) / (1300 - 321)));
         }
-        .container:nth-child(2) {margin-top: calc(28px + (35 - 28) * ((100vw - 321px) / (991 - 321)));}
+        .container:nth-child(2) {margin-top: calc(30px + (35 - 30) * ((100vw - 321px) / (991 - 321)));}
         .container:not(.container:nth-child(2)) {margin-top: calc(35px + (60 - 35) * ((100vw - 321px) / (991 - 321)));}
     }
 }
@@ -327,6 +327,11 @@
 }
 
 @media (max-width: 600.9px) {
+    .team-section2 {
+        .container {
+            p {transform: translate3d(0, 25%, 0);}
+        }
+    }
     .team-section3 {
         .container:nth-child(2), .container:nth-child(3), .container:nth-child(4), .container:nth-child(5), .container:nth-child(6),
         .container:nth-child(7), .container:nth-child(8), .container:nth-child(9), .container:nth-child(10), .container:nth-child(11) {
@@ -339,6 +344,11 @@
                     max-width: 300px;
                 }
             }
+            p {
+                font-size: 12px;
+                line-height: 150%;
+                transform: translate3d(0, 50%, 0);
+            }
         }
     }
 }
@@ -349,7 +359,7 @@
             padding: 25px 15px 30px 15px;
             p {
                 margin-top: 20px;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
@@ -363,14 +373,13 @@
                     margin-top: 12px;
                 }
             }
-            p {font-size: 10px;}
         }
         .container:nth-child(2), .container:nth-child(3), .container:nth-child(4), .container:nth-child(5), .container:nth-child(6),
         .container:nth-child(7), .container:nth-child(8), .container:nth-child(9), .container:nth-child(10), .container:nth-child(11) {
             padding: 0 15px;
             .team-section3__teammate {margin: 0 auto 30px auto;}
         }
-        .container:nth-child(2) {margin-top: 28px;}
+        .container:nth-child(2) {margin-top: 30px;}
         .container:not(.container:nth-child(2)) {margin-top: 35px;}
     }
 }
