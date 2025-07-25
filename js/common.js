@@ -36,6 +36,9 @@ var callback2 = function(entries2) {
     entries2.forEach(entry2 => {
         if (entry2.isIntersecting) {
             entry2.target.classList.add('_transform');
+            if (entry2.target.classList.contains('typing-effect')) {
+                typeWriter();
+            }
             observer2.unobserve(entry2.target);
         }
     });

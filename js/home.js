@@ -72,22 +72,6 @@ spBtn.addEventListener("click", function() {
     }
 });
 
-// Слайдер (Секция 5)
-new Swiper(".home-section5 .swiper", {
-    navigation: {
-        nextEl: '.swiper-btn-next',
-        prevEl: '.swiper-btn-prev',
-    },
-    parallax: true,
-    loop: true,
-    freeMode: {
-        enabled: true,
-        sticky: true,
-    },
-    speed: 600,
-    keyboard: true
-});
-
 // Слайдер (Секция 7)
 new Swiper(".home-section7 .swiper", {
     pagination: {
