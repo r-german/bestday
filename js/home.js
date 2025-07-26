@@ -84,6 +84,7 @@ new Swiper(".home-section7 .swiper", {
     },
     speed: 600,
     keyboard: true,
+    grabCursor: true,
     slidesPerView: 1,
     grid: {
         fill: 'row',

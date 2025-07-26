@@ -11,7 +11,8 @@ new Swiper("#photo-gallery-slider1 .swiper", {
         sticky: true,
     },
     speed: 600,
-    keyboard: true
+    keyboard: true,
+    grabCursor: true
 });
 
 new Swiper("#photo-gallery-slider2 .swiper", {
@@ -26,7 +27,8 @@ new Swiper("#photo-gallery-slider2 .swiper", {
         sticky: true,
     },
     speed: 600,
-    keyboard: true
+    keyboard: true,
+    grabCursor: true
 });
 
 new Swiper("#photo-gallery-slider3 .swiper", {
@@ -41,5 +43,6 @@ new Swiper("#photo-gallery-slider3 .swiper", {
         sticky: true,
     },
     speed: 600,
-    keyboard: true
+    keyboard: true,
+    grabCursor: true
 });

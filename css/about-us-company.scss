@@ -197,7 +197,7 @@
 .about-company-section6 {
     background-color: $orange2;
     .container {
-        padding: 50px 115px 60px 115px;
+        padding: 50px 115px 65px 115px;
         h4 {
             text-align: center;
             color: $violet1;
@@ -269,7 +269,7 @@
 
 .about-company-section7 {
     .container {
-        padding: 60px;
+        padding: 60px 60px 65px 60px;
         .about-company-section7__clients {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -313,7 +313,7 @@
 }
 
 .about-company-section8 {
-    margin-top: 60px;
+    margin-top: 50px;
     background-color: $brown3;
     .about-company-section8__title {
         background-color: $white2;
@@ -496,7 +496,7 @@
         .container {
             padding: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)))
                      calc(40px + (115 - 40) * ((100vw - 321px) / (1300 - 321)))
-                     calc(35px + (60 - 35) * ((100vw - 321px) / (1300 - 321)))
+                     calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321)))
                      calc(40px + (115 - 40) * ((100vw - 321px) / (1300 - 321)));
             .about-company-section6__swiper {
                 margin-top: calc(17px + (32 - 17) * ((100vw - 321px) / (1300 - 321)));
@@ -523,7 +523,7 @@
     .about-company-section7 {
         .container {
             padding-top: calc(35px + (60 - 35) * ((100vw - 321px) / (1300 - 321)));
-            padding-bottom: calc(35px + (60 - 35) * ((100vw - 321px) / (1300 - 321)));
+            padding-bottom: calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321)));
             .about-company-section7__clients {
                 .clients__thank-you-letters {
                     width: calc(240px + (480 - 240) * ((100vw - 321px) / (1300 - 321)));
@@ -535,7 +535,7 @@
         }
     }
     .about-company-section8 {
-        margin-top: calc(25px + (60 - 25) * ((100vw - 321px) / (1300 - 321)));
+        margin-top: calc(15px + (50 - 15) * ((100vw - 321px) / (1300 - 321)));
         .about-company-section8__title {
             h4 {
                 padding: calc(8px + (10 - 8) * ((100vw - 321px) / (1300 - 321)))
@@ -899,7 +899,7 @@
         }
     }
     .about-company-section8 {
-        margin-top: 25px;
+        margin-top: 15px;
         .about-company-section8__title {
             h4 {padding: 8px 16px;}
         }
