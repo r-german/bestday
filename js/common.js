@@ -2,10 +2,12 @@
 if (window.matchMedia("(max-height: 480.9px)").matches) {
     var options = {threshold: 0.2};
     var options2 = {threshold: 0.1};
+    var options3 = {threshold: 0.3};
 }
 else {
     options = {threshold: 0.4};
     options2 = {threshold: 0.2};
+    options3 = {threshold: 0.7};
 }
 
 var callback = function(entries) {
@@ -47,6 +49,20 @@ var observer2 = new IntersectionObserver(callback2, options2);
 var animItems2 = document.querySelectorAll('.anim-item2');
 animItems2.forEach(animItem2 => {
     observer2.observe(animItem2);
+});
+
+var callback3 = function(entries3) {
+    entries3.forEach(entry3 => {
+        if (entry3.isIntersecting) {
+            entry3.target.classList.add('_transform');
+            observer3.unobserve(entry3.target);
+        }
+    });
+};
+var observer3 = new IntersectionObserver(callback3, options3);
+var animItems3 = document.querySelectorAll('.anim-item3');
+animItems3.forEach(animItem3 => {
+    observer3.observe(animItem3);
 });
 
 // Полоса прокрутки

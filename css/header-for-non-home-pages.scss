@@ -17,7 +17,7 @@
         }
         .form-open-btn {
             font-size: 14px;
-            padding: 8px 16px 10px 16px;
+            padding: 8px 16px 11px 16px;
             color: $white;
             border: 1px solid;
             border-color: $white;
@@ -220,7 +220,7 @@
             }
             .form-open-btn {
                 font-size: 13px;
-                padding: 8px 12px 10px 12px;
+                padding: 8px 12px 11px 12px;
             }
             .header2__social-network {
                 .vk-link {
@@ -246,11 +246,6 @@
     .header2 {
         .container {
             padding: 0 calc(12px + (30 - 12) * ((100vw - 321px) / (480 - 321)));
-            .form-open-btn {
-                font-size: calc(9px + (12 - 9) * ((100vw - 321px) / (480 - 321)));
-                padding: 6px calc(8px + (10 - 8) * ((100vw - 321px) / (480 - 321)))
-                         8px calc(8px + (10 - 8) * ((100vw - 321px) / (480 - 321)));
-            }
             .header2__social-network {
                 column-gap: calc(8px + (12 - 8) * ((100vw - 321px) / (480 - 321)));
                 .vk-link {
@@ -276,6 +271,10 @@
             .header2__logo {
                 img {height: 30px;}
             }
+            .form-open-btn {
+                font-size: 12px;
+                padding: 5px 8px 8px 8px;
+            }
             .header2__burger-box {
                 height: 30px;
                 width: auto;
@@ -295,6 +294,10 @@
             .header2__logo {
                 img {height: 28px;}
             }
+            .form-open-btn {
+                font-size: 10px;
+                padding: 6px 8px 8px 8px;
+            }
             .header2__burger-box {height: 28px;}
             .header2__nav {
                 top: 52px;
@@ -308,10 +311,6 @@
     .header2 {
         .container {
             padding: 0 12px;
-            .form-open-btn {
-                font-size: 9px;
-                padding: 6px 8px 8px 8px;
-            }
             .header2__social-network {
                 column-gap: 8px;
                 .vk-link {

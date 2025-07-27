@@ -1,75 +1,189 @@
 form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     margin-top: 40px;
-    input, select, textarea {
-        border-radius: 5px;
-        color: $violet2;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-        transform: translate3d(0, 0, 0);
-        transition: box-shadow 0.3s;
+    .form__input-fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        input, select, textarea {
+            border-radius: 5px;
+            color: $violet2;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+            transform: translate3d(0, 0, 0);
+            transition: box-shadow 0.3s;
+        }
+        input::placeholder, textarea::placeholder {color: inherit;}
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 4px 4px rgba(237, 111, 89, 0.25);
+        }
+        input, select {
+            width: 100%;
+            height: 52px;
+            padding: 0 26px 3px 26px;
+        }
+        select{
+            font-family: inherit;
+            font-size: inherit;
+            letter-spacing: inherit;
+            appearance: none;
+        }
+        textarea {
+            grid-column: 1/3;
+            height: 104px;
+            padding: 12px 26px;
+            resize: none;
+        }
     }
-    input::placeholder, textarea::placeholder {color: inherit;}
-    input:focus, select:focus, textarea:focus {
-        outline: none;
-        box-shadow: 0 4px 4px rgba(237, 111, 89, 0.25);
+    .form__terms, .orange-btn {align-self: center;}
+    .form__terms {
+        margin-top: 34px;
+        margin-left: 44px;
+        .terms__term:first-child {margin-bottom: 20px;}
+        .terms__term {
+            input {display: none;}
+            label {
+                display: block;
+                line-height: 125%;
+                color: $violet2;
+                position: relative;
+                &::before{
+                    cursor: pointer;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -44px;
+                    width: 28px;
+                    height: 28px;
+                    border: 2px solid $red1;
+                    border-radius: 5px;
+                }
+                &::after{
+                    cursor: pointer;
+                    content: '';
+                    position: absolute;
+                    top: 7px;
+                    transform: translate3d(0, 0, 0);
+                    left: -37px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background-color: $red1;
+                    opacity: 0;
+                }
+                a {
+                    display: block;
+                    width: fit-content;
+                    line-height: 1;
+                    margin-top: 4px;
+                    color: $red1;
+                }
+                @media (hover: hover) and (pointer: fine) {
+                    a {
+                        transform: translate3d(0, 0, 0);
+                        transition: color 0.3s;
+                    }
+                    a:hover {color: $red2;}
+                }
+            }
+            input:checked ~ label {
+                &::after {opacity: 1;}
+            }
+        }
     }
-    input, select {
-        width: 100%;
-        height: 52px;
-        padding: 0 26px;
-    }
-    select{
-        font-family: inherit;
-        letter-spacing: inherit;
-        appearance: none;
-    }
-    textarea {
-        grid-column: 1/3;
-        height: 104px;
-        padding: 12px 26px;
-        resize: none;
-    }
-    .orange-btn {
-        grid-column: 1/3;
-        margin: 10px auto 0 auto;
-    }
+    .orange-btn {margin-top: 40px;}
 }
 
 @media (max-width: 1300.9px) and (min-width: 321px) {
     form {
-        gap: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321)));
         margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
-        input, select {
-            height: calc(36px + (52 - 36) * ((100vw - 321px) / (1300 - 321)));
-            padding: 0 calc(14px + (26 - 14) * ((100vw - 321px) / (1300 - 321)));
+        .form__input-fields {
+            gap: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321)));
+            input, select {
+                height: calc(36px + (52 - 36) * ((100vw - 321px) / (1300 - 321)));
+                padding: 0
+                         calc(14px + (26 - 14) * ((100vw - 321px) / (1300 - 321)))
+                         calc(1px + (3 - 1) * ((100vw - 321px) / (1300 - 321)))
+                         calc(14px + (26 - 14) * ((100vw - 321px) / (1300 - 321)));
+            }
+            textarea {
+                height: calc(72px + (104 - 72) * ((100vw - 321px) / (1300 - 321)));
+                padding: 12px calc(14px + (26 - 14) * ((100vw - 321px) / (1300 - 321)));
+            }
         }
-        textarea {
-            height: calc(72px + (104 - 72) * ((100vw - 321px) / (1300 - 321)));
-            padding: 12px calc(14px + (26 - 14) * ((100vw - 321px) / (1300 - 321)));
+        .form__terms {
+            margin-top: calc(24px + (34 - 24) * ((100vw - 321px) / (1300 - 321)));
+            margin-left: calc(22px + (44 - 22) * ((100vw - 321px) / (1300 - 321)));
+            .terms__term:first-child {margin-bottom: calc(12px + (20 - 12) * ((100vw - 321px) / (1300 - 321)));}
+            .terms__term {
+                label {
+                    &::before{
+                        left: calc(-22px + (-44 + 22) * ((100vw - 321px) / (1300 - 321)));
+                        width: calc(14px + (28 - 14) * ((100vw - 321px) / (1300 - 321)));
+                        height: calc(14px + (28 - 14) * ((100vw - 321px) / (1300 - 321)));
+                        border-radius: calc(3px + (5 - 3) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                    &::after{
+                        top: calc(4px + (7 - 4) * ((100vw - 321px) / (1300 - 321)));
+                        left: calc(-18px + (-37 + 18) * ((100vw - 321px) / (1300 - 321)));
+                        width: calc(6px + (14 - 6) * ((100vw - 321px) / (1300 - 321)));
+                        height: calc(6px + (14 - 6) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                }
+            }
         }
+        .orange-btn {margin-top: calc(25px + (40 - 25) * ((100vw - 321px) / (1300 - 321)));}
     }
 }
 
 @media (max-width: 767.9px) {
     form {
-        input[type="email"], select {grid-column: 1/3;}
+        .form__input-fields {
+            input[type="email"], select {grid-column: 1/3;}
+        }
+        .fields-for-reviews {
+            input:not(input[type="email"]) {grid-column: 1/3;}
+        }
     }
 }
 
 @media (max-width: 320.9px) {
     form {
-        gap: 15px;
         margin-top: 20px;
-        input, select {
-            height: 36px;
-            padding: 0 14px;
+        .form__input-fields {
+            gap: 15px;
+            input, select {
+                height: 36px;
+                padding: 0 14px 1px 14px;
+            }
+            textarea {
+                height: 72px;
+                padding: 12px 14px;
+            }
         }
-        textarea {
-            height: 72px;
-            padding: 12px 14px;
+        .form__terms {
+            margin-top: 24px;
+            margin-left: 22px;
+            .terms__term:first-child {margin-bottom: 12px;}
+            .terms__term {
+                label {
+                    &::before{
+                        left: -22px;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 3px;
+                    }
+                    &::after{
+                        top: 4px;
+                        left: -18px;
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+            }
         }
+        .orange-btn {margin-top: 25px;}
     }
 }

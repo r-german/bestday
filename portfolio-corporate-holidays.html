@@ -74,24 +74,26 @@
                     <div class="modal-window__form-wrapper">
                         <h4>Заявка на праздник</h4>
                         <form action="" name="form2" method="POST">
-                            <input class="font-size-24" type="text" name="name2" placeholder="Ваше имя" required>
-                            <input class="font-size-24" type="tel" name="phone2" placeholder="Телефон" required>
-                            <input class="font-size-24" type="email" name="mail2" placeholder="Email" required>
-                            <select class="font-size-24" name="service2" id="" required>
-                                <option value="" disabled selected hidden>Интересующая услуга</option>
-                                <option value="">Организация свадьбы</option>
-                                <option value="">Корпоративное мероприятие</option>
-                                <option value="">Детский праздник</option>
-                                <option value="">Проведение юбилея</option>
-                                <option value="">Организация выпускного</option>
-                                <option value="">Аренда костюмов и аксессуаров</option>
-                                <option value="">Оформление мероприятия</option>
-                                <option value="">Пошив</option>
-                                <option value="">Другое</option>
-                            </select>
-                            <input class="font-size-24" type="text" name="date2" placeholder="Дата праздника" required>
-                            <input class="font-size-24" type="number" name="participants2" placeholder="Кол-во участников" required>
-                            <textarea class="font-size-24" name="comment2" id="" placeholder="Комментарий..."></textarea>
+                            <div class="form__input-fields font-size-24">
+                                <input type="text" name="name2" placeholder="Ваше имя" required>
+                                <input type="tel" name="phone2" placeholder="Телефон" required>
+                                <input type="email" name="mail2" placeholder="Email" required>
+                                <select name="service2" id="" required>
+                                    <option value="" disabled selected hidden>Интересующая услуга</option>
+                                    <option value="">Организация свадьбы</option>
+                                    <option value="">Корпоративное мероприятие</option>
+                                    <option value="">Детский праздник</option>
+                                    <option value="">Проведение юбилея</option>
+                                    <option value="">Организация выпускного</option>
+                                    <option value="">Аренда костюмов и аксессуаров</option>
+                                    <option value="">Оформление мероприятия</option>
+                                    <option value="">Пошив</option>
+                                    <option value="">Другое</option>
+                                </select>
+                                <input type="text" name="date2" placeholder="Дата праздника" required>
+                                <input type="number" name="participants2" placeholder="Кол-во участников" required>
+                                <textarea name="comment2" id="" placeholder="Комментарий..."></textarea>
+                            </div>
                             <button class="orange-btn font-size-25 padding-60" type="submit">Отправить</button>
                         </form>
                         <div class="form-wrapper__cross">

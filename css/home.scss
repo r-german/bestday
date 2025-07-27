@@ -432,7 +432,7 @@
 }
 
 .home-section5 {
-    padding: 50px 0 60px 0;
+    padding: 50px 0 65px 0;
     background-color: $orange2;
     .photo-gallery-container {
         h4 {color: $violet1;}
@@ -442,7 +442,7 @@
 
 .home-section6 {
     .container {
-        padding: 50px 60px 60px 60px;
+        padding: 50px 60px 65px 60px;
         h4 {
             color: $violet1;
             margin-bottom: 30px;
@@ -453,7 +453,7 @@
 .home-section7 {
     background-color: $red1;
     .container {
-        padding: 0 50px 60px 50px;
+        padding: 0 50px 65px 50px;
         h4 {
             padding: 20px 70px;
             color: $white;
@@ -475,6 +475,7 @@
                         border-bottom-right-radius: 6px;
                         background-color: $white2;
                         box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
+                        overflow: hidden;
                         .swiper-slide__mark-wrapper {
                             width: 60px;
                             height: 60px;
@@ -763,13 +764,13 @@
     }
     .home-section5 {
         padding: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
-                 calc(35px + (60 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
+                 calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
     }
     .home-section6 {
         .container {
             padding: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)))
                      calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)))
-                     calc(35px + (60 - 35) * ((100vw - 321px) / (1300 - 321)))
+                     calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321)))
                      calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
             h4 {margin-bottom: calc(17px + (30 - 17) * ((100vw - 321px) / (1300 - 321)));}
         }
@@ -778,7 +779,7 @@
         .container {
             padding: 0
                      calc(10px + (50 - 10) * ((100vw - 321px) / (1300 - 321)))
-                     calc(35px + (60 - 35) * ((100vw - 321px) / (1300 - 321)))
+                     calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321)))
                      calc(10px + (50 - 10) * ((100vw - 321px) / (1300 - 321)));
             h4 {
                 padding: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)))
