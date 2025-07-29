@@ -26,10 +26,11 @@
                 column-gap: 12px;
                 padding: 3px 0 10px 0;
                 border-bottom: 1px solid $white;
-                a {
+                a, button {
                     font-size: 16px;
                     text-transform: uppercase;
                 }
+                button {background-color: transparent;}
             }
         }
         .header__phone {
@@ -59,7 +60,7 @@
             padding: 0 calc(50px + (176 - 50) * ((100vw - 768px) / (1300 - 768)));
             .header__nav {
                 nav {
-                    a {font-size: calc(13px + (16 - 13) * ((100vw - 768px) / (1300 - 768)));}
+                    a, button {font-size: calc(13px + (16 - 13) * ((100vw - 768px) / (1300 - 768)));}
                 }
             }
         }
@@ -151,13 +152,14 @@
                 align-items: flex-start;
                 overflow: auto;
                 background-color: rgba(49, 44, 59, 0.6);
-                nav{
+                nav {
                     min-width: 160px;
                     padding: 28px;
                     grid-auto-flow: row;
+                    justify-items: start;
                     background-color: $white;
                     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-                    a{
+                    a, button {
                         font-size: 13px;
                         margin-top: 20px;
                         color: inherit;
@@ -165,7 +167,7 @@
                     }
                 }
             }
-            .header__nav._active{transform: translate3d(-100%, 0, 0);}
+            .header__nav._active {transform: translate3d(-100%, 0, 0);}
         }
     }
 }

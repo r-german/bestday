@@ -5,9 +5,9 @@ const swiper1 = new Swiper(".home-section1 .swiper", {
         clickable: true
     },
     loop: true,
-    autoplay: {
-        disableOnInteraction: true
-    },
+    // autoplay: {
+    //     disableOnInteraction: true
+    // },
     freeMode: {
         enabled: true,
         sticky: true,

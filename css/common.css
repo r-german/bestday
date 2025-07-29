@@ -357,13 +357,15 @@ h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-5
 
 .anim-item._transform h4:not(.modal-window h4), .anim-item._transform .left-to-right-12, .anim-item._transform .left-to-right-25, .anim-item._transform .left-to-right-50, .anim-item._transform .right-to-left-25, .anim-item._transform .right-to-left-50,
 .anim-item._transform .bottom-up-15, .anim-item._transform .bottom-up-25, .anim-item._transform .bottom-up-50, .anim-item._transform .bottom-up-100, .anim-item._transform .home-section3__blue-square, .anim-item._transform .transparency, .anim-item2._transform h4:not(.modal-window h4), .anim-item2._transform .left-to-right-12, .anim-item2._transform .left-to-right-25, .anim-item2._transform .left-to-right-50, .anim-item2._transform .right-to-left-25, .anim-item2._transform .right-to-left-50,
-.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25, .anim-item2._transform .bottom-up-50, .anim-item2._transform .bottom-up-100, .anim-item2._transform .home-section3__blue-square, .anim-item2._transform .transparency {
+.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25, .anim-item2._transform .bottom-up-50, .anim-item2._transform .bottom-up-100, .anim-item2._transform .home-section3__blue-square, .anim-item2._transform .transparency, .anim-item3._transform h4:not(.modal-window h4), .anim-item3._transform .left-to-right-12, .anim-item3._transform .left-to-right-25, .anim-item3._transform .left-to-right-50, .anim-item3._transform .right-to-left-25, .anim-item3._transform .right-to-left-50,
+.anim-item3._transform .bottom-up-15, .anim-item3._transform .bottom-up-25, .anim-item3._transform .bottom-up-50, .anim-item3._transform .bottom-up-100, .anim-item3._transform .home-section3__blue-square, .anim-item3._transform .transparency {
   opacity: 1;
   visibility: visible;
 }
 .anim-item._transform .left-to-right-12, .anim-item._transform .left-to-right-25, .anim-item._transform .left-to-right-50, .anim-item._transform .right-to-left-25, .anim-item._transform .right-to-left-50,
 .anim-item._transform .bottom-up-15, .anim-item._transform .bottom-up-25:not(.team-section3__teammate), .anim-item._transform .bottom-up-50:not(.centered-card), .anim-item._transform .bottom-up-100, .anim-item2._transform .left-to-right-12, .anim-item2._transform .left-to-right-25, .anim-item2._transform .left-to-right-50, .anim-item2._transform .right-to-left-25, .anim-item2._transform .right-to-left-50,
-.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25:not(.team-section3__teammate), .anim-item2._transform .bottom-up-50:not(.centered-card), .anim-item2._transform .bottom-up-100 {
+.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25:not(.team-section3__teammate), .anim-item2._transform .bottom-up-50:not(.centered-card), .anim-item2._transform .bottom-up-100, .anim-item3._transform .left-to-right-12, .anim-item3._transform .left-to-right-25, .anim-item3._transform .left-to-right-50, .anim-item3._transform .right-to-left-25, .anim-item3._transform .right-to-left-50,
+.anim-item3._transform .bottom-up-15, .anim-item3._transform .bottom-up-25:not(.team-section3__teammate), .anim-item3._transform .bottom-up-50:not(.centered-card), .anim-item3._transform .bottom-up-100 {
   transform: translate3d(0, 0, 0);
 }
 
@@ -403,7 +405,8 @@ picture .position-top {
 }
 
 .text-with-lines {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -737,7 +740,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     transform: translate3d(0, 0, 0);
     transition: color 0.3s;
   }
-  .white-link:not(.header2 .white-link, .header3 .white-link):hover {
+  a.white-link:not(.header2 .white-link, .header3 .white-link):hover {
     color: #F6BD76;
   }
   .underlined-link a {
@@ -879,6 +882,9 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   }
   .photo-gallery-container .photo-gallery-slider .swiper .swiper-wrapper .swiper-slide .swiper-slide__link a {
     font-size: calc(13px + 11 * (100vw - 321px) / 979);
+  }
+  .coverflow-container {
+    padding: 0 calc(40px + 75 * (100vw - 321px) / 979);
   }
   .font-size-25 {
     font-size: calc(13px + 12 * (100vw - 321px) / 979);
@@ -1200,6 +1206,9 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   }
   .photo-gallery-container .photo-gallery-slider .swiper .swiper-wrapper .swiper-slide .swiper-slide__link a {
     font-size: 13px;
+  }
+  .coverflow-container {
+    padding: 0 40px;
   }
   .font-size-25 {
     font-size: 13px;
