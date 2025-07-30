@@ -28,8 +28,77 @@
                 display: grid;
                 grid-auto-flow: column;
                 column-gap: 18px;
-                a {font-size: 16px;}
-                a:not(.white-link) {color: #fff4c0;}
+                a:not(.internal-links-level1 a), .btn-to-open-level1 {font-size: 16px;}
+                a:not(.white-link, .internal-links-level2 a), button:not(.white-link) {color: #fff4c0;}
+                .nav__internal-links {
+                    button {background-color: transparent;}
+                    .pc-btn {display: block;}
+                    .mob-btn {display: none;}
+                    @media (hover: none) and (min-width: 992px) {
+                        button.white-link {transform: translate3d(0, 0, 0);}
+                        button.white-link._active {color: #fff4c0;}
+                    }
+                    .internal-links__box {
+                        transform: translate3d(0, 0, 0);
+                        display: none;
+                        padding-top: 38px;
+                        position: absolute;
+                        .internal-links-level1, .internal-links-level2 {
+                            width: max-content;
+                            padding: 9px 0 14px 0;
+                        }
+                        .internal-links-level1 {
+                            position: relative;
+                            border-top: 1px solid rgba(0, 0, 0, 0.12);
+                            background-color: rgb(167, 50, 71);
+                            a {display: block;}
+                            a, .btn-to-open-level2 {
+                                padding: 6px 20px;
+                                font-size: 14px;
+                            }
+                            .two-levels {
+                                .btn-to-open-level2 {
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                                .internal-links-level2 {
+                                    transform: translate3d(0, 0, 0);
+                                    display: none;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 100%;
+                                    background-color: $white;
+                                    a {color: $violet2;}
+                                    @media (hover: hover) and (pointer: fine) {
+                                        a {
+                                            transform: translate3d(0, 0, 0);
+                                            transition: 0.3s ease;
+                                        }
+                                        a:hover {color: rgb(167, 50, 71);}
+                                    }
+                                }
+                                @media (hover: none) {
+                                    .internal-links-level2._visible {display: block;}
+                                }
+                            }
+                        }
+                    }
+                    @media (hover: none) {
+                        .internal-links__box._visible {display: block;}
+                    }
+                }
+                @media (hover: hover) and (min-width: 992px) {
+                    .nav__internal-links:hover {
+                        .internal-links__box {
+                            display: block;
+                            .internal-links-level1 {
+                                .two-levels {
+                                    button:hover ~ .internal-links-level2, .internal-links-level2:hover {display: block;}
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .header2__social-network {
@@ -94,7 +163,25 @@
             .header2__nav {
                 nav {
                     column-gap: calc(14px + (18 - 14) * ((100vw - 992px) / (1300 - 992)));
-                    a {font-size: calc(13px + (16 - 13) * ((100vw - 992px) / (1300 - 992)));}
+                    a:not(.internal-links-level1 a), .btn-to-open-level1 {
+                        font-size: calc(13px + (16 - 13) * ((100vw - 992px) / (1300 - 992)));
+                    }
+                    .nav__internal-links {
+                        .internal-links__box {
+                            padding-top: calc(29px + (38 - 29) * ((100vw - 992px) / (1300 - 992)));
+                            .internal-links-level1, .internal-links-level2 {
+                                padding: calc(7px + (9 - 7) * ((100vw - 992px) / (1300 - 992))) 0
+                                         calc(12px + (14 - 12) * ((100vw - 992px) / (1300 - 992))) 0;
+                            }
+                            .internal-links-level1 {
+                                a, .btn-to-open-level2 {
+                                    padding: calc(5px + (6 - 5) * ((100vw - 992px) / (1300 - 992)))
+                                             calc(17px + (20 - 17) * ((100vw - 992px) / (1300 - 992)));
+                                    font-size: calc(12px + (14 - 12) * ((100vw - 992px) / (1300 - 992)));
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .header2__social-network {
@@ -182,23 +269,56 @@
                 overflow: auto;
                 background-color: rgba(49, 44, 59, 0.6);
                 nav{
-                    padding: 0 28px;
+                    padding: 15px 20px 8px 20px;
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height 0.8s;
                     grid-auto-flow: row;
                     background-color: $white;
                     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-                    a{
-                        font-size: 13px;
-                        margin-top: 20px;
-                        &:first-child {margin-top: 28px;}
-                        &:last-child {margin-bottom: 28px;}
-                    }
-                    a:not(.white-link) {color: $red2;}
+                    a:not(.internal-links-level1 a), .btn-to-open-level1 {margin-bottom: 12px;}
+                    a:not(.white-link, .internal-links-level2 a), button:not(.white-link) {color: $red2;}
                     .white-link {color: inherit;}
                     @media (hover: hover) and (pointer: fine) {
                         .white-link:hover {color: $red2;}
+                    }
+                    .nav__internal-links {
+                        .pc-btn {display: none;}
+                        .mob-btn {display: block;}
+                        .internal-links__box {
+                            display: block;
+                            transform: none;
+                            position: unset;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.4s ease-out;
+                            padding-top: 0;
+                            .internal-links-level1, .internal-links-level2 {
+                                padding: 0;
+                                background-color: unset;
+                            }
+                            .internal-links-level1 {
+                                margin-bottom: 6px;
+                                border-top: 0;
+                                a, .btn-to-open-level2 {
+                                    padding: 0;
+                                    margin-bottom: 8px;
+                                    margin-left: 12px;
+                                }
+                                .two-levels {
+                                    .internal-links-level2 {
+                                        display: block;
+                                        transform: none;
+                                        position: unset;
+                                        max-height: 0;
+                                        overflow: hidden;
+                                        transition: max-height 0.4s ease-out;
+                                        margin-left: 16px;
+                                        a:last-child {margin-bottom: 10px;}
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
