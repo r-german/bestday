@@ -110,16 +110,16 @@ new Swiper(".home-section7 .swiper", {
     }
 });
 
-// Бургер-меню
-const menuIcon = document.querySelector('.header__burger-icon-wrapper');
-const menuNav = document.querySelector('.header__nav');
+// Бургер-меню (моб)
+const menuIcon = document.querySelector('.header1__burger-mob');
+const menuNav = document.querySelector('.header1__nav');
 menuIcon.addEventListener('click', function() {
     body.classList.toggle('_lock');
     menuIcon.classList.toggle('_active');
 	menuNav.classList.toggle('_active');
 });
 
-// Сдвиг шапки при открытии модального окна
+// Сдвиг шапки при открытии формы (модального окна)
 const header1 = document.querySelector('.header1');
 document.querySelector('.home-section1__greeting button').addEventListener('click', function() {
     header1.style.cssText = `padding-right: ${scrollbarWidth}px;`;

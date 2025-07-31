@@ -91,3 +91,159 @@ formCross.addEventListener('click', function() {
     modalWindowForForm.style.cssText = '';
     modalWindowForForm.classList.remove('_visible');
 });
+
+// Меню "Услуги" - появление, исчезновение
+const servicesProvidedBtn = document.getElementById('btn-to-open-services-provided');
+const servicesProvided = document.querySelector('.services-provided');
+servicesProvidedBtn.addEventListener('click', function() {
+    servicesProvided.classList.toggle('_visible');
+    this.classList.toggle('_active');
+});
+document.body.addEventListener("click", function(e){
+    if (!e.target.closest('.services-provided') && !e.target.closest('#btn-to-open-services-provided') && servicesProvided.classList.contains('_visible')) {
+        servicesProvided.classList.remove('_visible');
+        servicesProvidedBtn.classList.remove('_active');
+    }
+});
+
+// Меню "Услуги" - спойлер для 1го уровня
+const moreBtns = document.querySelectorAll(".level1-btn");
+moreBtns.forEach((moreBtn) => {
+    moreBtn.addEventListener("click", function() {
+        this.classList.toggle("_open");
+        let spContent = this.previousElementSibling;
+        if (this.classList.contains("_open")) {
+            spContent.style.maxHeight = spContent.scrollHeight + "px";
+        } else {
+            if (spContent.style.maxHeight == "max-content") {
+                spContent.style.maxHeight = spContent.scrollHeight + "px";
+                void spContent.offsetHeight;
+            }
+            spContent.style.maxHeight = "";
+        }
+    });
+});
+
+// Меню "Услуги" - спойлер для 2го уровня
+const level2Btns = document.querySelectorAll(".level2-btn");
+level2Btns.forEach((level2Btn) => {
+    level2Btn.addEventListener("click", function() {
+        if (this.parentElement.parentElement.style.maxHeight != "" && this.parentElement.parentElement.style.maxHeight != "max-content") {
+            this.parentElement.parentElement.style.maxHeight = "max-content";
+        }
+        this.classList.toggle("_open");
+        let spContent = this.nextElementSibling;
+        if (this.classList.contains("_open")) {
+            spContent.style.maxHeight = spContent.scrollHeight + "px";
+        } else {
+            spContent.style.maxHeight = "";
+        }
+        level2Btns.forEach((anotherLevel2Btn) => {
+            let spContent = anotherLevel2Btn.nextElementSibling;
+            if (anotherLevel2Btn != this) {
+                spContent.style.maxHeight = "";
+                anotherLevel2Btn.classList.remove("_open");
+            }
+        });
+    });
+});
+
+// Шапка - выпадающие списки
+if (window.matchMedia('(hover: none)').matches) {
+    // Появление ссылок 1 уровня (ПК)
+    const BtnsToOpenLevel1 = document.querySelectorAll('.btn-to-open-level1.pc-btn');
+    BtnsToOpenLevel1.forEach((BtnToOpenLevel1) => {
+        BtnToOpenLevel1.addEventListener("click", function() {
+            this.nextElementSibling.classList.toggle('_visible');
+            this.classList.toggle('_active');
+            BtnsToOpenLevel1.forEach(AnotherBtnToOpenLevel1 => {
+                if (AnotherBtnToOpenLevel1 != this && AnotherBtnToOpenLevel1.nextElementSibling.classList.contains('_visible')) {
+                    AnotherBtnToOpenLevel1.nextElementSibling.classList.remove('_visible');
+                    AnotherBtnToOpenLevel1.classList.remove('_active');
+                }
+            });
+        });
+        document.body.addEventListener("click", function(e){
+            if (!e.target.closest('.internal-links__box') && !e.target.closest('.btn-to-open-level1.pc-btn') && BtnToOpenLevel1.nextElementSibling.classList.contains('_visible')) {
+                BtnToOpenLevel1.nextElementSibling.classList.remove('_visible');
+                BtnToOpenLevel1.classList.remove('_active');
+            }
+        });
+    });
+    // Появление ссылок 2 уровня (ПК)
+    const BtnsToOpenLevel2 = document.querySelectorAll('.btn-to-open-level2.pc-btn');
+    BtnsToOpenLevel2.forEach((BtnToOpenLevel2) => {
+        BtnToOpenLevel2.addEventListener("click", function() {
+            this.nextElementSibling.classList.toggle('_visible');
+            this.classList.toggle('_active');
+            BtnsToOpenLevel2.forEach(AnotherBtnToOpenLevel2 => {
+                if (AnotherBtnToOpenLevel2 != this && AnotherBtnToOpenLevel2.nextElementSibling.classList.contains('_visible')) {
+                    AnotherBtnToOpenLevel2.nextElementSibling.classList.remove('_visible');
+                    AnotherBtnToOpenLevel2.classList.remove('_active');
+                }
+            });
+        });
+        document.body.addEventListener("click", function(e){
+            if (!e.target.closest('.internal-links__box') && !e.target.closest('.btn-to-open-level2.pc-btn') && BtnToOpenLevel2.nextElementSibling.classList.contains('_visible')) {
+                BtnToOpenLevel2.nextElementSibling.classList.remove('_visible');
+                BtnToOpenLevel2.classList.remove('_active');
+            }
+        });
+    });
+}
+
+// Шапка - появление ссылок 1 уровня (моб)
+const MobBtnsToOpenLevel1 = document.querySelectorAll(".btn-to-open-level1.mob-btn");
+MobBtnsToOpenLevel1.forEach(MobBtnToOpenLevel1 => {
+    MobBtnToOpenLevel1.addEventListener("click", function() {
+        if (this.parentElement.parentElement.style.maxHeight != "" && this.parentElement.parentElement.style.maxHeight != "max-content") {
+            this.parentElement.parentElement.style.maxHeight = "max-content";
+        }
+        this.classList.toggle("_open");
+        let spContent = this.nextElementSibling.nextElementSibling;
+        if (this.classList.contains("_open")) {
+            spContent.style.maxHeight = spContent.scrollHeight + "px";
+        } else {
+            if (spContent.style.maxHeight == "max-content") {
+                spContent.style.maxHeight = spContent.scrollHeight + "px";
+                void spContent.offsetHeight;
+            }
+            spContent.style.maxHeight = "";
+        }
+        MobBtnsToOpenLevel1.forEach(AnotherMobBtnToOpenLevel1 => {
+            let spContent = AnotherMobBtnToOpenLevel1.nextElementSibling.nextElementSibling;
+            if (AnotherMobBtnToOpenLevel1 != this) {
+                if (spContent.style.maxHeight == "max-content") {
+                    spContent.style.maxHeight = spContent.scrollHeight + "px";
+                    void spContent.offsetHeight;
+                }
+                spContent.style.maxHeight = "";
+                AnotherMobBtnToOpenLevel1.classList.remove("_open");
+            }
+        });
+    });
+});
+
+// Шапка - появление ссылок 2 уровня (моб)
+const MobBtnsToOpenLevel2 = document.querySelectorAll(".btn-to-open-level2.mob-btn");
+MobBtnsToOpenLevel2.forEach(MobBtnToOpenLevel2 => {
+    MobBtnToOpenLevel2.addEventListener("click", function() {
+        if (this.parentElement.parentElement.parentElement.style.maxHeight != "" && this.parentElement.parentElement.parentElement.style.maxHeight != "max-content") {
+            this.parentElement.parentElement.parentElement.style.maxHeight = "max-content";
+        }
+        this.classList.toggle("_open");
+        let spContent = this.nextElementSibling.nextElementSibling;
+        if (this.classList.contains("_open")) {
+            spContent.style.maxHeight = spContent.scrollHeight + "px";
+        } else {
+            spContent.style.maxHeight = "";
+        }
+        MobBtnsToOpenLevel2.forEach(AnotherMobBtnToOpenLevel2 => {
+            let spContent = AnotherMobBtnToOpenLevel2.nextElementSibling.nextElementSibling;
+            if (AnotherMobBtnToOpenLevel2 != this) {
+                spContent.style.maxHeight = "";
+                AnotherMobBtnToOpenLevel2.classList.remove("_open");
+            }
+        });
+    });
+});

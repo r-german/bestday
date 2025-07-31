@@ -64,6 +64,42 @@ html, body {
 
 body._lock, main {overflow: hidden;}
 
+.burger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        position: relative;
+        cursor: pointer;
+        span, &::before, &::after {
+            position: absolute;
+            left: 0;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s;
+            background-color: $white;
+        }
+        &::before, &::after {
+            content: "";
+            transform: translate3d(0, 0, 0);
+        }
+        &::before {top: 0;}
+        &::after {bottom: 0;}
+        span {
+            top: 50%;
+            transform: translate3d(0, -50%, 0) scale(1);
+        }
+    }
+}
+
+.burger-icon._active {
+    div {
+        span {transform: translate3d(0, -50%, 0) scale(0);}
+        &::before {transform: translate3d(0, 0, 0) rotate(-45deg);}
+        &::after {transform: translate3d(0, 0, 0) rotate(45deg);}
+    }
+}
+
 .swiper, .container {
     .swiper-pagination {
         font-size: 0;
