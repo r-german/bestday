@@ -47,6 +47,7 @@ html, body {
   line-height: 1;
   color: black;
   background-color: #F7F6F1;
+  height: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
@@ -54,6 +55,11 @@ html, body {
 
 body._lock, main {
   overflow: hidden;
+}
+
+.wrapper._lock {
+  overflow: hidden;
+  height: 100%;
 }
 
 .burger-icon {

@@ -114,7 +114,7 @@ new Swiper(".home-section7 .swiper", {
 const menuIcon = document.querySelector('.header1__burger-mob');
 const menuNav = document.querySelector('.header1__nav');
 menuIcon.addEventListener('click', function() {
-    body.classList.toggle('_lock');
+    wrapper.classList.toggle('_lock');
     menuIcon.classList.toggle('_active');
 	menuNav.classList.toggle('_active');
 });
