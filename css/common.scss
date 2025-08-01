@@ -82,12 +82,12 @@ body._lock, main {overflow: hidden;}
             left: 0;
             height: 10%;
             width: 100%;
+            will-change: transform;
             transition: all 0.3s;
             background-color: $white;
         }
         &::before, &::after {
             content: "";
-            transform: translate3d(0, 0, 0);
         }
         &::before {top: 0;}
         &::after {bottom: 0;}
@@ -121,11 +121,14 @@ body._lock, main {overflow: hidden;}
 }
 
 .container {
+    .swiper-pagination:not(.test__stage3 .swiper-pagination) {margin-top: 26px;}
+}
+
+.container {
     max-width: 1280px;
     margin: 0px auto;
     .swiper-pagination {
         position: unset;
-        margin-top: 26px;
         .swiper-pagination-bullet-active {background: linear-gradient(to bottom, transparent 19px, $violet2 19px 22px, transparent 23px);}
     }
 }
@@ -295,26 +298,29 @@ h5 {font-size: 36px;}
 
 h4 {font-size: 48px;}
 
-h4:not(.modal-window h4) {transform: translate3d(0, 0, 0);}
+h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4) {transform: translate3d(0, 0, 0);}
 
 h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4,
-       .modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4) {
+       .modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4,
+       .test__stage2 h4, .test__stage4 h4, .test__stage5 h4) {
     width: fit-content;
     transition: opacity 0.8s, visibility 0.8s;
 }
 
-h4:not(.home-section2 h4, .home-section3__about-us h4, .modal-window h4) {
+h4:not(.home-section2 h4, .home-section3__about-us h4, .modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4) {
     margin-left: auto;
     margin-right: auto;
 }
 
-h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
+h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
 .bottom-up-15, .bottom-up-25, .bottom-up-50, .bottom-up-100, .home-section3__blue-square, .transparency {
     opacity: 0;
     visibility: hidden;
 }
 
-h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
+h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
 .bottom-up-15, .bottom-up-25, .bottom-up-50:not(.swiper), .bottom-up-100, .transparency {
     position: relative;
     z-index: 2;
@@ -338,7 +344,8 @@ h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-5
 .bottom-up-100 {transform: translate3d(0, 100%, 0);}
 
 .anim-item._transform, .anim-item2._transform, .anim-item3._transform {
-    h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
+    h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+    .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
     .bottom-up-15, .bottom-up-25, .bottom-up-50, .bottom-up-100, .home-section3__blue-square, .transparency {
         opacity: 1;
         visibility: visible;
@@ -382,15 +389,13 @@ picture {
     display: flex;
     flex-direction: column;
     align-items: center;
-    p {
-        padding: 27px 0 32px 0;
-        line-height: 160%;
-    }
-    p:not(.about-company-section9 p, .wedding-organization-section2 p) {text-align: justify;}
-    span {
+    p {line-height: 160%;}
+    p:not(.test__stage1 p), .stage3-text {margin: 27px 0 32px 0;}
+    p:not(.about-company-section9 p, .wedding-organization-section2 p, .test__stage5 p) {text-align: justify;}
+    span:not(.stage3-text) {
         font-family: "AmaticSC-Bold";
         font-size: 96px;
-        padding: 30px 0;
+        margin: 30px 0;
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     }
 }
@@ -793,7 +798,9 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
 @media (max-width: 1300.9px) and (min-width: 321px) {
     html, body {font-size: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));}
     .container {
-        .swiper-pagination {margin-top: calc(6px + (26 - 6) * ((100vw - 321px) / (1300 - 321)));}
+        .swiper-pagination:not(.test__stage3 .swiper-pagination) {
+            margin-top: calc(6px + (26 - 6) * ((100vw - 321px) / (1300 - 321)));
+        }
     }
     .swiper, .container {
         .swiper-pagination {
@@ -847,13 +854,13 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         }
     }
     .text-with-lines {
-        p {
-            padding: calc(11px + (27 - 11) * ((100vw - 321px) / (1300 - 321))) 0
+        p:not(.test__stage1 p), .stage3-text {
+            margin: calc(11px + (27 - 11) * ((100vw - 321px) / (1300 - 321))) 0
                      calc(15px + (32 - 15) * ((100vw - 321px) / (1300 - 321))) 0;
         }
-        span {
+        span:not(.stage3-text) {
             font-size: calc(32px + (96 - 32) * ((100vw - 321px) / (1300 - 321)));
-            padding: calc(13px + (30 - 13) * ((100vw - 321px) / (1300 - 321))) 0;
+            margin: calc(13px + (30 - 13) * ((100vw - 321px) / (1300 - 321))) 0;
         }
     }
     .cost-tables-container {
@@ -1170,7 +1177,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
 @media (max-width: 320.9px) {
     html, body {font-size: 10px;}
     .container {
-        .swiper-pagination {margin-top: 6px;}
+        .swiper-pagination:not(.test__stage3 .swiper-pagination) {margin-top: 6px;}
     }
     .swiper, .container {
         .swiper-pagination {
@@ -1222,10 +1229,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         }
     }
     .text-with-lines {
-        p {padding: 11px 0 15px 0;}
-        span {
+        p:not(.test__stage1 p), .stage3-text {margin: 11px 0 15px 0;}
+        span:not(.stage3-text) {
             font-size: 32px;
-            padding: 13px 0;
+            margin: 13px 0;
         }
     }
     .cost-tables-container {

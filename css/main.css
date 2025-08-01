@@ -76,12 +76,12 @@ body._lock, main {
   left: 0;
   height: 10%;
   width: 100%;
+  will-change: transform;
   transition: all 0.3s;
   background-color: #FFFFFF;
 }
 .burger-icon div::before, .burger-icon div::after {
   content: "";
-  transform: translate3d(0, 0, 0);
 }
 .burger-icon div::before {
   top: 0;
@@ -116,13 +116,16 @@ body._lock, main {
   background: linear-gradient(to bottom, transparent 19px, #FFFFFF 19px 22px, transparent 23px);
 }
 
+.container .swiper-pagination:not(.test__stage3 .swiper-pagination) {
+  margin-top: 26px;
+}
+
 .container {
   max-width: 1280px;
   margin: 0px auto;
 }
 .container .swiper-pagination {
   position: unset;
-  margin-top: 26px;
 }
 .container .swiper-pagination .swiper-pagination-bullet-active {
   background: linear-gradient(to bottom, transparent 19px, #554874 19px 22px, transparent 23px);
@@ -317,28 +320,31 @@ h4 {
   font-size: 48px;
 }
 
-h4:not(.modal-window h4) {
+h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4) {
   transform: translate3d(0, 0, 0);
 }
 
 h4:not(.home-section3__about-us h4, .about-company-section7 h4, .wedding-decoration-section4 h4,
-.modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4) {
+.modal-window h4, .corporate-events-section2 h4, .child-holiday-section2 h4,
+.test__stage2 h4, .test__stage4 h4, .test__stage5 h4) {
   width: fit-content;
   transition: opacity 0.8s, visibility 0.8s;
 }
 
-h4:not(.home-section2 h4, .home-section3__about-us h4, .modal-window h4) {
+h4:not(.home-section2 h4, .home-section3__about-us h4, .modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4) {
   margin-left: auto;
   margin-right: auto;
 }
 
-h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
+h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
 .bottom-up-15, .bottom-up-25, .bottom-up-50, .bottom-up-100, .home-section3__blue-square, .transparency {
   opacity: 0;
   visibility: hidden;
 }
 
-h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
+h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
 .bottom-up-15, .bottom-up-25, .bottom-up-50:not(.swiper), .bottom-up-100, .transparency {
   position: relative;
   z-index: 2;
@@ -404,9 +410,12 @@ h4:not(.modal-window h4), .left-to-right-12, .left-to-right-25, .left-to-right-5
   transform: translate3d(0, 100%, 0);
 }
 
-.anim-item._transform h4:not(.modal-window h4), .anim-item._transform .left-to-right-12, .anim-item._transform .left-to-right-25, .anim-item._transform .left-to-right-50, .anim-item._transform .right-to-left-25, .anim-item._transform .right-to-left-50,
-.anim-item._transform .bottom-up-15, .anim-item._transform .bottom-up-25, .anim-item._transform .bottom-up-50, .anim-item._transform .bottom-up-100, .anim-item._transform .home-section3__blue-square, .anim-item._transform .transparency, .anim-item2._transform h4:not(.modal-window h4), .anim-item2._transform .left-to-right-12, .anim-item2._transform .left-to-right-25, .anim-item2._transform .left-to-right-50, .anim-item2._transform .right-to-left-25, .anim-item2._transform .right-to-left-50,
-.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25, .anim-item2._transform .bottom-up-50, .anim-item2._transform .bottom-up-100, .anim-item2._transform .home-section3__blue-square, .anim-item2._transform .transparency, .anim-item3._transform h4:not(.modal-window h4), .anim-item3._transform .left-to-right-12, .anim-item3._transform .left-to-right-25, .anim-item3._transform .left-to-right-50, .anim-item3._transform .right-to-left-25, .anim-item3._transform .right-to-left-50,
+.anim-item._transform h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.anim-item._transform .left-to-right-12, .anim-item._transform .left-to-right-25, .anim-item._transform .left-to-right-50, .anim-item._transform .right-to-left-25, .anim-item._transform .right-to-left-50,
+.anim-item._transform .bottom-up-15, .anim-item._transform .bottom-up-25, .anim-item._transform .bottom-up-50, .anim-item._transform .bottom-up-100, .anim-item._transform .home-section3__blue-square, .anim-item._transform .transparency, .anim-item2._transform h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.anim-item2._transform .left-to-right-12, .anim-item2._transform .left-to-right-25, .anim-item2._transform .left-to-right-50, .anim-item2._transform .right-to-left-25, .anim-item2._transform .right-to-left-50,
+.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25, .anim-item2._transform .bottom-up-50, .anim-item2._transform .bottom-up-100, .anim-item2._transform .home-section3__blue-square, .anim-item2._transform .transparency, .anim-item3._transform h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
+.anim-item3._transform .left-to-right-12, .anim-item3._transform .left-to-right-25, .anim-item3._transform .left-to-right-50, .anim-item3._transform .right-to-left-25, .anim-item3._transform .right-to-left-50,
 .anim-item3._transform .bottom-up-15, .anim-item3._transform .bottom-up-25, .anim-item3._transform .bottom-up-50, .anim-item3._transform .bottom-up-100, .anim-item3._transform .home-section3__blue-square, .anim-item3._transform .transparency {
   opacity: 1;
   visibility: visible;
@@ -461,16 +470,18 @@ picture .position-top {
   align-items: center;
 }
 .text-with-lines p {
-  padding: 27px 0 32px 0;
   line-height: 160%;
 }
-.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p) {
+.text-with-lines p:not(.test__stage1 p), .text-with-lines .stage3-text {
+  margin: 27px 0 32px 0;
+}
+.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p, .test__stage5 p) {
   text-align: justify;
 }
-.text-with-lines span {
+.text-with-lines span:not(.stage3-text) {
   font-family: "AmaticSC-Bold";
   font-size: 96px;
-  padding: 30px 0;
+  margin: 30px 0;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -884,7 +895,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   html, body {
     font-size: calc(10px + 10 * (100vw - 321px) / 979);
   }
-  .container .swiper-pagination {
+  .container .swiper-pagination:not(.test__stage3 .swiper-pagination) {
     margin-top: calc(6px + 20 * (100vw - 321px) / 979);
   }
   .swiper .swiper-pagination .swiper-pagination-bullet, .container .swiper-pagination .swiper-pagination-bullet {
@@ -945,12 +956,12 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     width: calc(60px + 25 * (100vw - 321px) / 979);
     height: calc(60px + 25 * (100vw - 321px) / 979);
   }
-  .text-with-lines p {
-    padding: calc(11px + 16 * (100vw - 321px) / 979) 0 calc(15px + 17 * (100vw - 321px) / 979) 0;
+  .text-with-lines p:not(.test__stage1 p), .text-with-lines .stage3-text {
+    margin: calc(11px + 16 * (100vw - 321px) / 979) 0 calc(15px + 17 * (100vw - 321px) / 979) 0;
   }
-  .text-with-lines span {
+  .text-with-lines span:not(.stage3-text) {
     font-size: calc(32px + 64 * (100vw - 321px) / 979);
-    padding: calc(13px + 17 * (100vw - 321px) / 979) 0;
+    margin: calc(13px + 17 * (100vw - 321px) / 979) 0;
   }
   .cost-tables-container {
     padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
@@ -1211,7 +1222,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   html, body {
     font-size: 10px;
   }
-  .container .swiper-pagination {
+  .container .swiper-pagination:not(.test__stage3 .swiper-pagination) {
     margin-top: 6px;
   }
   .swiper .swiper-pagination .swiper-pagination-bullet, .container .swiper-pagination .swiper-pagination-bullet {
@@ -1269,12 +1280,12 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     width: 60px;
     height: 60px;
   }
-  .text-with-lines p {
-    padding: 11px 0 15px 0;
+  .text-with-lines p:not(.test__stage1 p), .text-with-lines .stage3-text {
+    margin: 11px 0 15px 0;
   }
-  .text-with-lines span {
+  .text-with-lines span:not(.stage3-text) {
     font-size: 32px;
-    padding: 13px 0;
+    margin: 13px 0;
   }
   .cost-tables-container {
     padding: 0 15px;
@@ -1846,16 +1857,19 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   left: 100%;
   background-color: #FFFFFF;
 }
-.header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 a {
+.header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 a:not(.current-page) {
   color: #554874;
 }
+.header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 .current-page {
+  color: rgba(148, 1, 29, 0.8);
+}
 @media (hover: hover) and (pointer: fine) {
-  .header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 a {
+  .header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 a:not(.current-page) {
     transform: translate3d(0, 0, 0);
     transition: 0.3s ease;
   }
-  .header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 a:hover {
-    color: rgb(167, 50, 71);
+  .header2 .container .header2__nav nav .nav__internal-links .internal-links__box .internal-links-level1 .two-levels .internal-links-level2 a:not(.current-page):hover {
+    color: rgba(148, 1, 29, 0.8);
   }
 }
 @media (hover: none) {
@@ -2490,10 +2504,22 @@ footer .container .footer__vk-links a span {
     font-size: 12px;
   }
 }
+form:not(.test__stage form) .form__input-fields input, form:not(.test__stage form) .form__input-fields select, form:not(.test__stage form) .form__input-fields textarea {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.test__stage form .form__input-fields input, .test__stage form .form__input-fields select, .test__stage form .form__input-fields textarea {
+  background-color: #FAFAFA;
+}
+
 form {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+}
+form .form__text {
+  text-align: center;
+  margin-bottom: 40px;
 }
 form .form__input-fields {
   display: grid;
@@ -2503,7 +2529,6 @@ form .form__input-fields {
 form .form__input-fields input, form .form__input-fields select, form .form__input-fields textarea {
   border-radius: 5px;
   color: #554874;
-  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   transform: translate3d(0, 0, 0);
   transition: box-shadow 0.3s;
@@ -2602,6 +2627,9 @@ form .orange-btn {
   form {
     margin-top: calc(20px + 20 * (100vw - 321px) / 979);
   }
+  form .form__text {
+    margin-bottom: calc(20px + 20 * (100vw - 321px) / 979);
+  }
   form .form__input-fields {
     gap: calc(15px + 15 * (100vw - 321px) / 979);
   }
@@ -2647,6 +2675,9 @@ form .orange-btn {
 @media (max-width: 320.9px) {
   form {
     margin-top: 20px;
+  }
+  form .form__text {
+    margin-bottom: 20px;
   }
   form .form__input-fields {
     gap: 15px;
@@ -6785,5 +6816,252 @@ form .orange-btn {
 @media (max-width: 767.9px) {
   .services-provided {
     display: none;
+  }
+}
+.wedding-style-section2 {
+  padding: 60px 0 65px 0;
+  transition: background-color 0.3s;
+  transform: translate3d(0, 0, 0);
+}
+.wedding-style-section2 .container {
+  padding: 0 60px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test {
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage:not(._visible), .wedding-style-section2 .container .wedding-style-section2__test .test__cross:not(._visible) {
+  opacity: 0;
+  visibility: hidden;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s, visibility 0.8s;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage h4 {
+  line-height: 120%;
+  text-align: center;
+  color: rgba(148, 1, 29, 0.8);
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage:not(.test__stage3) {
+  padding: 0 10px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1 {
+  margin: 45px 0 60px 0;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1 h4 {
+  max-width: 702px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines {
+  margin-top: 40px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines .text-with-lines__text1 {
+  margin-top: 26px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines .text-with-lines__text2 {
+  margin: 12px 0 33px 0;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .transparency {
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;
+  margin-top: 46px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage1:not(._visible) {
+  pointer-events: none;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage2, .wedding-style-section2 .container .wedding-style-section2__test .test__stage4, .wedding-style-section2 .container .wedding-style-section2__test .test__stage5 {
+  margin-bottom: 15px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 5px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .text-with-lines {
+  margin-bottom: 35px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper {
+  max-width: 740px;
+  padding: 0 10px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide picture {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide picture img {
+  height: 100%;
+  object-fit: cover;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-pagination {
+  margin-top: 40px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-pagination .swiper-pagination-progressbar-fill {
+  background: #ED6F59;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage5 .text-with-lines {
+  margin-top: 40px;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__stage5 .text-with-lines p {
+  text-align: center;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__cross {
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s, visibility 0.8s;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.wedding-style-section2 .container .wedding-style-section2__test .test__cross svg {
+  width: 27px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .wedding-style-section2 .container .wedding-style-section2__test .test__cross svg path {
+    transition: stroke 0.3s;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__cross:hover svg path {
+    stroke: rgba(148, 1, 29, 0.8);
+  }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+  .wedding-style-section2 {
+    padding: calc(30px + 30 * (100vw - 321px) / 979) 0 calc(35px + 30 * (100vw - 321px) / 979) 0;
+  }
+  .wedding-style-section2 .container {
+    padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test {
+    padding: 0 calc(5px + 45 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 {
+    margin: calc(22px + 23 * (100vw - 321px) / 979) 0 calc(30px + 30 * (100vw - 321px) / 979) 0;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 h4 {
+    max-width: calc(351px + 351 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines {
+    margin-top: calc(20px + 20 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines .text-with-lines__text1 {
+    margin-top: calc(11px + 15 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines .text-with-lines__text2 {
+    margin: calc(8px + 4 * (100vw - 321px) / 979) 0 calc(16px + 17 * (100vw - 321px) / 979) 0;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .transparency {
+    margin-top: calc(25px + 21 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage2, .wedding-style-section2 .container .wedding-style-section2__test .test__stage4, .wedding-style-section2 .container .wedding-style-section2__test .test__stage5 {
+    margin-bottom: calc(8px + 7 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .text-with-lines {
+    margin-bottom: calc(20px + 15 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper {
+    max-width: calc(296px + 444 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide {
+    gap: calc(12px + 18 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide picture {
+    padding: calc(4px + 6 * (100vw - 321px) / 979);
+    box-shadow: 0 calc(2px + 2 * (100vw - 321px) / 979) calc(2px + 2 * (100vw - 321px) / 979) rgba(0, 0, 0, 0.2);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-pagination {
+    margin-top: calc(25px + 15 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage5 .text-with-lines {
+    margin-top: calc(20px + 20 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__cross {
+    top: calc(13px + 17 * (100vw - 321px) / 979);
+    right: calc(13px + 17 * (100vw - 321px) / 979);
+    width: calc(40px + 7 * (100vw - 321px) / 979);
+    height: calc(40px + 7 * (100vw - 321px) / 979);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__cross svg {
+    width: calc(16px + 11 * (100vw - 321px) / 979);
+  }
+}
+@media (max-width: 480.9px) {
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-pagination {
+    height: 3px;
+  }
+}
+@media (max-width: 320.9px) {
+  .wedding-style-section2 {
+    padding: 30px 0 35px 0;
+  }
+  .wedding-style-section2 .container {
+    padding: 0 15px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test {
+    padding: 0 5px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 {
+    margin: 22px 0 30px 0;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines {
+    margin-top: 20px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines .text-with-lines__text1 {
+    margin-top: 11px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .text-with-lines .text-with-lines__text2 {
+    margin: 8px 0 16px 0;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage1 .transparency {
+    margin-top: 25px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage2, .wedding-style-section2 .container .wedding-style-section2__test .test__stage4, .wedding-style-section2 .container .wedding-style-section2__test .test__stage5 {
+    margin-bottom: 8px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .text-with-lines {
+    margin-bottom: 20px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide {
+    gap: 12px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-wrapper .swiper-slide picture {
+    padding: 4px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage3 .swiper .swiper-pagination {
+    margin-top: 25px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__stage5 .text-with-lines {
+    margin-top: 20px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__cross {
+    top: 13px;
+    right: 13px;
+    width: 40px;
+    height: 40px;
+  }
+  .wedding-style-section2 .container .wedding-style-section2__test .test__cross svg {
+    width: 16px;
   }
 }

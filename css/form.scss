@@ -1,7 +1,23 @@
+form:not(.test__stage form) {
+    .form__input-fields {
+        input, select, textarea {background-color: rgba(255, 255, 255, 0.8);}
+    }
+}
+
+.test__stage form {
+    .form__input-fields {
+        input, select, textarea {background-color: #FAFAFA;}
+    }
+}
+
 form {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    .form__text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
     .form__input-fields {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -9,7 +25,6 @@ form {
         input, select, textarea {
             border-radius: 5px;
             color: $violet2;
-            background-color: rgba(255, 255, 255, 0.8);
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
             transform: translate3d(0, 0, 0);
             transition: box-shadow 0.3s;
@@ -99,6 +114,7 @@ form {
 @media (max-width: 1300.9px) and (min-width: 321px) {
     form {
         margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+        .form__text {margin-bottom: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
         .form__input-fields {
             gap: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321)));
             input, select {
@@ -152,6 +168,7 @@ form {
 @media (max-width: 320.9px) {
     form {
         margin-top: 20px;
+        .form__text {margin-bottom: 20px;}
         .form__input-fields {
             gap: 15px;
             input, select {

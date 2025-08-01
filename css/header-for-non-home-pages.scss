@@ -68,13 +68,14 @@
                                     top: 0;
                                     left: 100%;
                                     background-color: $white;
-                                    a {color: $violet2;}
+                                    a:not(.current-page) {color: $violet2;}
+                                    .current-page {color: $red2;}
                                     @media (hover: hover) and (pointer: fine) {
-                                        a {
+                                        a:not(.current-page) {
                                             transform: translate3d(0, 0, 0);
                                             transition: 0.3s ease;
                                         }
-                                        a:hover {color: rgb(167, 50, 71);}
+                                        a:not(.current-page):hover {color: $red2;}
                                     }
                                 }
                                 @media (hover: none) {

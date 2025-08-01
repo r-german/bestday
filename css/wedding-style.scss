@@ -1,0 +1,233 @@
+.wedding-style-section2 {
+    padding: 60px 0 65px 0;
+    transition: background-color 0.3s;
+    transform: translate3d(0, 0, 0);
+    .container {
+        padding: 0 60px;
+        .wedding-style-section2__test {
+            position: relative;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+            background-color: $white;
+            .test__stage:not(._visible), .test__cross:not(._visible) {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .test__stage {
+                grid-row: 1/2;
+                grid-column: 1/2;
+                transform: translate3d(0, 0, 0);
+                transition: opacity 0.8s, visibility 0.8s;
+                h4 {
+                    line-height: 120%;
+                    text-align: center;
+                    color: $red2;
+                }
+            }
+            .test__stage:not(.test__stage3) {padding: 0 10px;}
+            .test__stage1 {
+                margin: 45px 0 60px 0;
+                h4 {max-width: 702px;}
+                .text-with-lines {
+                    margin-top: 40px;
+                    .text-with-lines__text1 {margin-top: 26px;}
+                    .text-with-lines__text2 {margin: 12px 0 33px 0;}
+                }
+                .transparency {
+                    transform: translate3d(0, 0, 0);
+                    transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;
+                    margin-top: 46px;
+                }
+            }
+            .test__stage1:not(._visible) {pointer-events: none;}
+            .test__stage2, .test__stage4, .test__stage5 {margin-bottom: 15px;}
+            .test__stage3 {
+                width: 100%;
+                min-width: 0;
+                margin-bottom: 5px;
+                .text-with-lines {margin-bottom: 35px;}
+                .swiper {
+                    max-width: 740px;
+                    padding: 0 10px;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 30px;
+                            picture {
+                                padding: 10px;
+                                border-radius: 5px;
+                                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+                                cursor: pointer;
+                                img {
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        margin-top: 40px;
+                        .swiper-pagination-progressbar-fill {background: $red1;}
+                    }
+                }
+            }
+            .test__stage5 {
+                .text-with-lines {
+                    margin-top: 40px;
+                    p {text-align: center;}
+                }
+            }
+            .test__cross {
+                transform: translate3d(0, 0, 0);
+                transition: opacity 0.8s, visibility 0.8s;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 47px;
+                height: 47px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                svg {width: 27px;}
+            }
+            @media (hover: hover) and (pointer: fine) {
+                .test__cross {
+                    svg {
+                        path {transition: stroke 0.3s;}
+                    }
+                }
+                .test__cross:hover {
+                    svg {
+                        path {stroke: $red2;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .wedding-style-section2 {
+        padding: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                 calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .wedding-style-section2__test {
+                padding: 0 calc(5px + (50 - 5) * ((100vw - 321px) / (1300 - 321)));
+                .test__stage1 {
+                    margin: calc(22px + (45 - 22) * ((100vw - 321px) / (1300 - 321))) 0
+                            calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0;
+                    h4 {max-width: calc(351px + (702 - 351) * ((100vw - 321px) / (1300 - 321)));}
+                    .text-with-lines {
+                        margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+                        .text-with-lines__text1 {margin-top: calc(11px + (26 - 11) * ((100vw - 321px) / (1300 - 321)));}
+                        .text-with-lines__text2 {
+                            margin: calc(8px + (12 - 8) * ((100vw - 321px) / (1300 - 321))) 0
+                                    calc(16px + (33 - 16) * ((100vw - 321px) / (1300 - 321))) 0;
+                        }
+                    }
+                    .transparency {margin-top: calc(25px + (46 - 25) * ((100vw - 321px) / (1300 - 321)));}
+                }
+                .test__stage2, .test__stage4, .test__stage5 {margin-bottom: calc(8px + (15 - 8) * ((100vw - 321px) / (1300 - 321)));}
+                .test__stage3 {
+                    .text-with-lines {margin-bottom: calc(20px + (35 - 20) * ((100vw - 321px) / (1300 - 321)));}
+                    .swiper {
+                        max-width: calc(296px + (740 - 296) * ((100vw - 321px) / (1300 - 321)));
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                gap: calc(12px + (30 - 12) * ((100vw - 321px) / (1300 - 321)));
+                                picture {
+                                    padding: calc(4px + (10 - 4) * ((100vw - 321px) / (1300 - 321)));
+                                    box-shadow: 0
+                                                calc(2px + (4 - 2) * ((100vw - 321px) / (1300 - 321)))
+                                                calc(2px + (4 - 2) * ((100vw - 321px) / (1300 - 321)))
+                                                rgba(0, 0, 0, 0.2);
+                                }
+                            }
+                        }
+                        .swiper-pagination {margin-top: calc(25px + (40 - 25) * ((100vw - 321px) / (1300 - 321)));}
+                    }
+                }
+                .test__stage5 {
+                    .text-with-lines {margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
+                }
+                .test__cross {
+                    top: calc(13px + (30 - 13) * ((100vw - 321px) / (1300 - 321)));
+                    right: calc(13px + (30 - 13) * ((100vw - 321px) / (1300 - 321)));
+                    width: calc(40px + (47 - 40) * ((100vw - 321px) / (1300 - 321)));
+                    height: calc(40px + (47 - 40) * ((100vw - 321px) / (1300 - 321)));
+                    svg {width: calc(16px + (27 - 16) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .wedding-style-section2 {
+        .container {
+            .wedding-style-section2__test {
+                .test__stage3 {
+                    .swiper {
+                        .swiper-pagination {height: 3px;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .wedding-style-section2 {
+        padding: 30px 0 35px 0;
+        .container {
+            padding: 0 15px;
+            .wedding-style-section2__test {
+                padding: 0 5px;
+                .test__stage1 {
+                    margin: 22px 0 30px 0;
+                    .text-with-lines {
+                        margin-top: 20px;
+                        .text-with-lines__text1 {margin-top: 11px;}
+                        .text-with-lines__text2 {margin: 8px 0 16px 0;}
+                    }
+                    .transparency {margin-top: 25px;}
+                }
+                .test__stage2, .test__stage4, .test__stage5 {margin-bottom: 8px;}
+                .test__stage3 {
+                    .text-with-lines {margin-bottom: 20px;}
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                gap: 12px;
+                                picture {
+                                    padding: 4px;
+                                    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+                                }
+                            }
+                        }
+                        .swiper-pagination {margin-top: 25px;}
+                    }
+                }
+                .test__stage5 {
+                    .text-with-lines {margin-top: 20px;}
+                }
+                .test__cross {
+                    top: 13px;
+                    right: 13px;
+                    width: 40px;
+                    height: 40px;
+                    svg {width: 16px;}
+                }
+            }
+        }
+    }
+}
