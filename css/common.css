@@ -420,9 +420,12 @@ h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
   visibility: visible;
 }
 .anim-item._transform .left-to-right-12, .anim-item._transform .left-to-right-25, .anim-item._transform .left-to-right-50, .anim-item._transform .right-to-left-25, .anim-item._transform .right-to-left-50,
-.anim-item._transform .bottom-up-15, .anim-item._transform .bottom-up-25:not(.team-section3__teammate), .anim-item._transform .bottom-up-50:not(.centered-card), .anim-item._transform .bottom-up-100, .anim-item2._transform .left-to-right-12, .anim-item2._transform .left-to-right-25, .anim-item2._transform .left-to-right-50, .anim-item2._transform .right-to-left-25, .anim-item2._transform .right-to-left-50,
-.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25:not(.team-section3__teammate), .anim-item2._transform .bottom-up-50:not(.centered-card), .anim-item2._transform .bottom-up-100, .anim-item3._transform .left-to-right-12, .anim-item3._transform .left-to-right-25, .anim-item3._transform .left-to-right-50, .anim-item3._transform .right-to-left-25, .anim-item3._transform .right-to-left-50,
-.anim-item3._transform .bottom-up-15, .anim-item3._transform .bottom-up-25:not(.team-section3__teammate), .anim-item3._transform .bottom-up-50:not(.centered-card), .anim-item3._transform .bottom-up-100 {
+.anim-item._transform .bottom-up-15, .anim-item._transform .bottom-up-25:not(.team-section3__teammate, .photo-on-the-left div, .photo-on-the-right div),
+.anim-item._transform .bottom-up-50:not(.centered-card), .anim-item._transform .bottom-up-100, .anim-item2._transform .left-to-right-12, .anim-item2._transform .left-to-right-25, .anim-item2._transform .left-to-right-50, .anim-item2._transform .right-to-left-25, .anim-item2._transform .right-to-left-50,
+.anim-item2._transform .bottom-up-15, .anim-item2._transform .bottom-up-25:not(.team-section3__teammate, .photo-on-the-left div, .photo-on-the-right div),
+.anim-item2._transform .bottom-up-50:not(.centered-card), .anim-item2._transform .bottom-up-100, .anim-item3._transform .left-to-right-12, .anim-item3._transform .left-to-right-25, .anim-item3._transform .left-to-right-50, .anim-item3._transform .right-to-left-25, .anim-item3._transform .right-to-left-50,
+.anim-item3._transform .bottom-up-15, .anim-item3._transform .bottom-up-25:not(.team-section3__teammate, .photo-on-the-left div, .photo-on-the-right div),
+.anim-item3._transform .bottom-up-50:not(.centered-card), .anim-item3._transform .bottom-up-100 {
   transform: translate3d(0, 0, 0);
 }
 
@@ -474,7 +477,7 @@ picture .position-top {
 .text-with-lines p:not(.test__stage1 p), .text-with-lines .stage3-text {
   margin: 27px 0 32px 0;
 }
-.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p) {
+.text-with-lines p:not(.about-company-section9 p, .wedding-organization-section2 p, .test__stage5 p, .saint-petersburg-section2 p) {
   text-align: justify;
 }
 .text-with-lines span:not(.stage3-text) {
@@ -530,6 +533,15 @@ picture .position-top {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.84);
 }
+.cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content .content__cost {
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  margin-bottom: 15px;
+  color: #412C73;
+}
+.cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content .content__cost span {
+  font-family: "NewsCycle-Bold";
+}
 .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content p {
   flex: 1 1 auto;
   font-size: 15px;
@@ -538,7 +550,7 @@ picture .position-top {
   text-align: center;
   color: #4B2F32;
 }
-.cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button {
+.cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content a {
   font-size: 15px;
   padding: 10px 30px 13px 30px;
   margin-top: 20px;
@@ -894,7 +906,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   html, body {
     font-size: calc(10px + 10 * (100vw - 321px) / 979);
   }
-  .container .swiper-pagination {
+  .container .swiper-pagination:not(.test__stage3 .swiper-pagination) {
     margin-top: calc(6px + 20 * (100vw - 321px) / 979);
   }
   .swiper .swiper-pagination .swiper-pagination-bullet, .container .swiper-pagination .swiper-pagination-bullet {
@@ -955,10 +967,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     width: calc(60px + 25 * (100vw - 321px) / 979);
     height: calc(60px + 25 * (100vw - 321px) / 979);
   }
-  .text-with-lines p:not(.test__stage1 p) {
+  .text-with-lines p:not(.test__stage1 p), .text-with-lines .stage3-text {
     margin: calc(11px + 16 * (100vw - 321px) / 979) 0 calc(15px + 17 * (100vw - 321px) / 979) 0;
   }
-  .text-with-lines span {
+  .text-with-lines span:not(.stage3-text) {
     font-size: calc(32px + 64 * (100vw - 321px) / 979);
     margin: calc(13px + 17 * (100vw - 321px) / 979) 0;
   }
@@ -977,10 +989,13 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content {
     padding: calc(12px + 8 * (100vw - 321px) / 979);
   }
-  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content p, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button {
+  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content .content__cost {
+    font-size: calc(16px + 16 * (100vw - 321px) / 979);
+  }
+  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content p, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content a {
     font-size: calc(10px + 5 * (100vw - 321px) / 979);
   }
-  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button {
+  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content a {
     padding: calc(7px + 3 * (100vw - 321px) / 979) calc(15px + 15 * (100vw - 321px) / 979) calc(8px + 5 * (100vw - 321px) / 979) calc(15px + 15 * (100vw - 321px) / 979);
     margin-top: calc(12px + 8 * (100vw - 321px) / 979);
   }
@@ -1221,7 +1236,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   html, body {
     font-size: 10px;
   }
-  .container .swiper-pagination {
+  .container .swiper-pagination:not(.test__stage3 .swiper-pagination) {
     margin-top: 6px;
   }
   .swiper .swiper-pagination .swiper-pagination-bullet, .container .swiper-pagination .swiper-pagination-bullet {
@@ -1279,10 +1294,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     width: 60px;
     height: 60px;
   }
-  .text-with-lines p:not(.test__stage1 p) {
+  .text-with-lines p:not(.test__stage1 p), .text-with-lines .stage3-text {
     margin: 11px 0 15px 0;
   }
-  .text-with-lines span {
+  .text-with-lines span:not(.stage3-text) {
     font-size: 32px;
     margin: 13px 0;
   }
@@ -1301,10 +1316,13 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content {
     padding: 12px;
   }
-  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content p, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button {
+  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content .content__cost {
+    font-size: 16px;
+  }
+  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content p, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content a {
     font-size: 10px;
   }
-  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button {
+  .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content button, .cost-tables-container .cost-tables .cost-table-wrapper .cost-table .cost-table__content a {
     padding: 7px 15px 8px 15px;
     margin-top: 12px;
   }

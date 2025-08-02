@@ -126,6 +126,8 @@
             .card {
                 grid-template-rows: auto 1fr;
                 div {
+                    width: 85px;
+                    height: 85px;
                     grid-row: 1/3;
                     background: linear-gradient(to right, $orange1 11%, $white 11%);
                 }
@@ -282,8 +284,33 @@
     }
 }
 
+.about-company-section8:not(.saint-petersburg-section4) {
+    margin-top: 40px;
+    .container {
+        .about-company-section8__cards {
+            grid-template-columns: repeat(3, 1fr);
+            .card {
+                div {
+                    width: 85px;
+                    height: 85px;
+                    .svg-key {height: 75%;}
+                }
+                p {font-size: 13px;}
+            }
+            .centered-card {transform: translate3d(calc(50% + 15px), 50%, 0);}
+        }
+    }
+}
+
+.about-company-section8:not(.saint-petersburg-section4)._transform {
+    .container {
+        .about-company-section8__cards {
+            .centered-card {transform: translate3d(calc(50% + 15px), 0, 0);}
+        }
+    }
+}
+
 .about-company-section8 {
-    margin-top: 50px;
     background-color: $brown3;
     .about-company-section8__title {
         background-color: $white2;
@@ -297,7 +324,6 @@
         padding: 60px;
         .about-company-section8__cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
             column-gap: 30px;
             row-gap: 60px;
             .card {
@@ -305,25 +331,14 @@
                 div {
                     grid-row: 1/3;
                     background: linear-gradient(to right, $violet2 11%, $white 11%);
-                    .svg-key {height: 75%;}
                 }
                 span, p {color: $white;}
                 p {
                     text-transform: lowercase;
-                    font-size: 13px;
                     line-height: 125%;
                     margin-top: 8px;
                 }
             }
-            .centered-card {transform: translate3d(calc(50% + 15px), 50%, 0);}
-        }
-    }
-}
-
-.about-company-section8._transform {
-    .container {
-        .about-company-section8__cards {
-            .centered-card {transform: translate3d(calc(50% + 15px), 0, 0);}
         }
     }
 }
@@ -453,6 +468,10 @@
                 column-gap: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321)));
                 margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
                 .card {
+                    div {
+                        width: calc(60px + (85 - 60) * ((100vw - 321px) / (1300 - 321)));
+                        height: calc(60px + (85 - 60) * ((100vw - 321px) / (1300 - 321)));
+                    }
                     p {font-size: calc(10px + (14 - 10) * ((100vw - 321px) / (1300 - 321)));}
                 }
             }
@@ -504,8 +523,29 @@
             }
         }
     }
+    .about-company-section8:not(.saint-petersburg-section4) {
+        margin-top: calc(5px + (40 - 5) * ((100vw - 321px) / (1300 - 321)));
+        .container {
+            .about-company-section8__cards {
+                .card {
+                    div {
+                        width: calc(60px + (85 - 60) * ((100vw - 321px) / (1300 - 321)));
+                        height: calc(60px + (85 - 60) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                    p {font-size: calc(10px + (13 - 10) * ((100vw - 321px) / (1300 - 321)));}
+                }
+                .centered-card {transform: translate3d(calc(50% + 8px + (15 - 8) * ((100vw - 321px) / (1300 - 321))), 50%, 0);}
+            }
+        }
+    }
+    .about-company-section8:not(.saint-petersburg-section4)._transform {
+        .container {
+            .about-company-section8__cards {
+                .centered-card {transform: translate3d(calc(50% + 8px + (15 - 8) * ((100vw - 321px) / (1300 - 321))), 0, 0);}
+            }
+        }
+    }
     .about-company-section8 {
-        margin-top: calc(15px + (50 - 15) * ((100vw - 321px) / (1300 - 321)));
         .about-company-section8__title {
             h4 {
                 padding: calc(8px + (10 - 8) * ((100vw - 321px) / (1300 - 321)))
@@ -518,17 +558,6 @@
             .about-company-section8__cards {
                 column-gap: calc(16px + (30 - 16) * ((100vw - 321px) / (1300 - 321)));
                 row-gap: calc(25px + (60 - 25) * ((100vw - 321px) / (1300 - 321)));
-                .card {
-                    p {font-size: calc(10px + (13 - 10) * ((100vw - 321px) / (1300 - 321)));}
-                }
-                .centered-card {transform: translate3d(calc(50% + 8px + (15 - 8) * ((100vw - 321px) / (1300 - 321))), 50%, 0);}
-            }
-        }
-    }
-    .about-company-section8._transform {
-        .container {
-            .about-company-section8__cards {
-                .centered-card {transform: translate3d(calc(50% + 8px + (15 - 8) * ((100vw - 321px) / (1300 - 321))), 0, 0);}
             }
         }
     }
@@ -620,6 +649,13 @@
             .about-company-section6__swiper {max-width: 790px;}
         }
     }
+    .about-company-section8:not(.saint-petersburg-section4) {
+        .container {
+            .about-company-section8__cards {
+                .card {max-width: 260px;}
+            }
+        }
+    }
     .about-company-section8 {
         .container {
             display: flex;
@@ -628,7 +664,6 @@
                 .card {
                     grid-template-columns: 1fr;
                     grid-template-rows: auto auto 1fr;
-                    max-width: 260px;
                     div {
                         grid-row: 1/2;
                         margin: 0 auto 10px auto;
@@ -759,7 +794,7 @@
             }
         }
     }
-    .about-company-section8 {
+    .about-company-section8:not(.saint-petersburg-section4) {
         .container {
             .about-company-section8__cards {
                 grid-template-columns: 1fr;
@@ -767,7 +802,7 @@
             }
         }
     }
-    .about-company-section8._transform {
+    .about-company-section8:not(.saint-petersburg-section4)._transform {
         .container {
             .about-company-section8__cards {
                 .centered-card {transform: translate3d(0, 0, 0);}
@@ -825,6 +860,10 @@
             .about-company-section5__cards {
                 margin-top: 20px;
                 .card {
+                    div {
+                        width: 60px;
+                        height: 60px;
+                    }
                     p {font-size: 10px;}
                 }
             }
@@ -868,8 +907,21 @@
             }
         }
     }
+    .about-company-section8:not(.saint-petersburg-section4) {
+        margin-top: 5px;
+        .container {
+            .about-company-section8__cards {
+                .card {
+                    div {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    p {font-size: 10px;}
+                }
+            }
+        }
+    }
     .about-company-section8 {
-        margin-top: 15px;
         .about-company-section8__title {
             h4 {padding: 8px 16px;}
         }
@@ -878,12 +930,7 @@
             padding-bottom: 35px;
             padding-left: 10px;
             padding-right: 10px;
-            .about-company-section8__cards {
-                row-gap: 25px;
-                .card {
-                    p {font-size: 10px;}
-                }
-            }
+            .about-company-section8__cards {row-gap: 25px;}
         }
     }
     .about-company-section9 {

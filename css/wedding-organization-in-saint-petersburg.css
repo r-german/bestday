@@ -1,0 +1,15 @@
+.saint-petersburg-section2 {
+  margin: 60px 0 50px 0;
+}
+.saint-petersburg-section2 .container .text-with-lines {
+  max-width: 542px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.saint-petersburg-section2 .container .text-with-lines p {
+  text-align: center;
+}
+.saint-petersburg-section2 .photo-on-the-left, .saint-petersburg-section2 .photo-on-the-right {
+  display: grid;
+  column-gap: 60px;
+}

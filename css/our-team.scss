@@ -50,12 +50,14 @@
         }
         .dividing-line {
             transform: translate3d(0, 0, 0);
-            transition: opacity 0.8s 0.5s;
+            transition: opacity 1s 0.5s;
         }
         p {
             font-size: 18px;
             line-height: 166%;
             text-align: justify;
+            transform: translate3d(0, 0, 0);
+            transition: opacity 1s 0.5s, visibility 1s 0.5s;
             color: $brown1;
         }
     }
@@ -342,7 +344,6 @@
             p {
                 font-size: 13px;
                 line-height: 150%;
-                transform: translate3d(0, 50%, 0);
             }
         }
     }
