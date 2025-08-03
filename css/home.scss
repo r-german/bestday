@@ -450,7 +450,7 @@
         padding: 50px 60px 65px 60px;
         h4 {
             color: $violet1;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
     }
 }
@@ -781,7 +781,7 @@
                      calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)))
                      calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321)))
                      calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
-            h4 {margin-bottom: calc(17px + (30 - 17) * ((100vw - 321px) / (1300 - 321)));}
+            h4 {margin-bottom: calc(17px + (32 - 17) * ((100vw - 321px) / (1300 - 321)));}
         }
     }
     .home-section7 {
@@ -984,6 +984,11 @@
                     .with-photo__social-network {display: none;}
                 }
             }
+        }
+    }
+    .home-section7 {
+        .container {
+            .home-section7__swiper {transform: translate3d(0, 15%, 0);}
         }
     }
 }

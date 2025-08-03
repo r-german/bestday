@@ -1,10 +1,10 @@
 // Модальное окно для пакетов услуг
 const modalWindowForServices = document.getElementById('modal-window-for-services');
 const servicePackageBtns = document.querySelectorAll('.service-package__description button');
-const etude = document.querySelector('.service-list-wrapper__etude');
-const novella = document.querySelector('.service-list-wrapper__novella');
-const poem = document.querySelector('.service-list-wrapper__poem');
-const turnkey = document.querySelector('.service-list-wrapper__turnkey');
+const etude = document.getElementById('etude');
+const novella = document.getElementById('novella');
+const poem = document.getElementById('poem');
+const turnkey = document.getElementById('turnkey');
 
 servicePackageBtns.forEach((servicePackageBtn) => {
     servicePackageBtn.addEventListener('click', function() {

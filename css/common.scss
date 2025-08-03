@@ -187,7 +187,7 @@ body._lock, main {overflow: hidden;}
         max-width: 1050px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
+        margin-top: 32px;
         .swiper {
             background-color: $white;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
@@ -324,7 +324,7 @@ h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
 
 h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
 .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
-.bottom-up-15, .bottom-up-25, .bottom-up-50:not(.swiper), .bottom-up-100, .transparency {
+.bottom-up-15, .bottom-up-25:not(.saint-petersburg-section12__swiper), .bottom-up-50:not(.swiper), .bottom-up-100, .transparency {
     position: relative;
     z-index: 2;
 }
@@ -829,7 +829,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     .photo-gallery-container {
         padding: 0 calc(40px + (115 - 40) * ((100vw - 321px) / (1300 - 321)));
         .photo-gallery-slider {
-            margin-top: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321)));
+            margin-top: calc(17px + (32 - 17) * ((100vw - 321px) / (1300 - 321)));
             .swiper {
                 .swiper-wrapper {
                     .swiper-slide {
@@ -1064,6 +1064,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
             .service-package {
                 grid-template-rows: auto 1fr;
                 max-width: 350px;
+                transform: translate3d(0, 15%, 0);
                 .service-package__name {
                     grid-row: auto;
                     border-bottom-left-radius: unset;
@@ -1204,7 +1205,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     .photo-gallery-container {
         padding: 0 40px;
         .photo-gallery-slider {
-            margin-top: 15px;
+            margin-top: 17px;
             .swiper {
                 .swiper-wrapper {
                     .swiper-slide {

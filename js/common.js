@@ -17,12 +17,19 @@ var callback = function(entries) {
             if (entry.target.classList.contains('typing-effect')) {
                 typeWriter();
             }
-            else if (entry.target.parentElement.classList.contains('about-company-section3')) {
+            else if (entry.target.classList.contains('counter1')) {
                 animateNumber('number-to-animate1', 0, 16, 2000);
                 animateNumber('number-to-animate2', 0, 9900, 2000);
                 animateNumber('number-to-animate3', 0, 85, 2000);
                 animateNumber('number-to-animate4', 0, 5840, 2000);
                 animateNumber('number-to-animate5', 0, 150, 2000);
+            }
+            else if (entry.target.classList.contains('counter2')) {
+                animateNumber('number-to-animate1', 0, 16, 2000);
+                animateNumber('number-to-animate2', 0, 52, 2000);
+                animateNumber('number-to-animate3', 0, 85, 2000);
+                animateNumber('number-to-animate4', 0, 198, 2000);
+                animateNumber('number-to-animate5', 0, 400, 2000);
             }
             observer.unobserve(entry.target);
         }

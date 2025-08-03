@@ -202,7 +202,7 @@ body._lock, main {
   max-width: 1050px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 32px;
 }
 .photo-gallery-container .photo-gallery-slider .swiper {
   background-color: #FFFFFF;
@@ -348,7 +348,7 @@ h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
 
 h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
 .left-to-right-12, .left-to-right-25, .left-to-right-50, .right-to-left-25, .right-to-left-50,
-.bottom-up-15, .bottom-up-25, .bottom-up-50:not(.swiper), .bottom-up-100, .transparency {
+.bottom-up-15, .bottom-up-25:not(.saint-petersburg-section12__swiper), .bottom-up-50:not(.swiper), .bottom-up-100, .transparency {
   position: relative;
   z-index: 2;
 }
@@ -932,7 +932,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     padding: 0 calc(40px + 75 * (100vw - 321px) / 979);
   }
   .photo-gallery-container .photo-gallery-slider {
-    margin-top: calc(15px + 15 * (100vw - 321px) / 979);
+    margin-top: calc(17px + 15 * (100vw - 321px) / 979);
   }
   .photo-gallery-container .photo-gallery-slider .swiper .swiper-wrapper .swiper-slide {
     padding: calc(5px + 5 * (100vw - 321px) / 979);
@@ -1138,6 +1138,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .service-packages-container .service-packages .service-package {
     grid-template-rows: auto 1fr;
     max-width: 350px;
+    transform: translate3d(0, 15%, 0);
   }
   .service-packages-container .service-packages .service-package .service-package__name {
     grid-row: auto;
@@ -1259,7 +1260,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     padding: 0 40px;
   }
   .photo-gallery-container .photo-gallery-slider {
-    margin-top: 15px;
+    margin-top: 17px;
   }
   .photo-gallery-container .photo-gallery-slider .swiper .swiper-wrapper .swiper-slide {
     padding: 5px;
@@ -2785,14 +2786,19 @@ form .orange-btn {
   align-items: center;
   background-color: #FFFFFF;
 }
+.modal-window .modal-window-container .modal-window__service-list-wrapper #etude, .modal-window .modal-window-container .modal-window__service-list-wrapper #novella, .modal-window .modal-window-container .modal-window__service-list-wrapper #poem, .modal-window .modal-window-container .modal-window__service-list-wrapper #turnkey {
+  display: none;
+}
 .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__text {
-  font-size: 32px;
-  text-transform: capitalize;
+  display: block;
+  font-size: 28px;
+  line-height: 120%;
+  margin-top: -5px;
+  margin-right: 32px;
   color: #412C73;
 }
 .modal-window .modal-window-container .modal-window__service-list-wrapper ul {
-  display: none;
-  margin: 25px 0 35px 0;
+  margin: 25px 0 38px 0;
 }
 .modal-window .modal-window-container .modal-window__service-list-wrapper ul li {
   list-style: none;
@@ -2835,10 +2841,11 @@ form .orange-btn {
     width: calc(16px + 11 * (100vw - 321px) / 979);
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__text {
-    font-size: calc(16px + 16 * (100vw - 321px) / 979);
+    font-size: calc(16px + 12 * (100vw - 321px) / 979);
+    margin-top: calc(-2px + -3 * (100vw - 321px) / 979);
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul {
-    margin: calc(15px + 10 * (100vw - 321px) / 979) 0 calc(20px + 15 * (100vw - 321px) / 979) 0;
+    margin: calc(15px + 10 * (100vw - 321px) / 979) 0 calc(21px + 17 * (100vw - 321px) / 979) 0;
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul li {
     padding-left: calc(9px + 9 * (100vw - 321px) / 979);
@@ -2890,9 +2897,10 @@ form .orange-btn {
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__text {
     font-size: 16px;
+    margin-top: -2px;
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul {
-    margin: 15px 0 20px 0;
+    margin: 15px 0 21px 0;
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul li {
     padding-left: 9px;
@@ -3324,7 +3332,7 @@ form .orange-btn {
 }
 .home-section6 .container h4 {
   color: #412C73;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .home-section7 {
@@ -3584,7 +3592,7 @@ form .orange-btn {
     padding: calc(25px + 25 * (100vw - 321px) / 979) calc(20px + 40 * (100vw - 321px) / 979) calc(35px + 30 * (100vw - 321px) / 979) calc(20px + 40 * (100vw - 321px) / 979);
   }
   .home-section6 .container h4 {
-    margin-bottom: calc(17px + 13 * (100vw - 321px) / 979);
+    margin-bottom: calc(17px + 15 * (100vw - 321px) / 979);
   }
   .home-section7 .container {
     padding: 0 calc(10px + 40 * (100vw - 321px) / 979) calc(35px + 30 * (100vw - 321px) / 979) calc(10px + 40 * (100vw - 321px) / 979);
@@ -3756,6 +3764,9 @@ form .orange-btn {
   }
   .home-section1 .container .home-section1__photo-frame .photo-frame__with-photo .with-photo__social-network {
     display: none;
+  }
+  .home-section7 .container .home-section7__swiper {
+    transform: translate3d(0, 15%, 0);
   }
 }
 @media (max-width: 600.9px) {
@@ -7209,11 +7220,75 @@ form .orange-btn {
 }
 
 .saint-petersburg-section7 {
-  padding: 60px 0;
+  padding: 60px;
   background: url("../img/saint-petersburg_section7-bg.png"), #FFFFFF;
 }
 .saint-petersburg-section7 div {
   transition: opacity 0.8s, visibility 0.8s;
+}
+
+.saint-petersburg-section8 {
+  margin: 50px 0 65px 0;
+}
+.saint-petersburg-section8 .underlined-link {
+  transition: opacity 0.8s 2.7s, visibility 0.8s 2.7s;
+}
+
+.saint-petersburg-section9, .saint-petersburg-section11 {
+  padding: 60px;
+  background-color: #FFFFFF;
+}
+.saint-petersburg-section9 .text-with-lines, .saint-petersburg-section11 .text-with-lines {
+  max-width: 842px;
+}
+
+.saint-petersburg-section12 {
+  margin: 50px 0 65px 0;
+}
+.saint-petersburg-section12 .container {
+  padding: 0 115px;
+}
+.saint-petersburg-section12 .container h4 {
+  text-align: center;
+  color: #412C73;
+}
+.saint-petersburg-section12 .container .saint-petersburg-section12__swiper {
+  position: relative;
+  z-index: 3;
+  max-width: 736px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
+.saint-petersburg-section12 .container .saint-petersburg-section12__swiper .swiper {
+  border: 8px solid #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.saint-petersburg-section12 .container .saint-petersburg-section12__swiper .swiper .swiper-wrapper .swiper-slide video {
+  display: block;
+  width: 100%;
+}
+.saint-petersburg-section12 .container .video-title {
+  display: grid;
+  padding: 12px 30px 19px 30px;
+  width: fit-content;
+  margin: 0 auto;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s 1.2s, visibility 0.8s 1.2s;
+  background-color: #EFBF84;
+}
+.saint-petersburg-section12 .container .video-title span {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.6s, visibility 0.6s;
+  color: #412C73;
+}
+.saint-petersburg-section12 .container .video-title span:not(._visible) {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 1300.9px) and (min-width: 321px) {
@@ -7245,8 +7320,26 @@ form .orange-btn {
   .saint-petersburg-section4 .container .about-company-section8__cards .card p {
     font-size: calc(10px + 4 * (100vw - 321px) / 979);
   }
-  .saint-petersburg-section7 {
-    padding: calc(30px + 30 * (100vw - 321px) / 979) 0;
+  .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11 {
+    padding: calc(30px + 30 * (100vw - 321px) / 979) calc(20px + 40 * (100vw - 321px) / 979);
+  }
+  .saint-petersburg-section8 {
+    margin: calc(25px + 25 * (100vw - 321px) / 979) 0 calc(35px + 30 * (100vw - 321px) / 979) 0;
+  }
+  .saint-petersburg-section9 .text-with-lines, .saint-petersburg-section11 .text-with-lines {
+    max-width: calc(421px + 421 * (100vw - 321px) / 979);
+  }
+  .saint-petersburg-section12 {
+    margin: calc(25px + 25 * (100vw - 321px) / 979) 0 calc(35px + 30 * (100vw - 321px) / 979) 0;
+  }
+  .saint-petersburg-section12 .container {
+    padding: 0 calc(40px + 75 * (100vw - 321px) / 979);
+  }
+  .saint-petersburg-section12 .container .saint-petersburg-section12__swiper {
+    margin-top: calc(17px + 15 * (100vw - 321px) / 979);
+  }
+  .saint-petersburg-section12 .container .video-title {
+    padding: calc(8px + 4 * (100vw - 321px) / 979) calc(12px + 18 * (100vw - 321px) / 979) calc(11px + 8 * (100vw - 321px) / 979) calc(12px + 18 * (100vw - 321px) / 979);
   }
 }
 @media (max-width: 1300.9px) and (min-width: 992px) {
@@ -7277,6 +7370,14 @@ form .orange-btn {
   }
   .saint-petersburg-section2 .photo-on-the-left:not(.photo-on-the-left:last-child), .saint-petersburg-section2 .photo-on-the-right:not(.photo-on-the-right:last-child) {
     margin-bottom: calc(30px + 20 * (100vw - 321px) / 670);
+  }
+  .saint-petersburg-section12 .container .saint-petersburg-section12__swiper .swiper {
+    border: calc(5px + 3 * (100vw - 321px) / 670) solid #FFFFFF;
+  }
+}
+@media (max-width: 991.9px) and (min-width: 601px) {
+  .saint-petersburg-section8 .underlined-link {
+    transition: opacity 0.8s 1.7s, visibility 0.8s 1.7s;
   }
 }
 @media (max-width: 991.9px) {
@@ -7356,7 +7457,25 @@ form .orange-btn {
   .saint-petersburg-section4 .container .about-company-section8__cards .card p {
     font-size: 10px;
   }
-  .saint-petersburg-section7 {
-    padding: 30px 0;
+  .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11 {
+    padding: 30px 20px;
+  }
+  .saint-petersburg-section8 {
+    margin: 25px 0 35px 0;
+  }
+  .saint-petersburg-section12 {
+    margin: 25px 0 35px 0;
+  }
+  .saint-petersburg-section12 .container {
+    padding: 0 40px;
+  }
+  .saint-petersburg-section12 .container .saint-petersburg-section12__swiper {
+    margin-top: 17px;
+  }
+  .saint-petersburg-section12 .container .saint-petersburg-section12__swiper .swiper {
+    border: 5px solid #FFFFFF;
+  }
+  .saint-petersburg-section12 .container .video-title {
+    padding: 8px 12px 11px 12px;
   }
 }

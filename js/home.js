@@ -23,39 +23,33 @@ const slide4 = document.querySelector('.swiper-slide4');
 const homeSection1 = document.querySelector('.home-section1 .container');
 
 swiper1.on('slideChangeTransitionEnd', function () {
+    homeSection1.className = 'container';
     if (slide1.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide1');
     }
     else if (slide2.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide2');
     }
     else if (slide3.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide3');
     }
     else if (slide4.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide4');
     }
 });
 
 swiper1.on('slideResetTransitionEnd', function () {
+    homeSection1.className = 'container';
     if (slide1.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide1');
     }
     else if (slide2.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide2');
     }
     else if (slide3.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide3');
     }
     else if (slide4.classList.contains('swiper-slide-active')) {
-        homeSection1.className = 'container';
         homeSection1.classList.add('slide4');
     }
 });

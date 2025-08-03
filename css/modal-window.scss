@@ -56,14 +56,17 @@
             flex-direction: column;
             align-items: center;
             background-color: $white;
+            #etude, #novella, #poem, #turnkey {display: none;}
             .service-list-wrapper__text {
-                font-size: 32px;
-                text-transform: capitalize;
+                display: block;
+                font-size: 28px;
+                line-height: 120%;
+                margin-top: -5px;
+                margin-right: 32px;
                 color: $violet1;
             }
             ul {
-                display: none;
-                margin: 25px 0 35px 0;
+                margin: 25px 0 38px 0;
                 li {
                     list-style: none;
                     position: relative;
@@ -106,10 +109,13 @@
                 }
             }
             .modal-window__service-list-wrapper {
-                .service-list-wrapper__text {font-size: calc(16px + (32 - 16) * ((100vw - 321px) / (1300 - 321)));}
+                .service-list-wrapper__text {
+                    font-size: calc(16px + (28 - 16) * ((100vw - 321px) / (1300 - 321)));
+                    margin-top: calc(-2px + (-5 + 2) * ((100vw - 321px) / (1300 - 321)));
+                }
                 ul {
                     margin: calc(15px + (25 - 15) * ((100vw - 321px) / (1300 - 321))) 0
-                            calc(20px + (35 - 20) * ((100vw - 321px) / (1300 - 321))) 0;
+                            calc(21px + (38 - 21) * ((100vw - 321px) / (1300 - 321))) 0;
                     li {padding-left: calc(9px + (18 - 9) * ((100vw - 321px) / (1300 - 321)));}
                 }
             }
@@ -173,9 +179,12 @@
                 }
             }
             .modal-window__service-list-wrapper {
-                .service-list-wrapper__text {font-size: 16px;}
+                .service-list-wrapper__text {
+                    font-size: 16px;
+                    margin-top: -2px;
+                }
                 ul {
-                    margin: 15px 0 20px 0;
+                    margin: 15px 0 21px 0;
                     li {padding-left: 9px;}
                 }
             }
