@@ -57,12 +57,13 @@
             align-items: center;
             background-color: $white;
             #etude, #novella, #poem, #turnkey {display: none;}
+            #etude .service-list-wrapper__text, #novella .service-list-wrapper__text,
+            #poem .service-list-wrapper__text, #turnkey .service-list-wrapper__text {margin-right: 32px;}
             .service-list-wrapper__text {
                 display: block;
                 font-size: 28px;
                 line-height: 120%;
                 margin-top: -5px;
-                margin-right: 32px;
                 color: $violet1;
             }
             ul {

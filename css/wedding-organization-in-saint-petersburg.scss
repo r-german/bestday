@@ -8,66 +8,6 @@
             p {text-align: center;}
         }
     }
-    .photo-on-the-left, .photo-on-the-right {
-        display: grid;
-        align-items: center;
-        column-gap: 80px;
-        div {
-            padding: 20px 20px 92px 20px;
-            background-color: $white;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-            picture {
-                display: block;
-                width: 394px;
-                position: relative;
-                padding-bottom: 71.574%;
-                border-radius: 5px;
-                overflow: hidden;
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            span {
-                font-family: "AmaticSC-Regular";
-                font-size: 36px;
-                width: 100%;
-                position: absolute;
-                bottom: 29px;
-                left: 0;
-                text-align: center;
-                color: $violet2;
-            }
-        }
-        p {
-            line-height: 166%;
-            text-align: justify;
-            transform: translate3d(0, 0, 0);
-            transition: opacity 1s 0.5s, visibility 1s 0.5s;
-        }
-    }
-    .photo-on-the-left:not(.photo-on-the-left:last-child), .photo-on-the-right:not(.photo-on-the-right:last-child) {margin-bottom: 27px;}
-    .photo-on-the-left {
-        grid-template-columns: auto 1fr;
-        padding: 0 130px 0 80px;
-    }
-    .photo-on-the-right {
-        grid-template-columns: 1fr auto;
-        padding: 0 80px 0 130px;
-        div {
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-    }
-    .photo-on-the-left._transform {
-        div {transform: translate3d(0, 0, 0) rotate(-3deg);}
-    }
-    .photo-on-the-right._transform {
-        div {transform: translate3d(0, 0, 0) rotate(5deg);}
-    }
 }
 
 .saint-petersburg-section4 {
@@ -86,8 +26,9 @@
     }
 }
 
+.saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11, .saint-petersburg-section15 {padding: 60px;}
+
 .saint-petersburg-section7 {
-    padding: 60px;
     background: url('../img/saint-petersburg_section7-bg.png'), $white;
     div {transition: opacity 0.8s, visibility 0.8s;}
 }
@@ -97,10 +38,9 @@
     .underlined-link {transition: opacity 0.8s 2.7s, visibility 0.8s 2.7s;}
 }
 
-.saint-petersburg-section9, .saint-petersburg-section11 {
-    padding: 60px;
+.saint-petersburg-section9, .saint-petersburg-section11, .saint-petersburg-section13, .saint-petersburg-section15 {
     background-color: $white;
-    .text-with-lines {max-width: 842px;}
+    .text-with-lines {max-width: 856px;}
 }
 
 .saint-petersburg-section12 {
@@ -156,6 +96,53 @@
     }
 }
 
+.saint-petersburg-section13 {
+    padding: 50px 60px 60px 60px;
+    h4 {
+        text-align: center;
+        color: $violet1;
+    }
+    .text-with-lines {margin-top: 40px;}
+}
+
+.saint-petersburg-section14 {
+    margin: 50px 0 60px 0;
+    .container {
+        padding: 0 60px;
+        h4 {
+            max-width: 872px;
+            text-align: center;
+            color: $violet1;
+        }
+    }
+}
+
+.saint-petersburg-section16 {
+    margin: 50px 0 65px 0;
+    .container {
+        padding: 0 60px;
+        h4 {color: $violet1;}
+        ul {
+            max-width: 1100px;
+            margin: 30px auto 0 auto;
+            li {text-align: justify;}
+        }
+    }
+}
+
+.saint-petersburg-section17 {
+    padding: 50px 60px 60px 60px;
+    background: url('../img/saint-petersburg_section7-bg.png'), $white;
+    h4 {
+        text-align: center;
+        color: $violet1;
+    }
+    div {
+        margin-top: 40px;
+        transition: opacity 0.8s 0.7s, visibility 0.8s 0.7s;
+    }
+}
+
 @media (max-width: 1300.9px) and (min-width: 321px) {
     .saint-petersburg-section2 {
         margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
@@ -165,19 +152,6 @@
                 max-width: calc(271px + (542 - 271) * ((100vw - 321px) / (1300 - 321)));
                 margin-top: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
                 margin-bottom: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
-            }
-        }
-        .photo-on-the-left, .photo-on-the-right {
-            div {
-                padding: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)))
-                         calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)))
-                         calc(46px + (92 - 46) * ((100vw - 321px) / (1300 - 321)))
-                         calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
-                picture {width: calc(200px + (394 - 200) * ((100vw - 321px) / (1300 - 321)));}
-                span {
-                    font-size: calc(18px + (36 - 18) * ((100vw - 321px) / (1300 - 321)));
-                    bottom: calc(15px + (29 - 15) * ((100vw - 321px) / (1300 - 321)));
-                }
             }
         }
     }
@@ -195,7 +169,7 @@
             }
         }
     }
-    .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11 {
+    .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11, .saint-petersburg-section15 {
         padding: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)))
                  calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
     }
@@ -203,8 +177,8 @@
         margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
                 calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
     }
-    .saint-petersburg-section9, .saint-petersburg-section11 {
-        .text-with-lines {max-width: calc(421px + (842 - 421) * ((100vw - 321px) / (1300 - 321)));}
+    .saint-petersburg-section9, .saint-petersburg-section11, .saint-petersburg-section13, .saint-petersburg-section15 {
+        .text-with-lines {max-width: calc(428px + (856 - 428) * ((100vw - 321px) / (1300 - 321)));}
     }
     .saint-petersburg-section12 {
         margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
@@ -220,22 +194,38 @@
             }
         }
     }
-}
-
-@media (max-width: 1300.9px) and (min-width: 992px) {
-    .saint-petersburg-section2 {
-        .photo-on-the-left, .photo-on-the-right {column-gap: calc(60px + (80 - 60) * ((100vw - 992px) / (1300 - 992)));}
-        .photo-on-the-left {
-            padding: 0 calc(60px + (130 - 60) * ((100vw - 992px) / (1300 - 992)))
-                     0 calc(40px + (80 - 40) * ((100vw - 992px) / (1300 - 992)));
+    .saint-petersburg-section13 {
+        padding: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)))
+                 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)))
+                 calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)))
+                 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+        .text-with-lines {margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    }
+    .saint-petersburg-section14 {
+        margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(32px + (60 - 32) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            h4 {max-width: calc(436px + (872 - 436) * ((100vw - 321px) / (1300 - 321)));}
         }
-        .photo-on-the-right {
-            padding: 0 calc(40px + (80 - 40) * ((100vw - 992px) / (1300 - 992)))
-                     0 calc(60px + (130 - 60) * ((100vw - 992px) / (1300 - 992)));
+    }
+    .saint-petersburg-section16 {
+        margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(30px + (65 - 30) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            ul {
+                max-width: calc(550px + (1100 - 550) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
+            }
         }
-        .photo-on-the-left:not(.photo-on-the-left:last-child), .photo-on-the-right:not(.photo-on-the-right:last-child) {
-            margin-bottom: calc(18px + (27 - 18) * ((100vw - 992px) / (1300 - 992)));
-        }
+    }
+    .saint-petersburg-section17 {
+        padding: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)))
+                 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)))
+                 calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)))
+                 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+        div {margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
     }
 }
 
@@ -250,15 +240,6 @@
 }
 
 @media (max-width: 991.9px) and (min-width: 321px) {
-    .saint-petersburg-section2 {
-        .photo-on-the-left, .photo-on-the-right {
-            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
-            div {margin-bottom: calc(25px + (40 - 25) * ((100vw - 321px) / (991 - 321)));}
-        }
-        .photo-on-the-left:not(.photo-on-the-left:last-child), .photo-on-the-right:not(.photo-on-the-right:last-child) {
-            margin-bottom: calc(30px + (50 - 30) * ((100vw - 321px) / (991 - 321)));
-        }
-    }
     .saint-petersburg-section12 {
         .container {
             .saint-petersburg-section12__swiper {
@@ -271,27 +252,6 @@
 @media (max-width: 991.9px) and (min-width: 601px) {
     .saint-petersburg-section8 {
         .underlined-link {transition: opacity 0.8s 1.7s, visibility 0.8s 1.7s;}
-    }
-}
-
-@media (max-width: 991.9px) {
-    .saint-petersburg-section2 {
-        .photo-on-the-left, .photo-on-the-right {
-            grid-template-columns: 1fr;
-            justify-items: center;
-        }
-        .photo-on-the-right {
-            div {grid-column: auto;}
-        }
-        .photo-on-the-left._transform {
-            div {transform: translate3d(0, 0, 0) rotate(-4deg);}
-        }
-        .photo-on-the-right._transform {
-            div {transform: translate3d(0, 0, 0) rotate(4deg);}
-        }
-        .photo-on-the-left:last-child, .photo-on-the-right:last-child {
-            p {margin-bottom: -10px;}
-        }
     }
 }
 
@@ -320,19 +280,6 @@
                 margin-bottom: 30px;
             }
         }
-        .photo-on-the-left, .photo-on-the-right {
-            padding: 0 20px;
-            div {
-                padding: 10px 10px 46px 10px;
-                margin-bottom: 25px;
-                picture {width: 200px;}
-                span {
-                    font-size: 18px;
-                    bottom: 15px;
-                }
-            }
-        }
-        .photo-on-the-left:not(.photo-on-the-left:last-child), .photo-on-the-right:not(.photo-on-the-right:last-child) {margin-bottom: 30px;}
     }
     .saint-petersburg-section4 {
         margin-top: 40px;
@@ -349,7 +296,7 @@
             }
         }
     }
-    .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11 {padding: 30px 20px;}
+    .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11, .saint-petersburg-section15 {padding: 30px 20px;}
     .saint-petersburg-section8 {margin: 25px 0 35px 0;}
     .saint-petersburg-section12 {
         margin: 25px 0 35px 0;
@@ -361,5 +308,24 @@
             }
             .video-title {padding: 8px 12px 11px 12px;}
         }
+    }
+    .saint-petersburg-section13 {
+        padding: 25px 20px 30px 20px;
+        .text-with-lines {margin-top: 20px;}
+    }
+    .saint-petersburg-section14 {
+        margin: 25px 0 32px 0;
+        .container {padding: 0 20px;}
+    }
+    .saint-petersburg-section16 {
+        margin: 25px 0 30px 0;
+        .container {
+            padding: 0 20px;
+            ul {margin: 15px auto 0 auto;}
+        }
+    }
+    .saint-petersburg-section17 {
+        padding: 25px 20px 30px 20px;
+        div {margin-top: 20px;}
     }
 }

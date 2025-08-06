@@ -1,0 +1,221 @@
+.turnkey-section2 {
+    margin: 60px 0 70px 0;
+    .turnkey-section2__top {
+        nav {
+            will-change: transform;
+            width: fit-content;
+            margin: 40px auto 0 auto;
+            display: grid;
+            grid-template-columns: repeat(7, auto);
+            gap: 16px;
+            a {
+                font-size: 12px;
+                padding: 8px 12px 10px 12px;
+                color: $white;
+                background-color: rgb(85, 72, 116, 0.7);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            }
+            @media (hover: hover) and (pointer: fine) {
+                a {
+                    transform: translate3d(0, 0, 0);
+                    transition: background-color 0.3s;
+                }
+                a:hover {background-color: $violet2;}
+            }
+        }
+    }
+    .container:not(.photo-on-the-left, .photo-on-the-right) {
+        .text-with-lines {
+            max-width: 776px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.turnkey-section3 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .spoiler-cards {
+            .spoiler-card:nth-child(7), .spoiler-card:nth-child(8), .spoiler-card:nth-child(9) {
+                h5 {
+                    width: min-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+.turnkey-section4, .turnkey-section5 {
+    .container {
+        .text-with-lines {max-width: 806px;}
+    }
+}
+
+.turnkey-section4 {
+    margin: 60px 0 57px 0;
+    .container {
+        padding: 0 60px;
+        h4 {color: $red2;}
+        .text-with-lines {margin-top: 40px;}
+    }
+}
+
+.turnkey-section5 {
+    margin-bottom: 65px;
+    .container {
+        .text-with-lines {margin-top: 50px;}
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .turnkey-section2 {
+        margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(35px + (70 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
+        .turnkey-section2__top {
+            nav {
+                margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
+                gap: calc(10px + (16 - 10) * ((100vw - 321px) / (1300 - 321)));
+            }
+        }
+        .container:not(.photo-on-the-left, .photo-on-the-right) {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            .text-with-lines {
+                max-width: calc(388px + (776 - 388) * ((100vw - 321px) / (1300 - 321)));
+                margin-top: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+                margin-bottom: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+            }
+        }
+    }
+    .turnkey-section3 {
+        .container {padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    }
+    .turnkey-section4, .turnkey-section5 {
+        .container {
+            .text-with-lines {max-width: calc(403px + (806 - 403) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .turnkey-section4 {
+        margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(27px + (57 - 27) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .text-with-lines {margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .turnkey-section5 {
+        margin-bottom: calc(34px + (65 - 34) * ((100vw - 321px) / (1300 - 321)));
+        .container {
+            .text-with-lines {margin-top: calc(30px + (50 - 30) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+}
+
+@media (max-width: 1200.9px) {
+    .turnkey-section2 {
+        .turnkey-section2__top {
+            nav {
+                grid-template-columns: repeat(4, auto);
+                transform: translate3d(0, 50%, 0);
+                a {text-align: center;}
+            }
+        }
+    }
+    .turnkey-section5 {
+        .container {
+            .text-with-lines {transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;}
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    .turnkey-section3 {
+        .container {
+            .spoiler-cards {
+                .spoiler-card:nth-child(9) {
+                    h5 {width: auto;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.9px) {
+    .turnkey-section2 {
+        .turnkey-section2__top {
+            nav {
+                grid-template-columns: auto auto;
+                transform: translate3d(0, 25%, 0);
+            }
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .turnkey-section2 {
+        .turnkey-section2__top {
+            nav {
+                width: min-content;
+                a:first-child {grid-row: 4/5;}
+            }
+        }
+    }
+    .turnkey-section3 {
+        .container {
+            .spoiler-cards {
+                .spoiler-card:nth-child(7), .spoiler-card:nth-child(8) {
+                    h5 {width: auto;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360.9px) {
+    .turnkey-section5 {
+        .container {
+            .text-with-lines {transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;}
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .turnkey-section2 {
+        margin: 30px 0 35px 0;
+        .turnkey-section2__top {
+            nav {
+                margin: 20px auto 0 auto;
+                gap: 10px;
+            }
+        }
+        .container:not(.photo-on-the-left, .photo-on-the-right) {
+            padding: 0 20px;
+            .text-with-lines {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .turnkey-section3 {
+        .container {padding: 0 20px;}
+    }
+    .turnkey-section4 {
+        margin: 30px 0 27px 0;
+        .container {
+            padding: 0 15px;
+            .text-with-lines {margin-top: 20px;}
+        }
+    }
+    .turnkey-section5 {
+        margin-bottom: 34px;
+        .container {
+            .text-with-lines {margin-top: 30px;}
+        }
+    }
+}

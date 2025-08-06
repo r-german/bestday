@@ -51,6 +51,7 @@ document.querySelector('.service-list-wrapper__cross').addEventListener('click',
 document.querySelector('.modal-window__service-list-wrapper button').addEventListener('click', function() {
     modalWindowForServices.classList.remove('_visible');
     setTimeout(function() {
+        modalWindowForServices.style.cssText = '';
         if (etude.style.display == 'block') {
             etude.style.display = '';
         }
