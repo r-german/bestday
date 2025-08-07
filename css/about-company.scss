@@ -51,7 +51,10 @@
     background-color: $orange2;
     .container {
         padding: 50px 30px 65px 30px;
-        h4 {color: $violet2;}
+        h4 {
+            text-align: center;
+            color: $violet2;
+        }
         .about-company-section3__statistics {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -62,7 +65,7 @@
                 display: grid;
                 grid-template-rows: auto 1fr;
                 row-gap: 4px;
-                padding: 18px 10px;
+                padding: 18px 8px;
                 border-radius: 5px;
                 color: $violet1;
                 background-color: rgba(255, 255, 255, 0.84);
@@ -434,7 +437,8 @@
             .about-company-section3__statistics {
                 margin-top: calc(20px + (33 - 20) * ((100vw - 321px) / (1300 - 321)));
                 div {
-                    padding: calc(14px + (18 - 14) * ((100vw - 321px) / (1300 - 321))) 10px;
+                    row-gap: calc(2px + (4 - 2) * ((100vw - 321px) / (1300 - 321)));
+                    padding: calc(14px + (18 - 14) * ((100vw - 321px) / (1300 - 321))) 8px;
                     span:not(:last-child) {font-size: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
                 }
             }
@@ -753,8 +757,12 @@
 @media (max-width: 600.9px) {
     .about-company-section3 {
         .container {
+            .about-company-section3__statistics {gap: 16px;}
+        }
+    }
+    .about-company-section3:not(.turnkey-section12) {
+        .container {
             .about-company-section3__statistics {
-                gap: 16px;
                 div:nth-child(4), div:nth-child(5) {transform: translate3d(calc(50% + 8px), 0, 0);}
             }
         }
@@ -763,6 +771,11 @@
 
 @media (max-width: 480.9px) {
     .about-company-section3 {
+        .container {
+            .about-company-section3__statistics {gap: 12px;}
+        }
+    }
+    .about-company-section3:not(.turnkey-section12) {
         .container {
             .about-company-section3__statistics {
                 grid-template-columns: 1fr 1fr;
@@ -835,7 +848,8 @@
             .about-company-section3__statistics {
                 margin-top: 20px;
                 div {
-                    padding: 14px 10px;
+                    row-gap: 2px;
+                    padding: 14px 8px;
                     span:not(:last-child) {font-size: 20px;}
                 }
             }

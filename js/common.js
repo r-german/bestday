@@ -31,6 +31,13 @@ var callback = function(entries) {
                 animateNumber('number-to-animate4', 0, 198, 2000);
                 animateNumber('number-to-animate5', 0, 400, 2000);
             }
+            else if (entry.target.classList.contains('counter3')) {
+                animateNumber('number-to-animate1', 0, 16, 2000);
+                animateNumber('number-to-animate2', 0, 875, 2000);
+                animateNumber('number-to-animate3', 0, 85, 2000);
+                animateNumber('number-to-animate4', 0, 70, 2000);
+                animateNumber('number-to-animate5', 0, 325, 2000);
+            }
             observer.unobserve(entry.target);
         }
     });

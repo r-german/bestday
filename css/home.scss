@@ -1015,6 +1015,7 @@
     .home-section4 {
         .container {
             .home-section4__cards {grid-template-columns: 1fr;}
+            .hidden-content {transition: max-height 1s ease-out;}
         }
     }
     .home-section8 {

@@ -347,7 +347,7 @@ h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
 .right-to-left-25 {transform: translate3d(25%, 0, 0);}
 .right-to-left-50 {transform: translate3d(50%, 0, 0);}
 .bottom-up-15 {transform: translate3d(0, 15%, 0);}
-.bottom-up-25 {transform: translate3d(0, 25%, 0);}
+.bottom-up-25:not(.turnkey-section15__questions) {transform: translate3d(0, 25%, 0);}
 .bottom-up-50:not(.centered-card) {transform: translate3d(0, 50%, 0);}
 .bottom-up-100 {transform: translate3d(0, 100%, 0);}
 
@@ -645,7 +645,7 @@ picture {
     li {
         list-style: none;
         position: relative;
-        line-height: 120%;
+        line-height: 125%;
         padding-left: 37px;
         &::before {
             content: '';
@@ -756,14 +756,11 @@ picture {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-out;
-            p, ul {
-                font-size: 15px;
-                margin-top: 15px;
-            }
-            p {
-                line-height: 133%;
-                text-align: center;
-            }
+            p, ul {font-size: 15px;}
+            p, ul:first-child {margin-top: 15px;}
+            ul:not(ul:first-child) {margin-top: 8px;}
+            p {line-height: 133%;}
+            p:not(.text-for-list) {text-align: center;}
             ul {
                 li {
                     list-style: none;
@@ -1119,10 +1116,8 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
                         calc(16px + (28 - 16) * ((100vw - 321px) / (1300 - 321)))
                         calc(12px + (15 - 12) * ((100vw - 321px) / (1300 - 321)));
             div {
-                p, ul {
-                    font-size: calc(10px + (15 - 10) * ((100vw - 321px) / (1300 - 321)));
-                    margin-top: calc(9px + (15 - 9) * ((100vw - 321px) / (1300 - 321)));
-                }
+                p, ul {font-size: calc(10px + (15 - 10) * ((100vw - 321px) / (1300 - 321)));}
+                p, ul:first-child {margin-top: calc(9px + (15 - 9) * ((100vw - 321px) / (1300 - 321)));}
                 ul {
                     li {padding-left: calc(9px + (14 - 9) * ((100vw - 321px) / (1300 - 321)));}
                 }
@@ -1577,10 +1572,8 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         .spoiler-card {
             padding: 12px 12px 16px 12px;
             div {
-                p, ul {
-                    font-size: 10px;
-                    margin-top: 9px;
-                }
+                p, ul {font-size: 10px;}
+                p, ul:first-child {margin-top: 9px;}
                 ul {
                     li {padding-left: 9px;}
                 }
