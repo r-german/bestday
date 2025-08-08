@@ -647,6 +647,16 @@ picture .position-top {
   font-family: "NewsCycle-Bold";
 }
 
+.note-to-table {
+  margin-top: 20px;
+  transform: translate3d(0, 0, 0);
+}
+.note-to-table span {
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+}
+
 .service-packages-container {
   padding: 0 60px;
 }

@@ -570,6 +570,17 @@ picture {
     }
 }
 
+.note-to-table {
+    margin-top: 20px;
+    transform: translate3d(0, 0, 0);
+    span {
+        display: block;
+        font-size: 15px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+    }
+}
+
 .service-packages-container {
     padding: 0 60px;
     .service-packages {
@@ -1057,6 +1068,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
             div:not(div:first-child) {column-gap: calc(4px + (6 - 4) * ((100vw - 321px) / (1300 - 321)));}
         }
     }
+    .note-to-table {
+        margin-top: calc(14px + (20 - 14) * ((100vw - 321px) / (1300 - 321)));
+        span {font-size: calc(10px + (15 - 10) * ((100vw - 321px) / (1300 - 321)));}
+    }
     .service-packages-container {
         padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
         .service-packages {
@@ -1509,6 +1524,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
             div:first-child {font-size: 10px;}
             div:not(div:first-child) {column-gap: 4px;}
         }
+    }
+    .note-to-table {
+        margin-top: 14px;
+        span {font-size: 10px;}
     }
     .service-packages-container {
         padding: 0 15px;

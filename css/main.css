@@ -647,6 +647,17 @@ picture .position-top {
   font-family: "NewsCycle-Bold";
 }
 
+.note-to-table {
+  margin-top: 20px;
+  transform: translate3d(0, 0, 0);
+}
+.note-to-table span {
+  display: block;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+}
+
 .service-packages-container {
   padding: 0 60px;
 }
@@ -1157,6 +1168,12 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .with-brown-header .cost-table2__column:not(.cost-table2__column:first-child) div:not(div:first-child) {
     column-gap: calc(4px + 2 * (100vw - 321px) / 979);
   }
+  .note-to-table {
+    margin-top: calc(14px + 6 * (100vw - 321px) / 979);
+  }
+  .note-to-table span {
+    font-size: calc(10px + 5 * (100vw - 321px) / 979);
+  }
   .service-packages-container {
     padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
   }
@@ -1571,6 +1588,12 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   }
   .with-brown-header .cost-table2__column:not(.cost-table2__column:first-child) div:not(div:first-child) {
     column-gap: 4px;
+  }
+  .note-to-table {
+    margin-top: 14px;
+  }
+  .note-to-table span {
+    font-size: 10px;
   }
   .service-packages-container {
     padding: 0 15px;
@@ -5888,7 +5911,7 @@ form .orange-btn {
   padding: 0 90px 0 80px;
 }
 .team-section3 .container:nth-child(4) .team-section3__teammate {
-  margin: -80px 0 50px 0;
+  margin-top: -80px;
 }
 .team-section3 .container:nth-child(4) .team-section3__teammate span {
   color: rgba(148, 1, 29, 0.8);
@@ -6035,7 +6058,7 @@ form .orange-btn {
     padding: 0 calc(15px + 75 * (100vw - 321px) / 979) 0 calc(50px + 30 * (100vw - 992px) / 308);
   }
   .team-section3 .container:nth-child(4) .team-section3__teammate {
-    margin: calc(-60px + -20 * (100vw - 992px) / 308) 0 50px 0;
+    margin-top: calc(-60px + -20 * (100vw - 992px) / 308);
   }
   .team-section3 .container:nth-child(5) {
     padding: 0 calc(50px + 10 * (100vw - 992px) / 308) 0 calc(15px + 75 * (100vw - 321px) / 979);
@@ -6074,6 +6097,11 @@ form .orange-btn {
     padding: 0 calc(234px + 96 * (100vw - 992px) / 308) 0 calc(15px + 75 * (100vw - 321px) / 979);
   }
 }
+@media (min-width: 992px) {
+  .container:nth-child(4):not(.container:last-child) .team-section3__teammate {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 991.9px) and (min-width: 321px) {
   .team-section3 .container:nth-child(n+2) {
     padding: 0 calc(15px + 75 * (100vw - 321px) / 979);
@@ -6092,7 +6120,7 @@ form .orange-btn {
 }
 @media (max-width: 991.9px) {
   .team-section3 .container:nth-child(4) .team-section3__teammate {
-    margin: 0;
+    margin-top: 0;
   }
   .team-section3 .container:nth-child(7) p {
     margin-bottom: 0;
@@ -8288,5 +8316,315 @@ form .orange-btn {
   }
   .turnkey-section19 .photo-on-the-left p span, .turnkey-section19 .photo-on-the-right p span {
     margin-bottom: 4px;
+  }
+}
+.wedding-coordinator-section2 {
+  margin: 60px 0 70px 0;
+}
+.wedding-coordinator-section2 .orange-bg {
+  margin-bottom: 65px;
+}
+
+.wedding-coordinator-section3 .container {
+  padding: 0 60px;
+}
+.wedding-coordinator-section3 .container h4 {
+  text-align: center;
+  color: rgba(148, 1, 29, 0.8);
+}
+.wedding-coordinator-section3 .container ul {
+  width: fit-content;
+  margin: 30px auto 40px auto;
+}
+.wedding-coordinator-section3 .container ul li a {
+  color: #ED6F59;
+}
+@media (hover: hover) and (pointer: fine) {
+  .wedding-coordinator-section3 .container ul li a {
+    display: inline-block;
+    transform: translate3d(0, 0, 0);
+    transition: color 0.3s;
+  }
+  .wedding-coordinator-section3 .container ul li a:hover {
+    color: rgba(148, 1, 29, 0.8);
+  }
+}
+.wedding-coordinator-section3 .container .text-with-lines {
+  max-width: 640px;
+}
+
+.wedding-coordinator-section4 {
+  margin: 57px 0 65px 0;
+}
+.wedding-coordinator-section4 .container {
+  padding: 0 60px;
+}
+.wedding-coordinator-section4 .container h4 {
+  color: rgba(148, 1, 29, 0.8);
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 80px;
+  margin-top: 80px;
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card {
+  grid-template-rows: auto 1fr;
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card div {
+  grid-row: 1/3;
+  width: 94px;
+  height: 94px;
+  background: linear-gradient(to right, #554874 11%, #FFFFFF 11%);
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card span {
+  font-size: 23px;
+  color: #554874;
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card p {
+  font-size: 15px;
+  line-height: 125%;
+  margin-top: 8px;
+  color: #4B2F32;
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:not(.card:nth-child(3), .card:last-child):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  width: 66px;
+  height: 54px;
+  background: url("../img/wedding-organization-turnkey_section7-10.svg") center/contain no-repeat;
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .centered-card {
+  transform: translate3d(calc(50% + 15px), 50%, 0);
+}
+.wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .centered-card span {
+  width: min-content;
+}
+.wedding-coordinator-section4 .container._transform .wedding-coordinator-section4__cards .centered-card {
+  transform: translate3d(calc(50% + 15px), 0, 0);
+}
+
+.wedding-coordinator-section5 {
+  margin-bottom: 65px;
+}
+.wedding-coordinator-section5 .container {
+  padding: 0 60px;
+}
+.wedding-coordinator-section5 .container h4 {
+  color: rgba(148, 1, 29, 0.8);
+}
+.wedding-coordinator-section5 .container .cost-table2, .wedding-coordinator-section5 .container .note-to-table {
+  max-width: 748px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wedding-coordinator-section5 .container .cost-table2 {
+  grid-template-columns: 1fr auto auto;
+  margin-top: 40px;
+}
+.wedding-coordinator-section5 .container .cost-table2 .cost-table2__column div {
+  padding: 0 30px;
+}
+.wedding-coordinator-section5 .container .note-to-table {
+  transition: opacity 0.8s 1s, visibility 0.8s 1s;
+}
+
+.wedding-coordinator-section7 {
+  margin-top: -5px;
+}
+
+.wedding-coordinator-section8 {
+  margin: 55px 0 60px 0;
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+  .wedding-coordinator-section2 {
+    margin: calc(30px + 30 * (100vw - 321px) / 979) 0 calc(35px + 35 * (100vw - 321px) / 979) 0;
+  }
+  .wedding-coordinator-section2 .orange-bg {
+    margin-bottom: calc(35px + 30 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section3 .container {
+    padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section3 .container ul {
+    margin: calc(15px + 15 * (100vw - 321px) / 979) auto calc(21px + 19 * (100vw - 321px) / 979) auto;
+  }
+  .wedding-coordinator-section3 .container .text-with-lines {
+    max-width: calc(320px + 320 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 {
+    margin: calc(32px + 25 * (100vw - 321px) / 979) 0 calc(35px + 30 * (100vw - 321px) / 979) 0;
+  }
+  .wedding-coordinator-section4 .container {
+    padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards {
+    column-gap: calc(16px + 14 * (100vw - 321px) / 979);
+    row-gap: calc(50px + 30 * (100vw - 321px) / 979);
+    margin-top: calc(50px + 30 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card div {
+    width: calc(63px + 31 * (100vw - 321px) / 979);
+    height: calc(63px + 31 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card span {
+    font-size: calc(12px + 11 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card p {
+    font-size: calc(10px + 5 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:not(.card:nth-child(3), .card:last-child):after {
+    width: calc(44px + 22 * (100vw - 321px) / 979);
+    height: calc(36px + 18 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .centered-card {
+    transform: translate3d(calc(50% + 8px + 7 * (100vw - 321px) / 979), 50%, 0);
+  }
+  .wedding-coordinator-section4 .container._transform .wedding-coordinator-section4__cards .centered-card {
+    transform: translate3d(calc(50% + 8px + 7 * (100vw - 321px) / 979), 0, 0);
+  }
+  .wedding-coordinator-section5 {
+    margin-bottom: calc(35px + 30 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section5 .container {
+    padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section5 .container .cost-table2, .wedding-coordinator-section5 .container .note-to-table {
+    max-width: calc(500px + 248 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section5 .container .cost-table2 {
+    margin-top: calc(20px + 20 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section5 .container .cost-table2 .cost-table2__column div {
+    padding: 0 calc(6px + 24 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section8 {
+    margin: calc(29px + 26 * (100vw - 321px) / 979) 0 calc(30px + 30 * (100vw - 321px) / 979) 0;
+  }
+}
+@media (max-width: 1200.9px) and (min-width: 321px) {
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card {
+    max-width: calc(175px + 87 * (100vw - 321px) / 979);
+  }
+}
+@media (max-width: 1200.9px) {
+  .wedding-coordinator-section4 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card {
+    display: block;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card div {
+    margin: 0 auto 10px auto;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card span {
+    display: block;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card span, .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card p {
+    text-align: center;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:not(.card:nth-child(3), .card:last-child):after {
+    transform: translate(50%, -100%);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .centered-card span {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480.9px) and (min-width: 321px) {
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards {
+    margin-top: calc(20px + 20 * (100vw - 321px) / 979);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:not(.card:last-child):after {
+    transform: translate(50%, calc(9px + 2 * (100vw - 321px) / 159));
+  }
+}
+@media (max-width: 480.9px) {
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards {
+    grid-template-columns: 1fr;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:nth-child(3):after {
+    content: "";
+    position: absolute;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:not(.card:last-child):after {
+    top: 100%;
+    right: 50%;
+    width: 16px;
+    height: 30px;
+    background: url("../img/wedding-organization-turnkey_section7-11.svg") center/contain no-repeat;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:nth-child(n+4) {
+    transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .centered-card {
+    transform: translate3d(0, 50%, 0);
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .centered-card span {
+    width: auto;
+  }
+  .wedding-coordinator-section4 .container._transform .wedding-coordinator-section4__cards .centered-card {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (max-width: 320.9px) {
+  .wedding-coordinator-section2 {
+    margin: 30px 0 35px 0;
+  }
+  .wedding-coordinator-section2 .orange-bg {
+    margin-bottom: 35px;
+  }
+  .wedding-coordinator-section3 .container {
+    padding: 0 20px;
+  }
+  .wedding-coordinator-section3 .container ul {
+    margin: 15px auto 21px auto;
+  }
+  .wedding-coordinator-section4 {
+    margin: 32px 0 35px 0;
+  }
+  .wedding-coordinator-section4 .container {
+    padding: 0 15px;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards {
+    row-gap: 50px;
+    margin-top: 20px;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card {
+    max-width: 174px;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card div {
+    width: 62px;
+    height: 62px;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card span {
+    font-size: 12px;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card p {
+    font-size: 10px;
+  }
+  .wedding-coordinator-section4 .container .wedding-coordinator-section4__cards .card:not(.card:last-child):after {
+    transform: translate(50%, 9px);
+  }
+  .wedding-coordinator-section5 {
+    margin-bottom: 35px;
+  }
+  .wedding-coordinator-section5 .container {
+    padding: 0 15px;
+  }
+  .wedding-coordinator-section5 .container .cost-table2 {
+    margin-top: 20px;
+  }
+  .wedding-coordinator-section5 .container .cost-table2 .cost-table2__column div {
+    padding: 0 6px;
+  }
+  .wedding-coordinator-section8 {
+    margin: 29px 0 30px 0;
   }
 }

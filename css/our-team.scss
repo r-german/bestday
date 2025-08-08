@@ -85,7 +85,7 @@
     .container:nth-child(4) {
         padding: 0 90px 0 80px;
         .team-section3__teammate {
-            margin: -80px 0 50px 0;
+            margin-top: -80px;
             span {color: $red2;}
         }
         .dividing-line {
@@ -233,7 +233,7 @@
         .container:nth-child(4) {
             padding: 0 calc(15px + (90 - 15) * ((100vw - 321px) / (1300 - 321)))
                      0 calc(50px + (80 - 50) * ((100vw - 992px) / (1300 - 992)));
-            .team-section3__teammate {margin: calc(-60px + (-80 + 60) * ((100vw - 992px) / (1300 - 992))) 0 50px 0;}
+            .team-section3__teammate {margin-top: calc(-60px + (-80 + 60) * ((100vw - 992px) / (1300 - 992)));}
         }
         .container:nth-child(5) {
             padding: 0 calc(50px + (60 - 50) * ((100vw - 992px) / (1300 - 992)))
@@ -276,6 +276,12 @@
     }
 }
 
+@media (min-width: 992px) {
+    .container:nth-child(4):not(.container:last-child) {
+        .team-section3__teammate {margin-bottom: 50px;}
+    }
+}
+
 @media (max-width: 991.9px) and (min-width: 321px) {
     .team-section3 {
         .container:nth-child(n+2) {padding: 0 calc(15px + (90 - 15) * ((100vw - 321px) / (1300 - 321)));}
@@ -293,7 +299,7 @@
 @media (max-width: 991.9px) {
     .team-section3 {
         .container:nth-child(4) {
-            .team-section3__teammate {margin: 0;}
+            .team-section3__teammate {margin-top: 0;}
         }
         .container:nth-child(7) {
             p {margin-bottom: 0;}
