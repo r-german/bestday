@@ -170,7 +170,7 @@
         padding: 0 60px;
         h4 {color: $violet1;}
         .turnkey-section15__questions {
-            transform: translate3d(0, 82px, 0);
+            transform: translate3d(0, 49px, 0);
             max-width: 956px;
             margin: 30px auto 0 auto;
             .questions__question {
@@ -345,7 +345,7 @@
         .container {
             padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
             .turnkey-section15__questions {
-                transform: translate3d(0, calc(66px + (82 - 66) * ((100vw - 321px) / (1300 - 321))), 0);
+                transform: translate3d(0, calc(40px + (49 - 40) * ((100vw - 321px) / (1300 - 321))), 0);
                 max-width: calc(478px + (956 - 478) * ((100vw - 321px) / (1300 - 321)));
                 margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
                 .questions__question {
@@ -624,7 +624,7 @@
         .container {
             padding: 0 20px;
             .turnkey-section15__questions {
-                transform: translate3d(0, 66px, 0);
+                transform: translate3d(0, 40px, 0);
                 margin: 15px auto 0 auto;
                 .questions__question {
                     column-gap: 10px;
