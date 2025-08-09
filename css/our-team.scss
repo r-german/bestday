@@ -206,7 +206,7 @@
             .team-section3__teammate {
                 padding: calc(10px + (18 - 10) * ((100vw - 321px) / (1300 - 321)))
                          calc(10px + (18 - 10) * ((100vw - 321px) / (1300 - 321)))
-                         calc(14px + (20 - 14) * ((100vw - 321px) / (1300 - 321)))
+                         calc(13px + (20 - 13) * ((100vw - 321px) / (1300 - 321)))
                          calc(10px + (18 - 10) * ((100vw - 321px) / (1300 - 321)));
                 picture {width: calc(150px + (250 - 150) * ((100vw - 321px) / (1300 - 321)));}
                 span {
@@ -352,6 +352,7 @@
                 line-height: 150%;
             }
         }
+        .container:last-child {margin-bottom: -5px;}
     }
 }
 
@@ -377,7 +378,7 @@
         margin-bottom: 30px;
         .container {
             .team-section3__teammate {
-                padding: 10px 10px 14px 10px;
+                padding: 10px 10px 13px 10px;
                 span {
                     font-size: 24px;
                     margin-top: 12px;

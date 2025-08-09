@@ -1,0 +1,97 @@
+.wedding-consultation-section3, .wedding-consultation-section6 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        ul {
+            width: fit-content;
+            margin: 30px auto 40px auto;
+        }
+        .text-with-lines {max-width: 748px;}
+    }
+}
+
+.wedding-consultation-section4 {
+    margin: 65px 0;
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .cost-table2, .note-to-table {
+            max-width: 748px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cost-table2 {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 40px;
+            .cost-table2__column {
+                div {padding: 0 30px;}
+            }
+        }
+        .note-to-table {transition: opacity 0.8s 1s, visibility 0.8s 1s;}
+    }
+}
+
+.wedding-consultation-section6 {margin-bottom: 60px;}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .wedding-consultation-section3, .wedding-consultation-section6 {
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            ul {
+                margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(21px + (40 - 21) * ((100vw - 321px) / (1300 - 321))) auto;
+            }
+            .text-with-lines {max-width: calc(500px + (748 - 500) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-consultation-section4 {
+        margin: calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .cost-table2, .note-to-table {max-width: calc(500px + (748 - 500) * ((100vw - 321px) / (1300 - 321)));}
+            .cost-table2 {
+                margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+                .cost-table2__column {
+                    div {padding: 0 calc(6px + (30 - 6) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+        }
+    }
+    .wedding-consultation-section6 {margin-bottom: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));}
+}
+
+@media (max-width: 360.9px) {
+    .wedding-consultation-section4 {
+        .container {
+            .cost-table2 {grid-template-columns: 1fr auto;}
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .wedding-consultation-section3, .wedding-consultation-section6 {
+        .container {
+            padding: 0 20px;
+            ul {margin: 15px auto 21px auto;}
+        }
+    }
+    .wedding-consultation-section4 {
+        margin: 35px 0;
+        .container {
+            padding: 0 15px;
+            .cost-table2 {
+                margin-top: 20px;
+                .cost-table2__column {
+                    div {padding: 0 6px;}
+                }
+            }
+        }
+    }
+    .wedding-consultation-section6 {margin-bottom: 30px;}
+}

@@ -1069,7 +1069,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         }
     }
     .note-to-table {
-        margin-top: calc(14px + (20 - 14) * ((100vw - 321px) / (1300 - 321)));
+        margin-top: calc(15px + (20 - 15) * ((100vw - 321px) / (1300 - 321)));
         span {font-size: calc(10px + (15 - 10) * ((100vw - 321px) / (1300 - 321)));}
     }
     .service-packages-container {
@@ -1526,7 +1526,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         }
     }
     .note-to-table {
-        margin-top: 14px;
+        margin-top: 15px;
         span {font-size: 10px;}
     }
     .service-packages-container {
