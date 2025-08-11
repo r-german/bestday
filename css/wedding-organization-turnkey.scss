@@ -1,28 +1,7 @@
 .turnkey-section2 {
     margin: 60px 0 70px 0;
     .turnkey-section2__top {
-        nav {
-            will-change: transform;
-            width: fit-content;
-            margin: 40px auto 0 auto;
-            display: grid;
-            grid-template-columns: repeat(7, auto);
-            gap: 16px;
-            a {
-                font-size: 12px;
-                padding: 8px 12px 10px 12px;
-                color: $white;
-                background-color: rgb(85, 72, 116, 0.7);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-            }
-            @media (hover: hover) and (pointer: fine) {
-                a {
-                    transform: translate3d(0, 0, 0);
-                    transition: background-color 0.3s;
-                }
-                a:hover {background-color: $violet2;}
-            }
-        }
+        nav {grid-template-columns: repeat(7, auto);}
     }
     .container:not(.photo-on-the-left, .photo-on-the-right) {
         .text-with-lines {
@@ -240,12 +219,6 @@
     .turnkey-section2 {
         margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
                 calc(35px + (70 - 35) * ((100vw - 321px) / (1300 - 321))) 0;
-        .turnkey-section2__top {
-            nav {
-                margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
-                gap: calc(10px + (16 - 10) * ((100vw - 321px) / (1300 - 321)));
-            }
-        }
         .container:not(.photo-on-the-left, .photo-on-the-right) {
             padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
             .text-with-lines {
@@ -538,12 +511,6 @@
 @media (max-width: 320.9px) {
     .turnkey-section2 {
         margin: 30px 0 35px 0;
-        .turnkey-section2__top {
-            nav {
-                margin: 20px auto 0 auto;
-                gap: 10px;
-            }
-        }
         .container:not(.photo-on-the-left, .photo-on-the-right) {
             padding: 0 20px;
             .text-with-lines {

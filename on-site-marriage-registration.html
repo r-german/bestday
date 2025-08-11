@@ -3,21 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <title>Цены. Оформление свадеб и выездных регистраций</title>
+        <title>Организация свадьбы. Выездная регистрация брака</title>
         <script src="js/typing-effect.js" defer></script>
         <script src="js/common.js" defer></script>
         <script src="js/menu-for-non-home-pages.js" defer></script>
         <script src="js/modal-window-for-services.js" defer></script>
+        <script src="js/swiper-bundle.min.js" defer></script>
+        <script src="js/swiper-video.js" defer></script>
+        <script src="js/swiper-events.js" defer></script>
+        <script src="js/spoiler-cards.js" defer></script>
     </head>
     <body>
         <div class="wrapper">
             <section class="first-screen anim-item" id="section1">
                 <picture>
-                    <source srcset="img/wedding-decoration_section1.webp" type="image/webp">
-                    <img src="img/wedding-decoration_section1.jpg" alt="">
+                    <source srcset="img/wedding-organization-turnkey_section1.webp" type="image/webp">
+                    <img class="position-top" src="img/wedding-organization-turnkey_section1.jpg" alt="">
                 </picture>
-                <h2 class="bottom-up-50 delay-5">Цены на услуги</h2>
+                <h2 class="bottom-up-50 delay-5">Организация свадьбы</h2>
                 <div class="first-screen__burger burger-icon" id="btn-to-open-services-provided">
                     <div>
                         <span></span>
@@ -27,7 +32,7 @@
                     <div class="services-provided__category">
                         <span class="category-title">Организация свадьбы</span>
                         <div class="category-links">
-                            <a href="">свадьбы в Санкт-Петербурге</a>
+                            <a href="wedding-organization-in-saint-petersburg.html">свадьбы в Санкт-Петербурге</a>
                             <button class="more-btn level2-btn" type="button">
                                 <span>свадьбы под ключ</span>
                                 <svg viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +63,7 @@
                                 </button>
                                 <div class="hidden-links-wrapper">
                                     <div class="category-links level2-links">
-                                        <a href="">выездная регистрация</a>
+                                        <a href="#">выездная регистрация</a>
                                         <a href="">свадебный регистратор</a>
                                     </div>
                                 </div>
@@ -619,19 +624,19 @@
                                 </div>
                             </div>
                             <div class="nav__internal-links">
-                                <button class="btn-to-open-level1 white-link mob-btn" type="button">Услуги</button>
-                                <button class="btn-to-open-level1 white-link pc-btn" type="button">Услуги</button>
+                                <button class="btn-to-open-level1 mob-btn" type="button">Услуги</button>
+                                <button class="btn-to-open-level1 pc-btn" type="button">Услуги</button>
                                 <div class="internal-links__box">
                                     <div class="internal-links-level1">
                                         <div class="two-levels">
-                                            <button class="btn-to-open-level2 white-link mob-btn" type="button">Организация свадьбы</button>
-                                            <button class="btn-to-open-level2 white-link pc-btn" type="button">Организация свадьбы</button>
+                                            <button class="btn-to-open-level2 mob-btn" type="button">Организация свадьбы</button>
+                                            <button class="btn-to-open-level2 pc-btn" type="button">Организация свадьбы</button>
                                             <div class="internal-links-level2">
-                                                <a href="">Свадьбы в Санкт-Петербурге</a>
-                                                <a href="">Свадьбы под ключ</a>
-                                                <a href="">Свадебный координатор</a>
-                                                <a href="">Свадебная консультация</a>
-                                                <a href="">Выездная регистрация</a>
+                                                <a href="wedding-organization-in-saint-petersburg.html">Свадьбы в Санкт-Петербурге</a>
+                                                <a href="wedding-organization-turnkey.html">Свадьбы под ключ</a>
+                                                <a href="wedding-coordinator.html">Свадебный координатор</a>
+                                                <a href="wedding-consultation.html">Свадебная консультация</a>
+                                                <a class="current-page" href="#">Выездная регистрация</a>
                                                 <a href="">Свадебные услуги</a>
                                                 <a href="">Стиль свадьбы</a>
                                                 <a href="">Годовщины свадеб</a>
@@ -795,12 +800,12 @@
                                 </div>
                             </div>
                             <div class="nav__internal-links">
-                                <button class="btn-to-open-level1 mob-btn" type="button">Цены</button>
-                                <button class="btn-to-open-level1 pc-btn" type="button">Цены</button>
+                                <button class="btn-to-open-level1 white-link mob-btn" type="button">Цены</button>
+                                <button class="btn-to-open-level1 white-link pc-btn" type="button">Цены</button>
                                 <div class="internal-links__box">
                                     <div class="internal-links-level1">
                                         <a class="white-link" href="prices-wedding-organization.html">Цены. Организация свадеб</a>
-                                        <a href="#">Цены. Оформление свадеб</a>
+                                        <a class="white-link" href="prices-wedding-decoration.html">Цены. Оформление свадеб</a>
                                         <a class="white-link" href="prices-corporate-events.html">Цены. Корпоративы</a>
                                         <a class="white-link" href="prices-team-building-and-quests.html">Цены. Тимбилдинги, квесты</a>
                                         <a class="white-link" href="prices-child-holiday.html">Цены. Детские праздники</a>
@@ -841,50 +846,97 @@
             <div class="modal-window" id="modal-window-for-services">
                 <div class="modal-window-container">
                     <div class="modal-window__service-list-wrapper">
-                        <span class="service-list-wrapper__text">В стоимость пакета входит:</span>
-                        <ul class="service-list-wrapper__etude font-size-24" id="etude">
-                            <li>оформление президиума тканью;</li>
-                            <li>центральная цветочная композиция на&nbsp;стол;</li>
-                            <li>цветочные композиции на гостевые столы (до&nbsp;5&nbsp;шт.);</li>
-                            <li>номерки на гостевые столы;</li>
-                            <li>работа оформителя на площадке;</li>
-                            <li>монтаж и демонтаж;</li>
-                            <li>доставка в пределах КАД (для расчета загородного мероприятия, обратитесь к&nbsp;нашим менеджерам).</li>
-                        </ul>
-                        <ul class="service-list-wrapper__novella font-size-24" id="novella">
-                            <li>оформление президиума тканью;</li>
-                            <li>центральная цветочная композиция на&nbsp;стол;</li>
-                            <li>аренда конструкции для оформления фона за&nbsp;молодоженами;</li>
-                            <li>оформление фона за президиумом тканью и&nbsp;цветами;</li>
-                            <li>цветочные композиции на гостевые столы (до&nbsp;5&nbsp;шт.);</li>
-                            <li>номерки на гостевые столы;</li>
-                            <li>план рассадки;</li>
-                            <li>работа оформителя на площадке;</li>
-                            <li>монтаж и демонтаж;</li>
-                            <li>доставка в пределах КАД (для расчета загородного мероприятия, обратитесь к&nbsp;нашим менеджерам).</li>
-                        </ul>
-                        <ul class="service-list-wrapper__poem font-size-24" id="poem">
-                            <li>оформление президиума тканью и&nbsp;декоративными элементами;</li>
-                            <li>пышное оформление президиума цветами;</li>
-                            <li>аренда конструкции для оформления фона за&nbsp;молодоженами;</li>
-                            <li>оформление фона за президиумом тканью и&nbsp;цветами;</li>
-                            <li>цветочные композиции на гостевые столы (до&nbsp;5&nbsp;шт.);</li>
-                            <li>номерки на гостевые столы;</li>
-                            <li>план рассадки;</li>
-                            <li>оформление стульев (до 30 шт.);</li>
-                            <li>оформление гостевых салфеток (до&nbsp;30&nbsp;шт.);</li>
-                            <li>работа оформителя на площадке;</li>
-                            <li>монтаж и демонтаж;</li>
-                            <li>доставка в пределах КАД (для расчета загородного мероприятия, обратитесь к&nbsp;нашим менеджерам).</li>
-                        </ul>
-                        <ul class="service-list-wrapper__turnkey font-size-24" id="turnkey">
-                            <li>первичная встреча-консультация с&nbsp;оформителем;</li>
-                            <li>разработка индивидуального стиля мероприятия;</li>
-                            <li>создание подробного проекта по&nbsp;оформлению;</li>
-                            <li>выезд специалиста на площадку;</li>
-                            <li>подбор текстиля, мебели, посуды, декораций и&nbsp;других необходимых элементов;</li>
-                            <li>свадебная флористика.</li>
-                        </ul>
+                        <div id="etude">
+                            <p>
+                                Если Вам хочется поразить своих гостей разнообразием сюрпризов и&nbsp;утонченностью деталей, обратите
+                                внимание на&nbsp;данный пакет. В&nbsp;него вошли самые популярные элементы декора, используемые
+                                в&nbsp;оформлении выездных регистраций. Декоратор выслушает все Ваши пожелания и&nbsp;сделает эскиз,
+                                либо воссоздаст атмосферу на&nbsp;площадке по&nbsp;Вашим наброскам или фотографиям (все материалы
+                                и&nbsp;реквизит, кроме композиций из&nbsp;живых цветов и&nbsp;персонализированных аксессуаров,
+                                предоставляются в&nbsp;аренду).
+                            </p>
+                            <span class="service-list-wrapper__text">В стоимость пакета входит:</span>
+                            <ul class="service-list-wrapper__etude font-size-24">
+                                <li>аренда основной конструкции на&nbsp;выбор;</li>
+                                <li>оформление основной конструкции искусственными цветами или&nbsp;цветами микс;</li>
+                                <li>столик регистратора (при&nbsp;необходимости);</li>
+                                <li>монтаж, демонтаж конструкций;</li>
+                                <li>доставка в пределах КАД (для&nbsp;расчета загородной церемонии обратитесь к&nbsp;нашим менеджерам).</li>
+                            </ul>
+                        </div>
+                        <div id="novella">
+                            <p>
+                                Другими словами, в этом пакете есть всё необходимое для&nbsp;идеального праздника, который непременно
+                                запомнится всем свидетелям Вашего торжества и&nbsp;оставит массу приятных впечатлений в&nbsp;их сердцах
+                                (все материалы и&nbsp;реквизит, кроме композиций из&nbsp;живых цветов и&nbsp;персонализированных аксессуаров,
+                                предоставляются в&nbsp;аренду).
+                            </p>
+                            <span class="service-list-wrapper__text">В стоимость пакета входит:</span>
+                            <ul class="service-list-wrapper__novella font-size-24">
+                                <li>аренда основной конструкции на&nbsp;выбор;</li>
+                                <li>оформление основной конструкции искусственными/живыми цветами;</li>
+                                <li>аренда столика для&nbsp;выездного регистратора (при&nbsp;необходимости);</li>
+                                <li>дополнительный декор у&nbsp;арки/ширмы;</li>
+                                <li>монтаж, демонтаж конструкций;</li>
+                                <li>доставка в пределах КАД (для&nbsp;расчета загородной церемонии обратитесь к&nbsp;нашим менеджерам).</li>
+                            </ul>
+                        </div>
+                        <div id="poem">
+                            <p>
+                                В данном пакете используются исключительно живые цветы и&nbsp;зелень, собранные в&nbsp;пышные эффектные
+                                композиции, позволяющие создать атмосферу поистине королевской церемонии.
+                            </p>
+                            <span class="service-list-wrapper__text">В стоимость пакета входит:</span>
+                            <ul class="service-list-wrapper__novella font-size-24">
+                                <li>аренда основной конструкции на&nbsp;выбор;</li>
+                                <li>пышное оформление арки/ширмы искусственными/живыми цветами и&nbsp;зеленью;</li>
+                                <li>аренда столика для&nbsp;выездного регистратора (при&nbsp;необходимости);</li>
+                                <li>декоративные элементы перед аркой/ширмой;</li>
+                                <li>оформление прохода к&nbsp;арке/ширме;</li>
+                                <li>монтаж, демонтаж конструкций;</li>
+                                <li>доставка в пределах КАД (для&nbsp;расчета загородной церемонии обратитесь к&nbsp;нашим менеджерам).</li>
+                            </ul>
+                        </div>
+                        <div id="turnkey">
+                            <p>
+                                В данном пакете предполагается воссоздание любой Вашей идеи с&nbsp;нуля. Доверив нашим профессионалам
+                                проведение выездной церемонии бракосочетания, Вы получите идеальное сочетание качественных услуг,
+                                сервиса и&nbsp;индивидуального подхода, который сделает Ваш праздник ярким, роскошным и&nbsp;незабываемым!
+                                А&nbsp;благодаря комплексности подхода Вы сэкономите массу средств и&nbsp;времени, которое сможете
+                                посвятить друг другу!
+                            </p>
+                            <span class="service-list-wrapper__text">
+                                Выберите из предложенного списка интересующие Вас элементы и&nbsp;свяжитесь с&nbsp;нами:
+                            </span>
+                            <ul class="service-list-wrapper__turnkey font-size-24">
+                                <li>арка, декорированная цветами, элементами декора — от&nbsp;15&nbsp;000&nbsp;руб.;</li>
+                                <li>столик регистратора — от&nbsp;1&nbsp;000&nbsp;руб.;</li>
+                                <li>оформление дорожки тканью — от&nbsp;350&nbsp;руб./м;</li>
+                                <li>декорирование дорожки (песок, лепестки и&nbsp;другое) — от&nbsp;5&nbsp;000&nbsp;руб.;</li>
+                                <li>оформление прохода к&nbsp;арке — от&nbsp;5&nbsp;000&nbsp;руб.;</li>
+                                <li>декор стульев, имеющихся на&nbsp;площадке — от&nbsp;150&nbsp;руб./шт.;</li>
+                                <li>аренда стульев, чехлов, праздничный декор — от&nbsp;500&nbsp;руб./шт.;</li>
+                                <li>стол для фуршета — от&nbsp;3&nbsp;000&nbsp;руб.;</li>
+                                <li>свадебные указатели — от&nbsp;2&nbsp;000&nbsp;руб.;</li>
+                                <li>регистратор — от&nbsp;7&nbsp;000&nbsp;руб.;</li>
+                                <li>
+                                    аксессуары: подушечка для&nbsp;колец (ручная работа, цветы, декор) — от&nbsp;500&nbsp;руб., кулечки
+                                    и&nbsp;корзинки для&nbsp;лепестков — от&nbsp;200&nbsp;руб./шт., обложка для&nbsp;свидетельства
+                                    ручной работы — от&nbsp;1&nbsp;000&nbsp;руб.;
+                                </li>
+                                <li>диджей с аппаратурой — от&nbsp;4&nbsp;000&nbsp;руб.;</li>
+                                <li>
+                                    живая музыка: саксофонист — от&nbsp;5&nbsp;000&nbsp;руб., скрипичный дуэт — от&nbsp;8&nbsp;000&nbsp;руб.,
+                                    струнный квартет — от&nbsp;15&nbsp;000&nbsp;руб.;
+                                </li>
+                                <li>аренда генератора — от&nbsp;5&nbsp;000&nbsp;руб.;</li>
+                                <li>фото, видео церемонии — от&nbsp;3&nbsp;500&nbsp;руб.;</li>
+                                <li>оформление зоны для&nbsp;пожеланий — от&nbsp;1&nbsp;500&nbsp;руб.;</li>
+                                <li>песочная церемония — от&nbsp;1&nbsp;500&nbsp;руб.;</li>
+                                <li>доставка, монтаж — от&nbsp;2&nbsp;500&nbsp;руб.;</li>
+                                <li>винная церемония – от&nbsp;2&nbsp;500&nbsp;руб.</li>
+                            </ul>
+                        </div>
                         <button class="form-open-btn orange-btn font-size-25 padding-60" type="button">Оставить заявку</button>
                         <div class="service-list-wrapper__cross">
                             <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -930,198 +982,589 @@
                 </div>
             </div>
             <main>
-                <section class="wedding-organization-section2 anim-item typing-effect">
-                    <div class="orange-bg">
-                        <div class="h3-wrapper">
-                            <span>Оформление свадеб и выездных регистраций</span>
-                            <h3></h3>
+                <section class="marriage-registration-section2">
+                    <div class="marriage-registration-section2__top anim-item typing-effect">
+                        <div class="orange-bg">
+                            <div class="h3-wrapper">
+                                <span>Выездная регистрация брака</span>
+                                <h3></h3>
+                            </div>
+                        </div>
+                        <nav class="nav-with-blue-links bottom-up-100 delay-5">
+                            <a href="#">Выездная регистрация</a>
+                            <a href="">Свадебный регистратор</a>
+                        </nav>
+                    </div>
+                    <div class="container anim-item">
+                        <div class="text-with-lines bottom-up-25 delay-0">
+                            <div class="dividing-line"></div>
+                            <p>
+                                Выездная регистрация брака уже не&nbsp;первый год находится на&nbsp;пике популярности в&nbsp;нашей стране.
+                                Эта&nbsp;традиция, пришедшая с&nbsp;запада, быстро распространилась и&nbsp;полюбилась нашим молодоженам
+                                благодаря ряду неоспоримых преимуществ. Всё больше и&nbsp;больше пар предпочитают индивидуальный сценарий
+                                вместо шаблонных схем официального ЗАГСа.
+                            </p>
+                            <div class="dividing-line"></div>
                         </div>
                     </div>
-                    <div class="text-with-lines">
-                        <div class="dividing-line"></div>
-                        <p class="left-to-right-12 delay-5">
-                            Стоимость декора - это вопрос, который волнует каждую пару. Ответить на&nbsp;него однозначно сложно:
-                            характер молодоженов, выбранная площадка, пожелания, общий бюджет, количество гостей - любой фактор
-                            влияет на&nbsp;стоимость. Мы&nbsp;подготовили примеры пакетов, чтобы вы смогли получить ориентировку
-                            в&nbsp;ценах: как они меняются, что может быть&nbsp;включено.
-                        </p>
-                        <div class="dividing-line"></div>
+                </section>
+                <section class="marriage-registration-section3">
+                    <div class="container anim-item2">
+                        <h4>5 преимуществ выездной регистрации&nbsp;в&nbsp;СПб</h4>
+                        <div class="spoiler-cards">
+                            <div class="spoiler-card bottom-up-25 delay-5">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section3-1.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section3-1.jpg" alt="">
+                                </picture>
+                                <h5>Оформление в&nbsp;Вашем&nbsp;стиле</h5>
+                                <div>
+                                    <p>
+                                        Здесь Вы сами являетесь художником своего свадебного полотна. Только Вам решать, в&nbsp;каком
+                                        стиле и&nbsp;цвете пройдет церемония Вашей мечты. А&nbsp;наши декораторы с&nbsp;радостью
+                                        претворят в&nbsp;жизнь любые Ваши&nbsp;задумки.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-5">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section3-2.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section3-2.jpg" alt="">
+                                </picture>
+                                <h5>Дату&nbsp;и&nbsp;время назначаете&nbsp;Вы</h5>
+                                <div>
+                                    <p>
+                                        В отличие от официальных структур, в&nbsp;контексте выездной регистрации брака
+                                        в&nbsp;Санкт&#8209;Петербурге Вы ограничены лишь возможностями понравившейся Вам площадки.
+                                        В&nbsp;свой самый главный день Вам не&nbsp;придется вставать в&nbsp;5&nbsp;утра.
+                                        Вы&nbsp;можете хорошенько выспаться, провести свадебную фотосессию и&nbsp;спокойно
+                                        прибыть на&nbsp;регистрацию в&nbsp;удобное&nbsp;время.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-5">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section3-3.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section3-3.jpg" alt="">
+                                </picture>
+                                <h5>Индивидуальный сценарий</h5>
+                                <div>
+                                    <p>
+                                        Вы сами выбираете ведущего на&nbsp;основании портфолио или&nbsp;личной встречи. В&nbsp;зависимости
+                                        от&nbsp;Ваших пожеланий это может быть молодая девушка, взрослая женщина или&nbsp;даже мужчина!
+                                        Текст составляется индивидуально для&nbsp;каждой пары. В&nbsp;нем отразится история знакомства
+                                        и&nbsp;самые трогательные моменты. Вы&nbsp;сможете произнести клятвы не&nbsp;под марш Мендельсона,
+                                        а&nbsp;под&nbsp;свою любимую романтическую мелодию.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card centered-card bottom-up-50 delay-10">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section3-4.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section3-4.jpg" alt="">
+                                </picture>
+                                <h5>Удобная&nbsp;логистика мероприятия</h5>
+                                <div>
+                                    <p>
+                                        Вы избавляете своих гостей от&nbsp;томительных ожиданий и&nbsp;затяжных переездов.
+                                        Родные и&nbsp;близкие спокойно собираются в&nbsp;велком&#8209;зоне. Как только Вы будете готовы
+                                        предстать перед зрителями, ведущий пригласит гостей занять места. Ну&nbsp;а&nbsp;после
+                                        того, как Вас объявят мужем и&nbsp;женой, вся праздничная процессия легко и&nbsp;быстро
+                                        переместится в&nbsp;банкетный&nbsp;зал.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card centered-card bottom-up-50 delay-10">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section3-5.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section3-5.jpg" alt="">
+                                </picture>
+                                <h5>Нет&nbsp;ограничений по&nbsp;количеству</h5>
+                                <div>
+                                    <p>
+                                        Не только районные ЗАГСы, но&nbsp;и&nbsp;некоторые дворцы СПб ставят ограничение
+                                        по&nbsp;количеству приглашенных. Если Вы планируете довольно масштабное мероприятие,
+                                        а&nbsp;число гостей превышает сотню человек, то&nbsp;самым грамотным решением для&nbsp;Вас
+                                        будет проведение выездной регистрации на&nbsp;просторной площадке, где все желающие смогут
+                                        стать свидетелями рождения Вашего семейного&nbsp;союза.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section class="wedding-decoration-section3">
+                <section class="marriage-registration-section4">
+                    <div class="container anim-item">
+                        <h4>Выездная регистрация брака. Стоимость.</h4>
+                        <div class="text-with-lines bottom-up-25 delay-5">
+                            <div class="dividing-line"></div>
+                            <p>
+                                Стоимость выездной регистрации брака складывается из&nbsp;отдельных услуг. Мы&nbsp;подберем все
+                                составляющие церемонии, исходя из&nbsp;Ваших пожеланий, или&nbsp;составим индивидуальное
+                                предложение под&nbsp;конкретный бюджет.
+                            </p>
+                            <div class="dividing-line"></div>
+                        </div>
+                        <p class="marriage-registration-section4__text bottom-up-15 delay-10">
+                            Обращаем ваше внимание, что официальное заключение брака проводится только в&nbsp;ЗАГСе. Необходимо
+                            подать заявление на&nbsp;Госуслугах, после чего в&nbsp;назначенный день можно прийти в&nbsp;повседневной
+                            одежде, без&nbsp;гостей и&nbsp;торжественных речей, чтобы просто получить документы, подтверждающие
+                            бракосочетание. В&nbsp;свою очередь, выездная регистрация является лишь красивой памятной неофициальной
+                            церемонией, которую можно провести в&nbsp;любой день, в&nbsp;любом месте и&nbsp;в&nbsp;любой
+                            стилистике – той, которую выберете именно вы, а&nbsp;мы поможем с&nbsp;реализацией.
+                        </p>
+                    </div>
+                </section>
+                <section class="wedding-decoration-section3 marriage-registration-section5">
                     <div class="container service-packages-container anim-item2">
-                        <h4>Стоимость готовых пакетов</h4>
+                        <h4>Обратите внимание на готовые пакеты оформления для выездной регистрации в&nbsp;СПб</h4>
+                        <div class="text-with-lines bottom-up-25 delay-5">
+                            <div class="dividing-line"></div>
+                            <p>
+                                Данные пакеты не включают в&nbsp;себя организационные услуги агентства и&nbsp;подбор площадки.
+                                Если кроме оформления выездной регистрации Вам необходимы и&nbsp;другие услуги, такие как подбор
+                                площадки, регистратора, шоу&#8209;программы и&nbsp;т.д., предлагаем Вам рассмотреть пакет "Организация
+                                выездной регистрации под&nbsp;ключ" (стоимость - 35&nbsp;000&nbsp;руб.) с&nbsp;работой координатора
+                                на&nbsp;площадке.
+                            </p>
+                            <div class="dividing-line"></div>
+                        </div>
                         <div class="service-packages">
-                            <div class="service-package bottom-up-25 delay-5">
-                                <div class="service-package__name">
-                                    <picture>
-                                        <source srcset="img/wedding-decoration_section3-1.webp" type="image/webp">
-                                        <img src="img/wedding-decoration_section3-1.jpg" alt="">
-                                    </picture>
-                                    <h5>Пакет оформления "ЭТЮД"</h5>
-                                </div>
-                                <div class="service-package__description">
-                                    <p>
-                                        Минимальный набор самых популярных элементов свадебного декора, которые помогут оживить зал
-                                        торжества и&nbsp;придать ему индивидуальности. Этот&nbsp;пакет оптимален для&nbsp;залов, которые сами
-                                        по&nbsp;себе уже достаточно наполненные и&nbsp;требуют добавления лишь нескольких&nbsp;штрихов.
-                                    </p>
-                                    <button class="etude-btn font-size-24" type="button">Подробнее</button>
-                                </div>
-                                <div class="service-package__cost">от<span>29 500</span>руб.</div>
-                            </div>
                             <div class="service-package bottom-up-25 delay-10">
                                 <div class="service-package__name">
                                     <picture>
-                                        <source srcset="img/wedding-decoration_section3-2.webp" type="image/webp">
-                                        <img src="img/wedding-decoration_section3-2.jpg" alt="">
+                                        <source srcset="img/marriage-registration_section5-1.webp" type="image/webp">
+                                        <img src="img/marriage-registration_section5-1.jpg" alt="">
                                     </picture>
-                                    <h5>Пакет оформления "НОВЕЛЛА"</h5>
+                                    <h5>Пакет «Соната»</h5>
                                 </div>
                                 <div class="service-package__description">
                                     <p>
-                                        Расширенный пакет декора для свадебного торжества. В&nbsp;него включены как основные пункты,
-                                        так и&nbsp;дополнительные бонусы, придающие залу особый шарм и&nbsp;торжественность. Этот&nbsp;пакет
-                                        открывает простор для&nbsp;фантазии и&nbsp;отражения неповторимого стиля&nbsp;свадьбы.
+                                        Всё включено для идеального звучания. Оптимальный набор декораций для&nbsp;красивой
+                                        и&nbsp;романтичной церемонии.
+                                    </p>
+                                    <button class="etude-btn font-size-24" type="button">Подробнее</button>
+                                </div>
+                                <div class="service-package__cost">от<span>31 500</span>руб.</div>
+                            </div>
+                            <div class="service-package bottom-up-25 delay-15">
+                                <div class="service-package__name">
+                                    <picture>
+                                        <source srcset="img/marriage-registration_section5-2.webp" type="image/webp">
+                                        <img src="img/marriage-registration_section5-2.jpg" alt="">
+                                    </picture>
+                                    <h5>Пакет «Серенада»</h5>
+                                </div>
+                                <div class="service-package__description">
+                                    <p>
+                                        Расширенный набор опций для Вашей свадебной церемонии. В&nbsp;этом пакете мы предлагаем
+                                        индивидуальный пошив и&nbsp;изготовление декораций для&nbsp;выездной регистрации в&nbsp;любой
+                                        цветовой гамме и&nbsp;в&nbsp;любом стиле по&nbsp;Вашему желанию, а&nbsp;также серию
+                                        дополнительных деталей для&nbsp;украшения площадки, где пройдет церемония.
                                     </p>
                                     <button class="novella-btn font-size-24" type="button">Подробнее</button>
                                 </div>
                                 <div class="service-package__cost">от<span>41 500</span>руб.</div>
                             </div>
-                            <div class="service-package bottom-up-25 delay-15">
-                                <div class="service-package__name">
-                                    <picture>
-                                        <source srcset="img/wedding-decoration_section3-3.webp" type="image/webp">
-                                        <img src="img/wedding-decoration_section3-3.jpg" alt="">
-                                    </picture>
-                                    <h5>Пакет оформления "ПОЭМА"</h5>
-                                </div>
-                                <div class="service-package__description">
-                                    <p>
-                                        Полный набор свадебных декораций для банкета, предполагающий богатое масштабное оформление.
-                                        Максимальный акцент на&nbsp;президиум, использование объемных и&nbsp;пышных цветочных композиций,
-                                        внимание к&nbsp;мелочам – вот главные достоинства&nbsp;«Поэмы».
-                                    </p>
-                                    <button class="poem-btn font-size-24" type="button">Подробнее</button>
-                                </div>
-                                <div class="service-package__cost">от<span>59 400</span>руб.</div>
-                            </div>
                             <div class="service-package bottom-up-25 delay-20">
                                 <div class="service-package__name">
                                     <picture>
-                                        <source srcset="img/wedding-decoration_section3-4.webp" type="image/webp">
-                                        <img src="img/wedding-decoration_section3-4.jpg" alt="">
+                                        <img src="img/marriage-registration_section5-3.jpg" alt="">
                                     </picture>
-                                    <h5>Оформление “под ключ”</h5>
+                                    <h5>Пакет «Симфония»</h5>
                                 </div>
                                 <div class="service-package__description">
                                     <p>
-                                        Мы с радостью воплотим в жизнь все Ваши самые фантастические задумки и&nbsp;вместе напишем
-                                        неповторимую историю Вашей волшебной свадьбы. По&nbsp;эскизу клиента мы создадим новые декорации,
-                                        соберем композиции и&nbsp;гирлянды из&nbsp;нужных цветов, разработаем стильный дизайн всей свадебной
-                                        полиграфии и&nbsp;прочих элементов, для&nbsp;того, чтобы каждое «слово» вашей свадьбы соответствовало
-                                        высокому стилю мероприятия и&nbsp;подчеркивало статус этого&nbsp;события.
+                                        Максимальное наполнение для Вашей сказочной и&nbsp;незабываемой церемонии. В&nbsp;это произведение
+                                        декораторского искусства войдут все возможные декорации, которые отразят неповторимый стиль
+                                        торжества и&nbsp;сделают его изысканным, гармоничным, идеально подходящим именно Вашей&nbsp;паре.
+                                    </p>
+                                    <button class="poem-btn font-size-24" type="button">Подробнее</button>
+                                </div>
+                                <div class="service-package__cost">от<span>56 500</span>руб.</div>
+                            </div>
+                            <div class="service-package bottom-up-25 delay-25">
+                                <div class="service-package__name">
+                                    <picture>
+                                        <source srcset="img/marriage-registration_section5-4.webp" type="image/webp">
+                                        <img src="img/marriage-registration_section5-4.jpg" alt="">
+                                    </picture>
+                                    <h5>Оформление выездной регистрации под ключ</h5>
+                                </div>
+                                <div class="service-package__description">
+                                    <p>
+                                        Если среди предложенных нами вариантов не&nbsp;нашлось идеально подходящего Вам, компания
+                                        «100&nbsp;Чудес» предлагает комплексную организацию этого торжественного события с&nbsp;учетом
+                                        всех Ваших пожеланий.
                                     </p>
                                     <button class="turnkey-btn font-size-24" type="button">Подробнее</button>
                                 </div>
-                                <a class="service-package__cost font-size-25" href="">Рассчитать стоимость</a>
+                                <div class="service-package__cost">от<span>35 000</span>руб.</div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="wedding-decoration-section4">
+                <section class="saint-petersburg-section12 marriage-registration-section6">
+                    <div class="container anim-item">
+                        <h4>Наши счастливые свадебные&nbsp;истории</h4>
+                        <div class="saint-petersburg-section12__swiper bottom-up-15 delay-5">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide wedding-slide1">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/forest-symphony.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="swiper-slide wedding-slide2">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/boho-style.webm" type="video/webm">
+                                            <source src="video/boho-style.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="swiper-slide wedding-slide3">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/cuteness.webm" type="video/webm">
+                                            <source src="video/cuteness.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="swiper-slide wedding-slide4">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/dasha-stas.webm" type="video/webm">
+                                            <source src="video/dasha-stas.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="swiper-slide wedding-slide5">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/royal-beach.webm" type="video/webm">
+                                            <source src="video/royal-beach.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="swiper-slide wedding-slide6">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/elegance.webm" type="video/webm">
+                                            <source src="video/elegance.mov" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="swiper-slide wedding-slide7">
+                                        <video preload="metadata" controls playsinline>
+                                            <source src="video/russian-american.webm" type="video/webm">
+                                            <source src="video/russian-american.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-btn-prev">&lt;</div>
+                            <div class="swiper-btn-next">&lt;</div>
+                        </div>
+                        <div class="video-title font-size-24 transparency">
+                            <span class="video-title1 _visible">Свадьба в лесной симфонии</span>
+                            <span class="video-title2">Бохо-стиль Вадика и Юли</span>
+                            <span class="video-title3">Уровень милоты на максимум!</span>
+                            <span class="video-title4">Свадьба Даши и Стаса</span>
+                            <span class="video-title5">Свадьба в ресторане Royal Beach</span>
+                            <span class="video-title6">Безупречная элегантность</span>
+                            <span class="video-title7">Русско-Американская свадьба</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="marriage-registration-section7">
+                    <div class="container anim-item">
+                        <h4>Организация выездной регистрации брака&nbsp;под&nbsp;ключ</h4>
+                        <div class="text-with-lines bottom-up-25 delay-5">
+                            <div class="dividing-line"></div>
+                            <p>
+                                Если Ваша заветная мечта - это сказочная выездная регистрация брака в&nbsp;СПб, то&nbsp;приступая
+                                к&nbsp;подготовке, стоит позаботиться не&nbsp;только о&nbsp;внешней составляющей,
+                                но&nbsp;и&nbsp;о&nbsp;множестве внутренних деталей и&nbsp;нюансов. С&nbsp;чего начать?
+                                Как выбрать площадку? Нужно&nbsp;ли официально регистрировать брак в&nbsp;ЗАГСе? Как воплотить
+                                в&nbsp;жизнь все давние задумки, не&nbsp;истратив на&nbsp;это весь свадебный бюджет?
+                            </p>
+                            <div class="dividing-line"></div>
+                        </div>
+                        <ul class="orange-marker bottom-up-50 delay-10">
+                            <li>Стоимость организации выездной регистрации под&nbsp;ключ - 35&nbsp;000&nbsp;руб.</li>
+                            <li>
+                                В стоимость входит подбор площадки для&nbsp;церемонии, подбор всех необходимых подрядчиков,
+                                разработка стиля регистрации, разработка сценария регистрации, написание речи регистратора,
+                                работа свадебного координатора на&nbsp;площадке.
+                            </li>
+                        </ul>
+                        <div class="text-with-lines bottom-up-25 delay-15">
+                            <div class="dividing-line"></div>
+                            <p>
+                                Ответы на эти и другие вопросы подскажут наши специалисты: дизайнер, ведущий, координатор.
+                                С&nbsp;Вами будет работать целая команда, слаженность и&nbsp;профессионализм которой станут
+                                залогом Вашего успешного мероприятия.
+                            </p>
+                            <div class="dividing-line"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="saint-petersburg-section7 anim-item">
+                    <div class="padding-30 transparency">
+                        <button class="form-open-btn orange-btn font-size-25" type="button">Записаться на встречу с декоратором</button>
+                    </div>
+                </section>
+                <section class="marriage-registration-section9">
                     <div class="container anim-item2">
-                        <div class="text-with-lines bottom-up-50 delay-0">
+                        <h4>Что нужно подготовить?</h4>
+                        <div class="text-with-lines bottom-up-50 delay-5">
                             <div class="dividing-line"></div>
-                            <p>
-                                Ниже мы представили общий прайс на отдельно взятые позиции. Конечно, это не&nbsp;весь список возможностей
-                                нашего декоратора! Помните, что мы делаем каждый проект под&nbsp;ваши пожелания и&nbsp;не&nbsp;отправляем одинаковые
-                                шаблоны разным парам. Минимальный бюджет, с&nbsp;которым мы работаем - 20&nbsp;000&nbsp;руб. Стоимость ведения проекта
-                                20% от&nbsp;общей сметы, но&nbsp;не&nbsp;менее 6&nbsp;000&nbsp;руб. + отдельно оплачиваются транспортные&nbsp;расходы.
-                            </p>
+                            <p>Для организации Вашей идеальной свадебной сказки необходимо позаботиться о&nbsp;следующих пунктах:</p>
                             <div class="dividing-line"></div>
                         </div>
-                        <h4>Средние цены на оформление свадеб:</h4>
-                        <div class="cost-table2 bottom-up-15 delay-10">
-                            <div class="cost-table2__column">
+                        <div class="spoiler-cards">
+                            <div class="spoiler-card bottom-up-25 delay-10">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-1.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-1.jpg" alt="">
+                                </picture>
+                                <h5>Аренда площадки</h5>
                                 <div>
-                                    <span>Приглашения</span>
-                                </div>
-                                <div>
-                                    <span>План расссадки</span>
-                                </div>
-                                <div>
-                                    <span>Карточки рассадки</span>
-                                </div>
-                                <div>
-                                    <span>Номерки на стол</span>
-                                </div>
-                                <div>
-                                    <span>Аренда арки для выездной регистрации</span>
-                                </div>
-                                <div>
-                                    <span>Декор арки цветами</span>
-                                </div>
-                                <div>
-                                    <span>Оформление прохода к&nbsp;арке</span>
-                                </div>
-                                <div>
-                                    <span>Фотозона</span>
-                                </div>
-                                <div>
-                                    <span>Букет невесты</span>
-                                </div>
-                                <div>
-                                    <span>Бутоньерка</span>
-                                </div>
-                                <div>
-                                    <span>Декор стола тканью</span>
-                                </div>
-                                <div>
-                                    <span>Цветочная композиция на&nbsp;гостевой&nbsp;стол</span>
-                                </div>
-                                <div>
-                                    <span>Цветочная композиция на&nbsp;президиум</span>
-                                </div>
-                                <div>
-                                    <span>Оформление салфетки</span>
-                                </div>
-                                <div>
-                                    <span>Книга для пожеланий</span>
-                                </div>
-                                <div>
-                                    <span>Зона для пожеланий</span>
+                                    <p>
+                                        Существует масса вариантов мест, где может состояться Ваша выездная регистрация. Цена аренды
+                                        зависит от&nbsp;благоустроенности, популярности, удаленности и&nbsp;множества других факторов.
+                                        Дворец, парк, крыша, пляж, лес – вот лишь часть этого обширного списка. Наши специалисты
+                                        с&nbsp;радостью подберут идеальную площадку для&nbsp;Вашего торжества.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="cost-table2__column font-size-24">
-                                <div>от <span>25 000</span> руб.</div>
-                                <div>от <span>30 000</span> руб.</div>
-                                <div>от <span>250</span> руб./шт.</div>
-                                <div>от <span>35 000</span> руб.</div>
-                                <div>от <span>15 000</span> руб.</div>
-                                <div>от <span>25 000</span> руб.</div>
-                                <div>от <span>30 000</span> руб.</div>
-                                <div>от <span>250</span> руб./шт.</div>
-                                <div>от <span>35 000</span> руб.</div>
-                                <div>от <span>25 000</span> руб.</div>
-                                <div>от <span>30 000</span> руб.</div>
-                                <div>от <span>250</span> руб./шт.</div>
-                                <div>от <span>35 000</span> руб.</div>
-                                <div>от <span>15 000</span> руб.</div>
-                                <div>от <span>25 000</span> руб.</div>
-                                <div>от <span>25 000</span> руб.</div>
+                            <div class="spoiler-card bottom-up-25 delay-10">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-2.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-2.jpg" alt="">
+                                </picture>
+                                <h5>Декор</h5>
+                                <div>
+                                    <p>
+                                        Это основная статья расходов, из&nbsp;которых складывается выездная регистрация. Стоимость
+                                        оформления сильно зависит от&nbsp;используемых материалов (живые цветы, текстиль, дерево,
+                                        декоративные элементы), их количества и&nbsp;выбранных Вами дополнительных опций. Заказывать
+                                        декор церемонии можно как комплексно, так и&nbsp;по&nbsp;отдельности.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-10">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-9.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-9.jpg" alt="">
+                                </picture>
+                                <h5>Координатор</h5>
+                                <div>
+                                    <p>
+                                        Чтобы выездная регистрация свадьбы прошла идеально, необходим специалист, который будет
+                                        координировать все процессы. Агентство «100&nbsp;Чудес» предоставляет услуги опытных
+                                        и&nbsp;внимательных координаторов по&nbsp;очень приятным&nbsp;ценам.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-15">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-8.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-8.jpg" alt="">
+                                </picture>
+                                <h5>Аксессуары и&nbsp;доп.&nbsp;услуги</h5>
+                                <div>
+                                    <p>
+                                        В сценарий Вашей регистрации можно добавить песочную церемонию или&nbsp;обряд закладки вина.
+                                        Можно организовать появление молодоженов на&nbsp;катере, мотоцикле или вертолете. Можно сшить
+                                        одинаковые платья подружкам невесты и&nbsp;бабочки друзьям жениха. Список возможностей
+                                        и&nbsp;идей безграничен. Подробнее о&nbsp;них мы расскажем Вам при&nbsp;личной встрече.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-15">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-3.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-3.jpg" alt="">
+                                </picture>
+                                <h5>Ведущий&nbsp;выездной церемонии</h5>
+                                <div>
+                                    <p>
+                                        Цена на данную услугу определяется качеством работы и&nbsp;спросом на&nbsp;конкретного специалиста.
+                                        При&nbsp;выборе регистратора обращайте внимание на&nbsp;отзывы и&nbsp;не&nbsp;ленитесь
+                                        просматривать видео&nbsp;и&nbsp;фото.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-15">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-4.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-4.jpg" alt="">
+                                </picture>
+                                <h5>Музыкальное сопровождение</h5>
+                                <div>
+                                    <p>
+                                        Музыка - это крайне важная составляющая, создающая атмосферу торжественности и&nbsp;романтики.
+                                        Самый простой и&nbsp;распространенный вариант – фоновая музыка из&nbsp;колонок. Если
+                                        на&nbsp;площадке отсутствует электричество, Вам потребуется аренда генератора. Прекрасная
+                                        альтернатива первому варианту - живая музыка. Услуги музыкантов хоть и&nbsp;стоят дороже,
+                                        зато дарят потрясающее настроение Вашему празднику.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-20">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-5.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-5.jpg" alt="">
+                                </picture>
+                                <h5>Мебель</h5>
+                                <div>
+                                    <p>
+                                        Для красивого и комфортного размещения гостей на&nbsp;церемонии необходимы стулья
+                                        или&nbsp;скамейки. В&nbsp;данном случае молодожены платят не&nbsp;только за&nbsp;аренду мебели,
+                                        но&nbsp;и&nbsp;доставку её на&nbsp;место. Преимуществом регистрации на&nbsp;площадке ресторана
+                                        является близость банкетного зала и&nbsp;возможность использовать стулья оттуда.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-20">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-6.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-6.jpg" alt="">
+                                </picture>
+                                <h5>Шатер или зонты</h5>
+                                <div>
+                                    <p>
+                                        Планируя выездную церемонию в&nbsp;Санкт&#8209;Петербурге всегда нужен план&nbsp;«Б» на&nbsp;случай
+                                        непогоды. Это может быть шатер или пространство в&nbsp;ресторане, куда можно будет переместить
+                                        церемонию непосредственно в&nbsp;день свадьбы. Если&nbsp;же такой возможности нет, арендуйте
+                                        для&nbsp;гостей красивые одинаковые зонтики.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-20">
+                                <picture>
+                                    <source srcset="img/marriage-registration_section9-7.webp" type="image/webp">
+                                    <img src="img/marriage-registration_section9-7.jpg" alt="">
+                                </picture>
+                                <h5>Угощения</h5>
+                                <div>
+                                    <p>
+                                        Если перед церемонией объявлен получасовой сбор, позаботьтесь о&nbsp;наличии напитков и&nbsp;закусок.
+                                        Если места для&nbsp;регистрации и&nbsp;банкета расположены рядом, эту задачу можно возложить
+                                        на&nbsp;ресторан. Если нет – пригласите кейтеринговую службу или попросите кого&#8209;то из&nbsp;друзей
+                                        организовать фуршетный стол. Прекрасным завершением церемонии станет пирамида шампанского – это
+                                        и&nbsp;угощение и&nbsp;шоу одновременно.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-with-lines bottom-up-50 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Что нужно сделать, чтобы быстрее получить расчет проекта? Вы&nbsp;можете отправить нам фотографии понравившегося
-                                декора, описать словами картинку, которая есть в&nbsp;вашей голове, ответить на&nbsp;уточняющие вопросы.
-                                Но&nbsp;все&nbsp;же нет ничего лучше личной встречи! Звоните, записывайтесь на&nbsp;нее: мы бесплатно сделаем
-                                для&nbsp;вас расчет. И&nbsp;вы сможете уже лучше представить, как будет выглядеть ваш декор
-                                и&nbsp;сколько он будет&nbsp;стоить.
-                            </p>
-                            <div class="dividing-line"></div>
+                    </div>
+                </section>
+                <section class="about-company-section6">
+                    <div class="container anim-item">
+                        <h4>Самое интересное из нашей свадебной&nbsp;биографии</h4>
+                        <div class="about-company-section6__swiper bottom-up-25 delay-5">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events1.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events1.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.06.2024</span>
+                                            <span class="swiper-slide__title">Катя и Женя: Как упоительны<br>в России вечера</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events2.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events2.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">23.10.2021</span>
+                                            <span class="swiper-slide__title">Маша и Лёша:<br>осенние краски любви</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events3.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events3.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.10.2022</span>
+                                            <span class="swiper-slide__title">Владимир и Мария: легкость<br>и задор в разгаре осени</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events4.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events4.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">16.08.2024</span>
+                                            <span class="swiper-slide__title">Олег и Дарья:<br>красота в деталях</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events1.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events1.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.06.2024</span>
+                                            <span class="swiper-slide__title">Катя и Женя: Как упоительны<br>в России вечера</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events2.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events2.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">23.10.2021</span>
+                                            <span class="swiper-slide__title">Маша и Лёша:<br>осенние краски любви</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events3.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events3.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.10.2022</span>
+                                            <span class="swiper-slide__title">Владимир и Мария: легкость<br>и задор в разгаре осени</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events4.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events4.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">16.08.2024</span>
+                                            <span class="swiper-slide__title">Олег и Дарья:<br>красота в деталях</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events1.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events1.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.06.2024</span>
+                                            <span class="swiper-slide__title">Катя и Женя: Как упоительны<br>в России вечера</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events2.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events2.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">23.10.2021</span>
+                                            <span class="swiper-slide__title">Маша и Лёша:<br>осенние краски любви</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-btn-prev">&lt;</div>
+                            <div class="swiper-btn-next">&lt;</div>
+                        </div>
+                        <div class="underlined-link transparency">
+                            <a href="">Посмотреть все мероприятия</a>
                         </div>
                     </div>
                 </section>

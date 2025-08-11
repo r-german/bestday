@@ -608,6 +608,18 @@ picture {
                 grid-row: 1/3;
                 padding: 10px 10px 28px 10px;
                 background-color: $white;
+                picture {
+                    display: block;
+                    position: relative;
+                    padding-bottom: 66.667%;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
             }
             .service-package__description {
                 align-self: end;
@@ -855,6 +867,28 @@ button {cursor: pointer;}
 .underlined-link:not(.home-section7 .underlined-link) {margin-top: 35px;}
 
 a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-decoration: none;}
+
+.nav-with-blue-links {
+    will-change: transform;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+    display: grid;
+    gap: 16px;
+    a {
+        font-size: 12px;
+        padding: 8px 12px 10px 12px;
+        color: $white;
+        background-color: rgb(85, 72, 116, 0.7);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    @media (hover: hover) and (pointer: fine) {
+        a {
+            transform: translate3d(0, 0, 0);
+            transition: background-color 0.3s;
+        }
+        a:hover {background-color: $violet2;}
+    }
+}
 
 @media (hover: hover) and (pointer: fine) {
     .white-link {
@@ -1169,6 +1203,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         a {font-size: calc(14px + (32 - 14) * ((100vw - 321px) / (1300 - 321)));}
     }
     .underlined-link:not(.home-section7 .underlined-link) {margin-top: calc(20px + (35 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    .nav-with-blue-links {
+        margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
+        gap: calc(10px + (16 - 10) * ((100vw - 321px) / (1300 - 321)));
+    }
 }
 
 @media (max-width: 1300.9px) and (min-width: 992px) {
@@ -1290,9 +1328,14 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
                     }
                 }
             }
+            .service-package:nth-child(2):not(.marriage-registration-section5 .service-package) {
+                transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+            }
+            .service-package:nth-child(3):not(.marriage-registration-section5 .service-package),
+            .service-package:nth-child(4):not(.marriage-registration-section5 .service-package) {
+                transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
+            }
         }
-        .service-package:nth-child(2) {transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;}
-        .service-package:nth-child(3), .service-package:nth-child(4) {transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;}
     }
     .photo-on-the-left, .photo-on-the-right {
         grid-template-columns: 1fr;
@@ -1312,14 +1355,20 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     }
     .spoiler-cards {
         grid-template-columns: 1fr 1fr;
-        .spoiler-card:nth-child(3) {transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;}
-        .spoiler-card:nth-child(5), .spoiler-card:nth-child(6) {
+        .spoiler-card:nth-child(3):not(.marriage-registration-section9 .spoiler-card) {
+            transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
+        }
+        .spoiler-card:nth-child(5):not(.marriage-registration-section9 .spoiler-card),
+        .spoiler-card:nth-child(6):not(.marriage-registration-section9 .spoiler-card) {
             transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
         }
-        .spoiler-card:nth-child(7), .spoiler-card:nth-child(8) {
+        .spoiler-card:nth-child(7):not(.marriage-registration-section9 .spoiler-card),
+        .spoiler-card:nth-child(8):not(.marriage-registration-section9 .spoiler-card) {
             transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
         }
-        .spoiler-card:nth-child(9) {transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;}
+        .spoiler-card:nth-child(9):not(.marriage-registration-section9 .spoiler-card) {
+            transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;
+        }
     }
 }
 
@@ -1380,9 +1429,15 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     .service-packages-container {
         .service-packages {
             grid-template-columns: 1fr;
-            .service-package:nth-child(2) {transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;}
-            .service-package:nth-child(3) {transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;}
-            .service-package:nth-child(4) {transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;}
+            .service-package:nth-child(2):not(.marriage-registration-section5 .service-package) {
+                transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
+            }
+            .service-package:nth-child(3):not(.marriage-registration-section5 .service-package) {
+                transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
+            }
+            .service-package:nth-child(4):not(.marriage-registration-section5 .service-package) {
+                transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
+            }
         }
     }
 }
@@ -1404,7 +1459,9 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     }
     .spoiler-cards {
         grid-template-columns: 1fr;
-        .spoiler-card:nth-child(n+3) {transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;}
+        .spoiler-card:nth-child(n+3):not(.marriage-registration-section9 .spoiler-card) {
+            transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+        }
     }
 }
 
@@ -1615,4 +1672,8 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
         a {font-size: 14px;}
     }
     .underlined-link:not(.home-section7 .underlined-link) {margin-top: 20px;}
+    .nav-with-blue-links {
+        margin: 20px auto 0 auto;
+        gap: 10px;
+    }
 }

@@ -695,6 +695,18 @@ picture .position-top {
   padding: 10px 10px 28px 10px;
   background-color: #FFFFFF;
 }
+.service-packages-container .service-packages .service-package .service-package__name picture {
+  display: block;
+  position: relative;
+  padding-bottom: 66.667%;
+}
+.service-packages-container .service-packages .service-package .service-package__name picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
 .service-packages-container .service-packages .service-package .service-package__description {
   align-self: end;
   padding: 20px 25px 32px 25px;
@@ -961,6 +973,30 @@ button {
 
 a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   text-decoration: none;
+}
+
+.nav-with-blue-links {
+  will-change: transform;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  display: grid;
+  gap: 16px;
+}
+.nav-with-blue-links a {
+  font-size: 12px;
+  padding: 8px 12px 10px 12px;
+  color: #FFFFFF;
+  background-color: rgba(85, 72, 116, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-with-blue-links a {
+    transform: translate3d(0, 0, 0);
+    transition: background-color 0.3s;
+  }
+  .nav-with-blue-links a:hover {
+    background-color: #554874;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1263,6 +1299,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .underlined-link:not(.home-section7 .underlined-link) {
     margin-top: calc(20px + 15 * (100vw - 321px) / 979);
   }
+  .nav-with-blue-links {
+    margin: calc(20px + 20 * (100vw - 321px) / 979) auto 0 auto;
+    gap: calc(10px + 6 * (100vw - 321px) / 979);
+  }
 }
 @media (max-width: 1300.9px) and (min-width: 992px) {
   .service-packages-container .service-packages {
@@ -1368,10 +1408,11 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
     flex: 1 1 auto;
     text-align: center;
   }
-  .service-packages-container .service-package:nth-child(2) {
+  .service-packages-container .service-packages .service-package:nth-child(2):not(.marriage-registration-section5 .service-package) {
     transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;
   }
-  .service-packages-container .service-package:nth-child(3), .service-packages-container .service-package:nth-child(4) {
+  .service-packages-container .service-packages .service-package:nth-child(3):not(.marriage-registration-section5 .service-package),
+  .service-packages-container .service-packages .service-package:nth-child(4):not(.marriage-registration-section5 .service-package) {
     transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
   }
   .photo-on-the-left, .photo-on-the-right {
@@ -1393,16 +1434,18 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .spoiler-cards {
     grid-template-columns: 1fr 1fr;
   }
-  .spoiler-cards .spoiler-card:nth-child(3) {
+  .spoiler-cards .spoiler-card:nth-child(3):not(.marriage-registration-section9 .spoiler-card) {
     transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
   }
-  .spoiler-cards .spoiler-card:nth-child(5), .spoiler-cards .spoiler-card:nth-child(6) {
+  .spoiler-cards .spoiler-card:nth-child(5):not(.marriage-registration-section9 .spoiler-card),
+  .spoiler-cards .spoiler-card:nth-child(6):not(.marriage-registration-section9 .spoiler-card) {
     transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
   }
-  .spoiler-cards .spoiler-card:nth-child(7), .spoiler-cards .spoiler-card:nth-child(8) {
+  .spoiler-cards .spoiler-card:nth-child(7):not(.marriage-registration-section9 .spoiler-card),
+  .spoiler-cards .spoiler-card:nth-child(8):not(.marriage-registration-section9 .spoiler-card) {
     transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
   }
-  .spoiler-cards .spoiler-card:nth-child(9) {
+  .spoiler-cards .spoiler-card:nth-child(9):not(.marriage-registration-section9 .spoiler-card) {
     transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;
   }
 }
@@ -1439,13 +1482,13 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .service-packages-container .service-packages {
     grid-template-columns: 1fr;
   }
-  .service-packages-container .service-packages .service-package:nth-child(2) {
+  .service-packages-container .service-packages .service-package:nth-child(2):not(.marriage-registration-section5 .service-package) {
     transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
   }
-  .service-packages-container .service-packages .service-package:nth-child(3) {
+  .service-packages-container .service-packages .service-package:nth-child(3):not(.marriage-registration-section5 .service-package) {
     transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
   }
-  .service-packages-container .service-packages .service-package:nth-child(4) {
+  .service-packages-container .service-packages .service-package:nth-child(4):not(.marriage-registration-section5 .service-package) {
     transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
   }
 }
@@ -1459,7 +1502,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   .spoiler-cards {
     grid-template-columns: 1fr;
   }
-  .spoiler-cards .spoiler-card:nth-child(n+3) {
+  .spoiler-cards .spoiler-card:nth-child(n+3):not(.marriage-registration-section9 .spoiler-card) {
     transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;
   }
 }
@@ -1700,6 +1743,10 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {
   }
   .underlined-link:not(.home-section7 .underlined-link) {
     margin-top: 20px;
+  }
+  .nav-with-blue-links {
+    margin: 20px auto 0 auto;
+    gap: 10px;
   }
 }
 .header1 {
@@ -3078,9 +3125,12 @@ form .orange-btn {
 .modal-window .modal-window-container .modal-window__service-list-wrapper #etude, .modal-window .modal-window-container .modal-window__service-list-wrapper #novella, .modal-window .modal-window-container .modal-window__service-list-wrapper #poem, .modal-window .modal-window-container .modal-window__service-list-wrapper #turnkey {
   display: none;
 }
-.modal-window .modal-window-container .modal-window__service-list-wrapper #etude .service-list-wrapper__text, .modal-window .modal-window-container .modal-window__service-list-wrapper #novella .service-list-wrapper__text,
-.modal-window .modal-window-container .modal-window__service-list-wrapper #poem .service-list-wrapper__text, .modal-window .modal-window-container .modal-window__service-list-wrapper #turnkey .service-list-wrapper__text {
+.modal-window .modal-window-container .modal-window__service-list-wrapper #etude p, .modal-window .modal-window-container .modal-window__service-list-wrapper #etude .service-list-wrapper__text, .modal-window .modal-window-container .modal-window__service-list-wrapper #novella p, .modal-window .modal-window-container .modal-window__service-list-wrapper #novella .service-list-wrapper__text, .modal-window .modal-window-container .modal-window__service-list-wrapper #poem p, .modal-window .modal-window-container .modal-window__service-list-wrapper #poem .service-list-wrapper__text, .modal-window .modal-window-container .modal-window__service-list-wrapper #turnkey p, .modal-window .modal-window-container .modal-window__service-list-wrapper #turnkey .service-list-wrapper__text {
   margin-right: 32px;
+}
+.modal-window .modal-window-container .modal-window__service-list-wrapper p {
+  line-height: 130%;
+  margin-bottom: 36px;
 }
 .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__text {
   display: block;
@@ -3090,7 +3140,7 @@ form .orange-btn {
   color: #412C73;
 }
 .modal-window .modal-window-container .modal-window__service-list-wrapper ul {
-  margin: 25px 0 38px 0;
+  margin: 24px 0 38px 0;
 }
 .modal-window .modal-window-container .modal-window__service-list-wrapper ul li {
   list-style: none;
@@ -3132,12 +3182,15 @@ form .orange-btn {
   .modal-window .modal-window-container .modal-window__form-wrapper .form-wrapper__cross svg, .modal-window .modal-window-container .modal-window__form-wrapper .service-list-wrapper__cross svg, .modal-window .modal-window-container .modal-window__service-list-wrapper .form-wrapper__cross svg, .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__cross svg {
     width: calc(16px + 11 * (100vw - 321px) / 979);
   }
+  .modal-window .modal-window-container .modal-window__service-list-wrapper p {
+    margin-bottom: calc(20px + 16 * (100vw - 321px) / 979);
+  }
   .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__text {
     font-size: calc(16px + 12 * (100vw - 321px) / 979);
     margin-top: calc(-2px + -3 * (100vw - 321px) / 979);
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul {
-    margin: calc(15px + 10 * (100vw - 321px) / 979) 0 calc(21px + 17 * (100vw - 321px) / 979) 0;
+    margin: calc(15px + 9 * (100vw - 321px) / 979) 0 calc(22px + 16 * (100vw - 321px) / 979) 0;
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul li {
     padding-left: calc(9px + 9 * (100vw - 321px) / 979);
@@ -3187,12 +3240,15 @@ form .orange-btn {
   .modal-window .modal-window-container .modal-window__form-wrapper .form-wrapper__cross svg, .modal-window .modal-window-container .modal-window__form-wrapper .service-list-wrapper__cross svg, .modal-window .modal-window-container .modal-window__service-list-wrapper .form-wrapper__cross svg, .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__cross svg {
     width: 16px;
   }
+  .modal-window .modal-window-container .modal-window__service-list-wrapper p {
+    margin-bottom: 20px;
+  }
   .modal-window .modal-window-container .modal-window__service-list-wrapper .service-list-wrapper__text {
     font-size: 16px;
     margin-top: -2px;
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul {
-    margin: 15px 0 21px 0;
+    margin: 15px 0 22px 0;
   }
   .modal-window .modal-window-container .modal-window__service-list-wrapper ul li {
     padding-left: 9px;
@@ -7728,28 +7784,7 @@ form .orange-btn {
   margin: 60px 0 70px 0;
 }
 .turnkey-section2 .turnkey-section2__top nav {
-  will-change: transform;
-  width: fit-content;
-  margin: 40px auto 0 auto;
-  display: grid;
   grid-template-columns: repeat(7, auto);
-  gap: 16px;
-}
-.turnkey-section2 .turnkey-section2__top nav a {
-  font-size: 12px;
-  padding: 8px 12px 10px 12px;
-  color: #FFFFFF;
-  background-color: rgba(85, 72, 116, 0.7);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-}
-@media (hover: hover) and (pointer: fine) {
-  .turnkey-section2 .turnkey-section2__top nav a {
-    transform: translate3d(0, 0, 0);
-    transition: background-color 0.3s;
-  }
-  .turnkey-section2 .turnkey-section2__top nav a:hover {
-    background-color: #554874;
-  }
 }
 .turnkey-section2 .container:not(.photo-on-the-left, .photo-on-the-right) .text-with-lines {
   max-width: 776px;
@@ -7961,10 +7996,6 @@ form .orange-btn {
 @media (max-width: 1300.9px) and (min-width: 321px) {
   .turnkey-section2 {
     margin: calc(30px + 30 * (100vw - 321px) / 979) 0 calc(35px + 35 * (100vw - 321px) / 979) 0;
-  }
-  .turnkey-section2 .turnkey-section2__top nav {
-    margin: calc(20px + 20 * (100vw - 321px) / 979) auto 0 auto;
-    gap: calc(10px + 6 * (100vw - 321px) / 979);
   }
   .turnkey-section2 .container:not(.photo-on-the-left, .photo-on-the-right) {
     padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
@@ -8198,10 +8229,6 @@ form .orange-btn {
 @media (max-width: 320.9px) {
   .turnkey-section2 {
     margin: 30px 0 35px 0;
-  }
-  .turnkey-section2 .turnkey-section2__top nav {
-    margin: 20px auto 0 auto;
-    gap: 10px;
   }
   .turnkey-section2 .container:not(.photo-on-the-left, .photo-on-the-right) {
     padding: 0 20px;
@@ -8683,7 +8710,7 @@ form .orange-btn {
     max-width: calc(500px + 248 * (100vw - 321px) / 979);
   }
   .wedding-consultation-section4 {
-    margin: calc(35px + 30 * (100vw - 321px) / 979) 0;
+    margin: calc(32px + 33 * (100vw - 321px) / 979) 0;
   }
   .wedding-consultation-section4 .container {
     padding: 0 calc(15px + 45 * (100vw - 321px) / 979);
@@ -8714,7 +8741,7 @@ form .orange-btn {
     margin: 15px auto 21px auto;
   }
   .wedding-consultation-section4 {
-    margin: 35px 0;
+    margin: 32px 0;
   }
   .wedding-consultation-section4 .container {
     padding: 0 15px;
@@ -8727,5 +8754,287 @@ form .orange-btn {
   }
   .wedding-consultation-section6 {
     margin-bottom: 30px;
+  }
+}
+.marriage-registration-section2 .container .text-with-lines, .marriage-registration-section2 .container .marriage-registration-section4__text, .marriage-registration-section4 .container .text-with-lines, .marriage-registration-section4 .container .marriage-registration-section4__text, .marriage-registration-section5 .container .text-with-lines, .marriage-registration-section5 .container .marriage-registration-section4__text, .marriage-registration-section7 .container .text-with-lines, .marriage-registration-section7 .container .marriage-registration-section4__text {
+  max-width: 838px;
+}
+
+.marriage-registration-section2 {
+  margin: 60px 0 50px 0;
+}
+.marriage-registration-section2 .marriage-registration-section2__top nav {
+  grid-template-columns: 1fr 1fr;
+}
+.marriage-registration-section2 .marriage-registration-section2__top nav a {
+  text-align: center;
+}
+.marriage-registration-section2 .container {
+  margin-top: 60px;
+}
+
+.marriage-registration-section3 .container {
+  padding: 0 60px;
+}
+.marriage-registration-section3 .container h4 {
+  text-align: center;
+  color: rgba(148, 1, 29, 0.8);
+}
+.marriage-registration-section3 .container .spoiler-cards .spoiler-card h5 {
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.marriage-registration-section3 .container .spoiler-cards .centered-card {
+  transform: translate3d(calc(50% + 20px), 25%, 0);
+}
+.marriage-registration-section3 .container._transform .spoiler-cards .centered-card {
+  transform: translate3d(calc(50% + 20px), 0, 0);
+}
+
+.marriage-registration-section4 {
+  margin: 60px 0 52px 0;
+}
+.marriage-registration-section4 .container {
+  padding: 0 60px;
+}
+.marriage-registration-section4 .container h4 {
+  text-align: center;
+  color: rgba(148, 1, 29, 0.8);
+}
+.marriage-registration-section4 .container .text-with-lines {
+  margin-top: 40px;
+  margin-bottom: 34px;
+}
+.marriage-registration-section4 .container .marriage-registration-section4__text {
+  text-align: justify;
+  line-height: 160%;
+  margin: 0 auto;
+}
+
+.marriage-registration-section5 .container h4 {
+  max-width: 728px;
+  text-align: center;
+}
+.marriage-registration-section5 .container .text-with-lines {
+  margin-bottom: 44px;
+}
+
+.marriage-registration-section6 {
+  padding-top: 13px;
+}
+
+.marriage-registration-section7 {
+  margin-bottom: 60px;
+}
+.marriage-registration-section7 .container {
+  padding: 0 60px;
+}
+.marriage-registration-section7 .container h4 {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #412C73;
+}
+.marriage-registration-section7 .container ul {
+  max-width: 1068px;
+  margin: 34px auto 41px auto;
+}
+
+.marriage-registration-section9 {
+  margin: 50px 0 65px 0;
+}
+.marriage-registration-section9 .container {
+  padding: 0 60px;
+}
+.marriage-registration-section9 .container h4 {
+  color: #412C73;
+}
+.marriage-registration-section9 .container .text-with-lines {
+  max-width: 444px;
+  margin-top: 36px;
+}
+.marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(4) h5, .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(5) h5, .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(6) h5 {
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+  .marriage-registration-section2 .container .text-with-lines, .marriage-registration-section2 .container .marriage-registration-section4__text, .marriage-registration-section4 .container .text-with-lines, .marriage-registration-section4 .container .marriage-registration-section4__text, .marriage-registration-section5 .container .text-with-lines, .marriage-registration-section5 .container .marriage-registration-section4__text, .marriage-registration-section7 .container .text-with-lines, .marriage-registration-section7 .container .marriage-registration-section4__text {
+    max-width: calc(419px + 419 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section2 {
+    margin: calc(30px + 30 * (100vw - 321px) / 979) 0 calc(25px + 25 * (100vw - 321px) / 979) 0;
+  }
+  .marriage-registration-section2 .container {
+    padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
+    margin-top: calc(30px + 30 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section3 .container {
+    padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section3 .container .spoiler-cards .centered-card {
+    transform: translate3d(calc(50% + 8px + 12 * (100vw - 321px) / 979), 25%, 0);
+  }
+  .marriage-registration-section3 .container._transform .spoiler-cards .centered-card {
+    transform: translate3d(calc(50% + 8px + 12 * (100vw - 321px) / 979), 0, 0);
+  }
+  .marriage-registration-section4 {
+    margin: calc(30px + 30 * (100vw - 321px) / 979) 0 calc(25px + 27 * (100vw - 321px) / 979) 0;
+  }
+  .marriage-registration-section4 .container {
+    padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section4 .container .text-with-lines {
+    margin-top: calc(20px + 20 * (100vw - 321px) / 979);
+    margin-bottom: calc(18px + 16 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section5 .container h4 {
+    max-width: calc(364px + 364 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section5 .container .text-with-lines {
+    margin-bottom: calc(23px + 21 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section6 {
+    padding-top: calc(7px + 6 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section7 {
+    margin-bottom: calc(30px + 30 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section7 .container {
+    padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section7 .container h4 {
+    margin-bottom: calc(20px + 20 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section7 .container ul {
+    max-width: calc(534px + 534 * (100vw - 321px) / 979);
+    margin: calc(18px + 16 * (100vw - 321px) / 979) auto calc(22px + 19 * (100vw - 321px) / 979) auto;
+  }
+  .marriage-registration-section9 {
+    margin: calc(25px + 25 * (100vw - 321px) / 979) 0 calc(35px + 30 * (100vw - 321px) / 979) 0;
+  }
+  .marriage-registration-section9 .container {
+    padding: 0 calc(20px + 40 * (100vw - 321px) / 979);
+  }
+  .marriage-registration-section9 .container .text-with-lines {
+    max-width: calc(222px + 222 * (100vw - 321px) / 979);
+    margin-top: calc(16px + 20 * (100vw - 321px) / 979);
+  }
+}
+@media (max-width: 991.9px) {
+  .marriage-registration-section3 .container .spoiler-cards .centered-card {
+    transform: translate3d(0, 25%, 0);
+  }
+  .marriage-registration-section3 .container._transform .spoiler-cards .centered-card {
+    transform: translate3d(0, 0, 0);
+  }
+  .marriage-registration-section5 .service-packages-container .service-package:nth-child(2) {
+    transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
+  }
+  .marriage-registration-section5 .service-packages-container .service-package:nth-child(3), .marriage-registration-section5 .service-packages-container .service-package:nth-child(4) {
+    transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
+  }
+  .marriage-registration-section7 .container ul {
+    transform: translate3d(0, 25%, 0);
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(4) h5 {
+    width: auto;
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(3) {
+    transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(5), .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(6) {
+    transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(7), .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(8) {
+    transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(9) {
+    transition: transform 0.8s 3s, opacity 0.8s 3s, visibility 0.8s 3s;
+  }
+}
+@media (max-width: 600.9px) {
+  .marriage-registration-section5 .service-packages-container .service-packages .service-package:nth-child(2) {
+    transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
+  }
+  .marriage-registration-section5 .service-packages-container .service-packages .service-package:nth-child(3) {
+    transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
+  }
+  .marriage-registration-section5 .service-packages-container .service-packages .service-package:nth-child(4) {
+    transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;
+  }
+}
+@media (max-width: 599.9px) and (min-width: 321px) {
+  .marriage-registration-section5 .container .text-with-lines {
+    padding: 0 calc(5px + -5 * (100vw - 321px) / 979);
+  }
+}
+@media (max-width: 480.9px) {
+  .marriage-registration-section3 .container .spoiler-cards .spoiler-card h5 {
+    width: auto;
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(5) h5, .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(6) h5 {
+    width: auto;
+  }
+  .marriage-registration-section9 .container .spoiler-cards .spoiler-card:nth-child(n+3) {
+    transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
+  }
+}
+@media (max-width: 360.9px) {
+  .marriage-registration-section2 .marriage-registration-section2__top nav {
+    grid-template-columns: 1fr;
+    transform: translate3d(0, 50%, 0);
+  }
+}
+@media (max-width: 320.9px) {
+  .marriage-registration-section2 {
+    margin: 30px 0 25px 0;
+  }
+  .marriage-registration-section2 .container {
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+  .marriage-registration-section3 .container {
+    padding: 0 20px;
+  }
+  .marriage-registration-section4 {
+    margin: 30px 0 25px 0;
+  }
+  .marriage-registration-section4 .container {
+    padding: 0 20px;
+  }
+  .marriage-registration-section4 .container .text-with-lines {
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+  .marriage-registration-section5 .container .text-with-lines {
+    margin-bottom: 23px;
+    padding: 0 5px;
+  }
+  .marriage-registration-section6 {
+    padding-top: 7px;
+  }
+  .marriage-registration-section7 {
+    margin-bottom: 30px;
+  }
+  .marriage-registration-section7 .container {
+    padding: 0 20px;
+  }
+  .marriage-registration-section7 .container h4 {
+    margin-bottom: 20px;
+  }
+  .marriage-registration-section7 .container ul {
+    margin: 18px auto 22px auto;
+  }
+  .marriage-registration-section9 {
+    margin: 25px 0 35px 0;
+  }
+  .marriage-registration-section9 .container {
+    padding: 0 20px;
+  }
+  .marriage-registration-section9 .container .text-with-lines {
+    max-width: 222px;
+    margin-top: 16px;
   }
 }

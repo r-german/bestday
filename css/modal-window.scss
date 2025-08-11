@@ -56,9 +56,14 @@
             flex-direction: column;
             align-items: center;
             background-color: $white;
-            #etude, #novella, #poem, #turnkey {display: none;}
-            #etude .service-list-wrapper__text, #novella .service-list-wrapper__text,
-            #poem .service-list-wrapper__text, #turnkey .service-list-wrapper__text {margin-right: 32px;}
+            #etude, #novella, #poem, #turnkey {
+                display: none;
+                p, .service-list-wrapper__text {margin-right: 32px;}
+            }
+            p {
+                line-height: 130%;
+                margin-bottom: 36px;
+            }
             .service-list-wrapper__text {
                 display: block;
                 font-size: 28px;
@@ -67,7 +72,7 @@
                 color: $violet1;
             }
             ul {
-                margin: 25px 0 38px 0;
+                margin: 24px 0 38px 0;
                 li {
                     list-style: none;
                     position: relative;
@@ -110,13 +115,14 @@
                 }
             }
             .modal-window__service-list-wrapper {
+                p {margin-bottom: calc(20px + (36 - 20) * ((100vw - 321px) / (1300 - 321)));}
                 .service-list-wrapper__text {
                     font-size: calc(16px + (28 - 16) * ((100vw - 321px) / (1300 - 321)));
                     margin-top: calc(-2px + (-5 + 2) * ((100vw - 321px) / (1300 - 321)));
                 }
                 ul {
-                    margin: calc(15px + (25 - 15) * ((100vw - 321px) / (1300 - 321))) 0
-                            calc(21px + (38 - 21) * ((100vw - 321px) / (1300 - 321))) 0;
+                    margin: calc(15px + (24 - 15) * ((100vw - 321px) / (1300 - 321))) 0
+                            calc(22px + (38 - 22) * ((100vw - 321px) / (1300 - 321))) 0;
                     li {padding-left: calc(9px + (18 - 9) * ((100vw - 321px) / (1300 - 321)));}
                 }
             }
@@ -180,12 +186,13 @@
                 }
             }
             .modal-window__service-list-wrapper {
+                p {margin-bottom: 20px;}
                 .service-list-wrapper__text {
                     font-size: 16px;
                     margin-top: -2px;
                 }
                 ul {
-                    margin: 15px 0 21px 0;
+                    margin: 15px 0 22px 0;
                     li {padding-left: 9px;}
                 }
             }
