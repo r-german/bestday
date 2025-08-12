@@ -347,7 +347,7 @@ h4:not(.modal-window h4, .test__stage2 h4, .test__stage4 h4, .test__stage5 h4),
 .right-to-left-25 {transform: translate3d(25%, 0, 0);}
 .right-to-left-50 {transform: translate3d(50%, 0, 0);}
 .bottom-up-15 {transform: translate3d(0, 15%, 0);}
-.bottom-up-25:not(.turnkey-section15__questions) {transform: translate3d(0, 25%, 0);}
+.bottom-up-25:not(.turnkey-section15__questions, .wedding-receptionist-section5 ul) {transform: translate3d(0, 25%, 0);}
 .bottom-up-50:not(.centered-card) {transform: translate3d(0, 50%, 0);}
 .bottom-up-100 {transform: translate3d(0, 100%, 0);}
 
@@ -875,7 +875,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     display: grid;
     gap: 16px;
     a {
-        font-size: 12px;
+        font-size: 14px;
         padding: 8px 12px 10px 12px;
         color: $white;
         background-color: rgb(85, 72, 116, 0.7);
@@ -986,6 +986,12 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
                 .cost-table {box-shadow: 0 4px 4px rgb(237, 111, 89, 0.3);}
             }
         }
+    }
+}
+
+@media (max-width: 1400.9px) {
+    .nav-with-blue-links {
+        a {font-size: 12px;}
     }
 }
 

@@ -1,8 +1,8 @@
-// Слайдер "Наши счастливые свадебные истории"
-const weddingSwiper = new Swiper(".saint-petersburg-section12__swiper .swiper", {
+// Первый слайдер с видео
+const weddingSwiper1 = new Swiper("#video-slider1 .swiper", {
     navigation: {
-        prevEl: ".saint-petersburg-section12__swiper .swiper-btn-prev",
-        nextEl: ".saint-petersburg-section12__swiper .swiper-btn-next"
+        prevEl: "#video-slider1 .swiper-btn-prev",
+        nextEl: "#video-slider1 .swiper-btn-next"
     },
     freeMode: {
         enabled: true,
@@ -13,23 +13,24 @@ const weddingSwiper = new Swiper(".saint-petersburg-section12__swiper .swiper", 
     spaceBetween: 20
 });
 
-const weddingSlide1 = document.querySelector('.wedding-slide1');
-const weddingSlide2 = document.querySelector('.wedding-slide2');
-const weddingSlide3 = document.querySelector('.wedding-slide3');
-const weddingSlide4 = document.querySelector('.wedding-slide4');
-const weddingSlide5 = document.querySelector('.wedding-slide5');
-const weddingSlide6 = document.querySelector('.wedding-slide6');
-const weddingSlide7 = document.querySelector('.wedding-slide7');
-const videoTitles = document.querySelectorAll('.video-title span');
-const videoTitle1 = document.querySelector('.video-title1');
-const videoTitle2 = document.querySelector('.video-title2');
-const videoTitle3 = document.querySelector('.video-title3');
-const videoTitle4 = document.querySelector('.video-title4');
-const videoTitle5 = document.querySelector('.video-title5');
-const videoTitle6 = document.querySelector('.video-title6');
-const videoTitle7 = document.querySelector('.video-title7');
+const videoSlider1 = document.getElementById('video-slider1');
+const weddingSlide1 = videoSlider1.querySelector('.wedding-slide1');
+const weddingSlide2 = videoSlider1.querySelector('.wedding-slide2');
+const weddingSlide3 = videoSlider1.querySelector('.wedding-slide3');
+const weddingSlide4 = videoSlider1.querySelector('.wedding-slide4');
+const weddingSlide5 = videoSlider1.querySelector('.wedding-slide5');
+const weddingSlide6 = videoSlider1.querySelector('.wedding-slide6');
+const weddingSlide7 = videoSlider1.querySelector('.wedding-slide7');
+const videoTitles = videoSlider1.querySelectorAll('.video-title span');
+const videoTitle1 = videoSlider1.querySelector('.video-title1');
+const videoTitle2 = videoSlider1.querySelector('.video-title2');
+const videoTitle3 = videoSlider1.querySelector('.video-title3');
+const videoTitle4 = videoSlider1.querySelector('.video-title4');
+const videoTitle5 = videoSlider1.querySelector('.video-title5');
+const videoTitle6 = videoSlider1.querySelector('.video-title6');
+const videoTitle7 = videoSlider1.querySelector('.video-title7');
 
-weddingSwiper.on('slideChangeTransitionEnd', function () {
+weddingSwiper1.on('slideChangeTransitionEnd', function () {
     videoTitles.forEach((videoTitle) => {
         if (videoTitle.classList.contains('_visible')) {
             videoTitle.classList.remove('_visible');
@@ -58,7 +59,7 @@ weddingSwiper.on('slideChangeTransitionEnd', function () {
     }
 });
 
-weddingSwiper.on('slideResetTransitionEnd', function () {
+weddingSwiper1.on('slideResetTransitionEnd', function () {
     videoTitles.forEach((videoTitle) => {
         if (videoTitle.classList.contains('_visible')) {
             videoTitle.classList.remove('_visible');
@@ -85,4 +86,19 @@ weddingSwiper.on('slideResetTransitionEnd', function () {
     else if (weddingSlide7.classList.contains('swiper-slide-active')) {
         videoTitle7.classList.add('_visible');
     }
+});
+
+// Второй слайдер с видео
+new Swiper("#video-slider2 .swiper", {
+    navigation: {
+        prevEl: "#video-slider2 .swiper-btn-prev",
+        nextEl: "#video-slider2 .swiper-btn-next"
+    },
+    freeMode: {
+        enabled: true,
+        sticky: true
+    },
+    keyboard: true,
+    speed: 600,
+    spaceBetween: 20
 });

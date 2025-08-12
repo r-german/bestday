@@ -1,6 +1,6 @@
 .marriage-registration-section2, .marriage-registration-section4, .marriage-registration-section5, .marriage-registration-section7 {
     .container {
-        .text-with-lines, .marriage-registration-section4__text {max-width: 838px;}
+        .text-with-lines:not(.wedding-receptionist-section2 .text-with-lines), .marriage-registration-section4__text {max-width: 838px;}
     }
 }
 
@@ -112,7 +112,9 @@
 @media (max-width: 1300.9px) and (min-width: 321px) {
     .marriage-registration-section2, .marriage-registration-section4, .marriage-registration-section5, .marriage-registration-section7 {
         .container {
-            .text-with-lines, .marriage-registration-section4__text {max-width: calc(419px + (838 - 419) * ((100vw - 321px) / (1300 - 321)));}
+            .text-with-lines:not(.wedding-receptionist-section2 .text-with-lines), .marriage-registration-section4__text {
+                max-width: calc(419px + (838 - 419) * ((100vw - 321px) / (1300 - 321)));
+            }
         }
     }
     .marriage-registration-section2 {

@@ -239,19 +239,19 @@
     }
 }
 
-@media (max-width: 991.9px) and (min-width: 321px) {
-    .saint-petersburg-section12 {
-        .container {
-            .saint-petersburg-section12__swiper {
-                .swiper {border: calc(5px + (8 - 5) * ((100vw - 321px) / (991 - 321))) solid $white;}
-            }
-        }
-    }
-}
-
 @media (max-width: 991.9px) and (min-width: 601px) {
     .saint-petersburg-section8 {
         .underlined-link {transition: opacity 0.8s 1.7s, visibility 0.8s 1.7s;}
+    }
+}
+
+@media (max-width: 767.9px) and (min-width: 321px) {
+    .saint-petersburg-section12 {
+        .container {
+            .saint-petersburg-section12__swiper {
+                .swiper {border: calc(5px + (8 - 5) * ((100vw - 321px) / (767 - 321))) solid $white;}
+            }
+        }
     }
 }
 
