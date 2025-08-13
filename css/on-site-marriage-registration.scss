@@ -82,7 +82,7 @@
             color: $violet1;
         }
         ul {
-            max-width: 1068px;
+            max-width: 1054px;
             margin: 34px auto 41px auto;
         }
     }
@@ -162,7 +162,7 @@
             padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
             h4 {margin-bottom: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
             ul {
-                max-width: calc(534px + (1068 - 534) * ((100vw - 321px) / (1300 - 321)));
+                max-width: calc(527px + (1054 - 527) * ((100vw - 321px) / (1300 - 321)));
                 margin: calc(18px + (34 - 18) * ((100vw - 321px) / (1300 - 321))) auto
                         calc(22px + (41 - 22) * ((100vw - 321px) / (1300 - 321))) auto;
             }

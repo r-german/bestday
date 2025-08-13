@@ -1,0 +1,187 @@
+.wedding-anniversary-section2 {
+    margin: 60px 0 50px 0;
+    .orange-bg {margin-bottom: 60px;}
+    .container {
+        .wedding-anniversary-section2__long-text {max-width: 826px;}
+        .wedding-anniversary-section2__short-text {max-width: 580px;}
+        svg {
+            display: block;
+            margin: 40px auto;
+            transform: translate3d(0, 0, 0);
+            transition: opacity 1s;
+        }
+        .wedding-anniversary-section2__svg1 {width: 54px;}
+        .wedding-anniversary-section2__svg2 {width: 68px;}
+        ul {
+            max-width: 1090px;
+            margin: 34px auto 41px auto;
+            text-align: justify;
+            li {
+                span {color: $red1;}
+            }
+        }
+    }
+}
+
+.wedding-anniversary-section3:not(.wedding-anniversary-section4) {
+    .container {
+        h4 {max-width: 544px;}
+        .spoiler-cards {
+            .spoiler-card:nth-child(10), .spoiler-card:nth-child(11) {
+                h5 {
+                    width: min-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+.wedding-anniversary-section3 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .spoiler-cards {
+            .centered-card {transform: translate3d(calc(50% + 20px), 25%, 0);}
+        }
+    }
+    .container._transform {
+        .spoiler-cards {
+            .centered-card {transform: translate3d(calc(50% + 20px), 0, 0);}
+        }
+    }
+}
+
+.wedding-anniversary-section4 {
+    margin: 60px 0;
+    .container {
+        .spoiler-cards {
+            .spoiler-card:nth-child(n+7) {
+                h5 {
+                    width: min-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .wedding-anniversary-section2 {
+        margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0;
+        .orange-bg {margin-bottom: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));}
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            .wedding-anniversary-section2__long-text {max-width: calc(413px + (826 - 413) * ((100vw - 321px) / (1300 - 321)));}
+            .wedding-anniversary-section2__short-text {max-width: calc(290px + (580 - 290) * ((100vw - 321px) / (1300 - 321)));}
+            svg {margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto;}
+            .wedding-anniversary-section2__svg1 {width: calc(40px + (54 - 40) * ((100vw - 321px) / (1300 - 321)));}
+            .wedding-anniversary-section2__svg2 {width: calc(50px + (68 - 50) * ((100vw - 321px) / (1300 - 321)));}
+            ul {
+                max-width: calc(545px + (1090 - 545) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(18px + (34 - 18) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(22px + (41 - 22) * ((100vw - 321px) / (1300 - 321))) auto;
+            }
+        }
+    }
+    .wedding-anniversary-section3:not(.wedding-anniversary-section4) {
+        .container {
+            h4 {max-width: calc(272px + (544 - 272) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-anniversary-section3 {
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            .spoiler-cards {
+                .centered-card {transform: translate3d(calc(50% + calc(8px + (20 - 8) * ((100vw - 321px) / (1300 - 321)))), 25%, 0);}
+            }
+        }
+        .container._transform {
+            .spoiler-cards {
+                .centered-card {transform: translate3d(calc(50% + calc(8px + (20 - 8) * ((100vw - 321px) / (1300 - 321)))), 0, 0);}
+            }
+        }
+    }
+    .wedding-anniversary-section4 {margin: calc(34px + (60 - 34) * ((100vw - 321px) / (1300 - 321))) 0;}
+}
+
+@media (max-width: 991.9px) {
+    .wedding-anniversary-section3 {
+        .container {
+            .spoiler-cards {
+                .centered-card {transform: translate3d(0, 25%, 0);}
+                .spoiler-card:nth-child(3) {transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;}
+                .spoiler-card:nth-child(5), .spoiler-card:nth-child(6) {
+                    transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
+                }
+                .spoiler-card:nth-child(7), .spoiler-card:nth-child(8) {
+                    transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
+                }
+                .spoiler-card:nth-child(10), .spoiler-card:nth-child(11) {
+                    transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;
+                }
+                .spoiler-card:nth-child(9) {
+                    grid-row: 6/7;
+                    transition: transform 0.8s 3s, opacity 0.8s 3s, visibility 0.8s 3s;
+                }
+            }
+        }
+        .container._transform {
+            .spoiler-cards {
+                .centered-card {transform: translate3d(0, 0, 0);}
+            }
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .wedding-anniversary-section3:not(.wedding-anniversary-section4) {
+        .container {
+            .spoiler-cards {
+                .spoiler-card:nth-child(10), .spoiler-card:nth-child(11) {
+                    h5 {width: auto;}
+                }
+            }
+        }
+    }
+    .wedding-anniversary-section3 {
+        .container {
+            .spoiler-cards {
+                .spoiler-card:nth-child(n+3) {transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;}
+            }
+        }
+    }
+    .wedding-anniversary-section4 {
+        .container {
+            .spoiler-cards {
+                .spoiler-card:nth-child(n+7) {
+                    h5 {width: auto;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .wedding-anniversary-section2 {
+        margin: 30px 0 25px 0;
+        .orange-bg {margin-bottom: 30px;}
+        .container {
+            padding: 0 20px;
+            svg {margin: 20px auto;}
+            .wedding-anniversary-section2__svg1 {width: 40px;}
+            .wedding-anniversary-section2__svg2 {width: 50px;}
+            ul {margin: 18px auto 22px auto;}
+        }
+    }
+    .wedding-anniversary-section3 {
+        .container {padding: 0 20px;}
+    }
+    .wedding-anniversary-section4 {margin: 34px 0;}
+}

@@ -1,0 +1,21 @@
+.wedding-anniversary-section2 {
+  margin: 60px 0 50px 0;
+}
+.wedding-anniversary-section2 .orange-bg {
+  margin-bottom: 60px;
+}
+.wedding-anniversary-section2 .container .wedding-anniversary-section2__text-with-lines1, .wedding-anniversary-section2 .container .wedding-anniversary-section2__text-with-lines2 {
+  max-width: 836px;
+}
+.wedding-anniversary-section2 .container svg {
+  display: block;
+  margin: 40px auto;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s;
+}
+.wedding-anniversary-section2 .container .wedding-anniversary-section2__svg1 {
+  width: 54px;
+}
+.wedding-anniversary-section2 .container .wedding-anniversary-section2__svg2 {
+  width: 68px;
+}

@@ -1361,18 +1361,18 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     }
     .spoiler-cards {
         grid-template-columns: 1fr 1fr;
-        .spoiler-card:nth-child(3):not(.marriage-registration-section9 .spoiler-card) {
+        .spoiler-card:nth-child(3):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card) {
             transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;
         }
-        .spoiler-card:nth-child(5):not(.marriage-registration-section9 .spoiler-card),
-        .spoiler-card:nth-child(6):not(.marriage-registration-section9 .spoiler-card) {
+        .spoiler-card:nth-child(5):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card),
+        .spoiler-card:nth-child(6):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card) {
             transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;
         }
-        .spoiler-card:nth-child(7):not(.marriage-registration-section9 .spoiler-card),
-        .spoiler-card:nth-child(8):not(.marriage-registration-section9 .spoiler-card) {
+        .spoiler-card:nth-child(7):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card),
+        .spoiler-card:nth-child(8):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card) {
             transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;
         }
-        .spoiler-card:nth-child(9):not(.marriage-registration-section9 .spoiler-card) {
+        .spoiler-card:nth-child(9):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card) {
             transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;
         }
     }
@@ -1465,7 +1465,7 @@ a:not(.underlined-link a, .footer__text a, .footer__bottom .white-link) {text-de
     }
     .spoiler-cards {
         grid-template-columns: 1fr;
-        .spoiler-card:nth-child(n+3):not(.marriage-registration-section9 .spoiler-card) {
+        .spoiler-card:nth-child(n+3):not(.marriage-registration-section9 .spoiler-card, .wedding-anniversary-section3 .spoiler-card) {
             transition: transform 0.8s 0.5s, opacity 0.8s 0.5s, visibility 0.8s 0.5s;
         }
     }

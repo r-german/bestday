@@ -437,6 +437,7 @@
     padding: 50px 0 65px 0;
     background-color: $orange2;
     .photo-gallery-container {
+        .home-section5__title {margin-bottom: -2px;}
         h4 {
             text-align: center;
             color: $violet1;
@@ -450,7 +451,7 @@
         padding: 50px 60px 65px 60px;
         h4 {
             color: $violet1;
-            margin-bottom: 32px;
+            margin-bottom: 35px;
         }
     }
 }
@@ -781,7 +782,7 @@
                      calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)))
                      calc(35px + (65 - 35) * ((100vw - 321px) / (1300 - 321)))
                      calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
-            h4 {margin-bottom: calc(17px + (32 - 17) * ((100vw - 321px) / (1300 - 321)));}
+            h4 {margin-bottom: calc(18px + (35 - 18) * ((100vw - 321px) / (1300 - 321)));}
         }
     }
     .home-section7 {
@@ -1197,7 +1198,7 @@
     .home-section6 {
         .container {
             padding: 25px 20px 35px 20px;
-            h4 {margin-bottom: 17px;}
+            h4 {margin-bottom: 18px;}
         }
     }
     .home-section7 {

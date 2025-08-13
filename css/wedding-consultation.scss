@@ -7,7 +7,7 @@
         }
         ul {
             width: fit-content;
-            margin: 30px auto 40px auto;
+            margin: 30px auto 46px auto;
         }
         .text-with-lines {max-width: 748px;}
     }
@@ -45,7 +45,7 @@
             padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
             ul {
                 margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto
-                        calc(21px + (40 - 21) * ((100vw - 321px) / (1300 - 321))) auto;
+                        calc(23px + (46 - 23) * ((100vw - 321px) / (1300 - 321))) auto;
             }
             .text-with-lines {max-width: calc(500px + (748 - 500) * ((100vw - 321px) / (1300 - 321)));}
         }
@@ -78,7 +78,7 @@
     .wedding-consultation-section3, .wedding-consultation-section6 {
         .container {
             padding: 0 20px;
-            ul {margin: 15px auto 21px auto;}
+            ul {margin: 15px auto 23px auto;}
         }
     }
     .wedding-consultation-section4 {

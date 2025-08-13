@@ -94,12 +94,12 @@
 }
 
 .wedding-receptionist-section6 {
-    margin: 50px 0 60px 0;
+    margin: 50px 0 64px 0;
     .container {
         h4 {max-width: 760px;}
         ul {
             width: fit-content;
-            margin: 30px auto 40px auto;
+            margin: 28px auto 46px auto;
         }
     }
 }
@@ -148,12 +148,12 @@
     }
     .wedding-receptionist-section6 {
         margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
-                calc(32px + (60 - 32) * ((100vw - 321px) / (1300 - 321))) 0;
+                calc(32px + (64 - 32) * ((100vw - 321px) / (1300 - 321))) 0;
         .container {
             h4 {max-width: calc(380px + (760 - 380) * ((100vw - 321px) / (1300 - 321)));}
             ul {
-                margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto
-                        calc(21px + (40 - 21) * ((100vw - 321px) / (1300 - 321))) auto;
+                margin: calc(15px + (28 - 15) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(24px + (46 - 24) * ((100vw - 321px) / (1300 - 321))) auto;
             }
         }
     }
@@ -194,7 +194,7 @@
     .wedding-receptionist-section6 {
         margin: 25px 0 32px 0;
         .container {
-            ul {margin: 15px auto 21px auto;}
+            ul {margin: 15px auto 24px auto;}
         }
     }
 }

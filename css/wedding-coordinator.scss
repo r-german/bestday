@@ -12,7 +12,7 @@
         }
         ul {
             width: fit-content;
-            margin: 30px auto 40px auto;
+            margin: 30px auto 43px auto;
             li {
                 a {color: $red1;}
                 @media (hover: hover) and (pointer: fine) {
@@ -118,7 +118,7 @@
             padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
             ul {
                 margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto
-                        calc(21px + (40 - 21) * ((100vw - 321px) / (1300 - 321))) auto;
+                        calc(23px + (43 - 23) * ((100vw - 321px) / (1300 - 321))) auto;
             }
             .text-with-lines {max-width: calc(320px + (640 - 320) * ((100vw - 321px) / (1300 - 321)));}
         }
@@ -264,7 +264,7 @@
     .wedding-coordinator-section3 {
         .container {
             padding: 0 20px;
-            ul {margin: 15px auto 21px auto;}
+            ul {margin: 15px auto 23px auto;}
         }
     }
     .wedding-coordinator-section4 {
