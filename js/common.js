@@ -1,5 +1,5 @@
 // Появление элементов
-if (window.matchMedia("(max-height: 480.9px)").matches) {
+if (window.matchMedia("(max-width: 480.9px), (max-height: 480.9px)").matches) {
     var options = {threshold: 0.2};
     var options2 = {threshold: 0.1};
     var options3 = {threshold: 0.3};

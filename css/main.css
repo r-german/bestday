@@ -9108,6 +9108,10 @@ form .orange-btn {
   margin-top: 35px;
 }
 
+.olesya-section {
+  margin: 50px 0;
+}
+
 .wedding-receptionist-section4 .container {
   margin-bottom: -8px;
 }
@@ -9177,6 +9181,9 @@ form .orange-btn {
   .wedding-receptionist-section3 .container .text-with-lines {
     margin-top: calc(20px + 15 * (100vw - 321px) / 979);
   }
+  .olesya-section {
+    margin: calc(25px + 25 * (100vw - 321px) / 979) 0;
+  }
   .wedding-receptionist-section4 .container {
     margin-bottom: calc(-4px + -4 * (100vw - 321px) / 979);
   }
@@ -9220,6 +9227,9 @@ form .orange-btn {
   }
   .wedding-receptionist-section3 .container .text-with-lines {
     margin-top: 20px;
+  }
+  .olesya-section {
+    margin: 25px 0;
   }
   .wedding-receptionist-section4 .container {
     margin-bottom: -4px;
@@ -9295,7 +9305,7 @@ form .orange-btn {
 }
 
 .wedding-anniversary-section4 {
-  margin: 60px 0;
+  margin: 62px 0;
 }
 .wedding-anniversary-section4 .container .spoiler-cards .spoiler-card:nth-child(n+7) h5 {
   width: min-content;
@@ -9345,7 +9355,7 @@ form .orange-btn {
     transform: translate3d(calc(50% + 8px + 12 * (100vw - 321px) / 979), 0, 0);
   }
   .wedding-anniversary-section4 {
-    margin: calc(34px + 26 * (100vw - 321px) / 979) 0;
+    margin: calc(34px + 28 * (100vw - 321px) / 979) 0;
   }
 }
 @media (max-width: 991.9px) {

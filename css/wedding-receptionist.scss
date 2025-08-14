@@ -56,6 +56,8 @@
     }
 }
 
+.olesya-section {margin: 50px 0;}
+
 .wedding-receptionist-section4 {
     .container {margin-bottom: -8px;}
 }
@@ -127,6 +129,7 @@
             .text-with-lines {margin-top: calc(20px + (35 - 20) * ((100vw - 321px) / (1300 - 321)));}
         }
     }
+    .olesya-section {margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0;}
     .wedding-receptionist-section4 {
         .container {margin-bottom: calc(-4px + (-8 + 4) * ((100vw - 321px) / (1300 - 321)));}
     }
@@ -179,6 +182,7 @@
             .text-with-lines {margin-top: 20px;}
         }
     }
+    .olesya-section {margin: 25px 0;}
     .wedding-receptionist-section4 {
         .container {margin-bottom: -4px;}
     }

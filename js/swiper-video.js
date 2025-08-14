@@ -102,3 +102,18 @@ new Swiper("#video-slider2 .swiper", {
     speed: 600,
     spaceBetween: 20
 });
+
+// Третий слайдер с видео
+new Swiper("#video-slider3 .swiper", {
+    navigation: {
+        prevEl: "#video-slider3 .swiper-btn-prev",
+        nextEl: "#video-slider3 .swiper-btn-next"
+    },
+    freeMode: {
+        enabled: true,
+        sticky: true
+    },
+    keyboard: true,
+    speed: 600,
+    spaceBetween: 20
+});
