@@ -3,17 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css">
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <title>Организация свадьбы. Свадебный регистратор</title>
+        <title>Оформление мероприятий. Оформление свадьбы</title>
         <script src="js/typing-effect.js" defer></script>
         <script src="js/common.js" defer></script>
         <script src="js/menu-for-non-home-pages.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js" defer></script>
-        <script src="js/fancybox-activation.js" defer></script>
+        <script src="js/modal-window-for-services.js" defer></script>
         <script src="js/swiper-bundle.min.js" defer></script>
-        <script src="js/swiper-video.js" defer></script>
+        <script src="js/swiper-events.js" defer></script>
+        <script src="js/spoiler-cards.js" defer></script>
     </head>
     <body>
         <div class="wrapper">
@@ -22,7 +21,7 @@
                     <source srcset="img/wedding-organization-turnkey_section1.webp" type="image/webp">
                     <img class="position-top" src="img/wedding-organization-turnkey_section1.jpg" alt="">
                 </picture>
-                <h2 class="bottom-up-50 delay-5">Организация свадьбы</h2>
+                <h2 class="bottom-up-50 delay-5">Оформление мероприятий</h2>
                 <div class="first-screen__burger burger-icon" id="btn-to-open-services-provided">
                     <div>
                         <span></span>
@@ -64,7 +63,7 @@
                                 <div class="hidden-links-wrapper">
                                     <div class="category-links level2-links">
                                         <a href="on-site-marriage-registration.html">выездная регистрация</a>
-                                        <a href="#">свадебный регистратор</a>
+                                        <a href="wedding-receptionist.html">свадебный регистратор</a>
                                     </div>
                                 </div>
                                 <a href="">свадебные услуги</a>
@@ -578,7 +577,7 @@
                     <div class="services-provided__category">
                         <span class="category-title">Оформление мероприятий</span>
                         <div class="category-links">
-                            <a href="">оформление свадьбы</a>
+                            <a href="#">оформление свадьбы</a>
                             <a href="">оформление свадебного зала</a>
                             <a href="">свадебная фотозона</a>
                         </div>
@@ -629,17 +628,17 @@
                                 <div class="internal-links__box">
                                     <div class="internal-links-level1">
                                         <div class="two-levels">
-                                            <button class="btn-to-open-level2 mob-btn" type="button">Организация свадьбы</button>
-                                            <button class="btn-to-open-level2 pc-btn" type="button">Организация свадьбы</button>
+                                            <button class="btn-to-open-level2 white-link mob-btn" type="button">Организация свадьбы</button>
+                                            <button class="btn-to-open-level2 white-link pc-btn" type="button">Организация свадьбы</button>
                                             <div class="internal-links-level2">
                                                 <a href="wedding-organization-in-saint-petersburg.html">Свадьбы в Санкт-Петербурге</a>
                                                 <a href="wedding-organization-turnkey.html">Свадьбы под ключ</a>
                                                 <a href="wedding-coordinator.html">Свадебный координатор</a>
                                                 <a href="wedding-consultation.html">Свадебная консультация</a>
-                                                <a class="current-page" href="#">Выездная регистрация</a>
+                                                <a href="on-site-marriage-registration.html">Выездная регистрация</a>
                                                 <a href="">Свадебные услуги</a>
-                                                <a href="">Стиль свадьбы</a>
-                                                <a href="">Годовщины свадеб</a>
+                                                <a href="wedding-style.html">Стиль свадьбы</a>
+                                                <a href="wedding-anniversary.html">Годовщины свадеб</a>
                                                 <a href="">Свадебный блог</a>
                                             </div>
                                         </div>
@@ -771,10 +770,10 @@
                                             </div>
                                         </div>
                                         <div class="two-levels">
-                                            <button class="btn-to-open-level2 white-link mob-btn" type="button">Оформление мероприятий</button>
-                                            <button class="btn-to-open-level2 white-link pc-btn" type="button">Оформление мероприятий</button>
+                                            <button class="btn-to-open-level2 mob-btn" type="button">Оформление мероприятий</button>
+                                            <button class="btn-to-open-level2 pc-btn" type="button">Оформление мероприятий</button>
                                             <div class="internal-links-level2">
-                                                <a href="">Оформление свадьбы</a>
+                                                <a class="current-page" href="#">Оформление свадьбы</a>
                                                 <a href="">Оформление свадебного зала</a>
                                                 <a href="">Свадебная фотозона</a>
                                                 <a href="">Приглашения на свадьбу</a>
@@ -843,6 +842,62 @@
                     </div>
                 </div>
             </header>
+            <div class="modal-window" id="modal-window-for-services">
+                <div class="modal-window-container">
+                    <div class="modal-window__service-list-wrapper">
+                        <span class="service-list-wrapper__text">В стоимость пакета входит:</span>
+                        <ul class="service-list-wrapper__etude font-size-24" id="etude">
+                            <li>оформление президиума тканью;</li>
+                            <li>центральная цветочная композиция на&nbsp;стол;</li>
+                            <li>цветочные композиции на гостевые столы (до&nbsp;5&nbsp;шт.);</li>
+                            <li>номерки на гостевые столы;</li>
+                            <li>работа оформителя на площадке;</li>
+                            <li>монтаж и демонтаж;</li>
+                            <li>доставка в пределах КАД (для расчета загородного мероприятия, обратитесь к&nbsp;нашим менеджерам).</li>
+                        </ul>
+                        <ul class="service-list-wrapper__novella font-size-24" id="novella">
+                            <li>оформление президиума тканью;</li>
+                            <li>центральная цветочная композиция на&nbsp;стол;</li>
+                            <li>аренда конструкции для оформления фона за&nbsp;молодоженами;</li>
+                            <li>оформление фона за президиумом тканью и&nbsp;цветами;</li>
+                            <li>цветочные композиции на гостевые столы (до&nbsp;5&nbsp;шт.);</li>
+                            <li>номерки на гостевые столы;</li>
+                            <li>план рассадки;</li>
+                            <li>работа оформителя на площадке;</li>
+                            <li>монтаж и демонтаж;</li>
+                            <li>доставка в пределах КАД (для расчета загородного мероприятия, обратитесь к&nbsp;нашим менеджерам).</li>
+                        </ul>
+                        <ul class="service-list-wrapper__poem font-size-24" id="poem">
+                            <li>оформление президиума тканью и&nbsp;декоративными элементами;</li>
+                            <li>пышное оформление президиума цветами;</li>
+                            <li>аренда конструкции для оформления фона за&nbsp;молодоженами;</li>
+                            <li>оформление фона за президиумом тканью и&nbsp;цветами;</li>
+                            <li>цветочные композиции на гостевые столы (до&nbsp;5&nbsp;шт.);</li>
+                            <li>номерки на гостевые столы;</li>
+                            <li>план рассадки;</li>
+                            <li>оформление стульев (до 30 шт.);</li>
+                            <li>оформление гостевых салфеток (до&nbsp;30&nbsp;шт.);</li>
+                            <li>работа оформителя на площадке;</li>
+                            <li>монтаж и демонтаж;</li>
+                            <li>доставка в пределах КАД (для расчета загородного мероприятия, обратитесь к&nbsp;нашим менеджерам).</li>
+                        </ul>
+                        <ul class="service-list-wrapper__turnkey font-size-24" id="turnkey">
+                            <li>первичная встреча-консультация с&nbsp;оформителем;</li>
+                            <li>разработка индивидуального стиля мероприятия;</li>
+                            <li>создание подробного проекта по&nbsp;оформлению;</li>
+                            <li>выезд специалиста на площадку;</li>
+                            <li>подбор текстиля, мебели, посуды, декораций и&nbsp;других необходимых элементов;</li>
+                            <li>свадебная флористика.</li>
+                        </ul>
+                        <button class="form-open-btn orange-btn font-size-25 padding-60" type="button">Оставить заявку</button>
+                        <div class="service-list-wrapper__cross">
+                            <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L25.6667 25.6667M25.6667 1L1 25.6667" stroke="#ED6F59" stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="modal-window" id="modal-window-for-form">
                 <div class="modal-window-container">
                     <div class="modal-window__form-wrapper">
@@ -879,652 +934,470 @@
                 </div>
             </div>
             <main>
-                <section class="marriage-registration-section2 wedding-receptionist-section2">
-                    <div class="marriage-registration-section2__top anim-item typing-effect">
+                <section class="wedding-decor-section2">
+                    <div class="wedding-decor-section2__top anim-item typing-effect">
                         <div class="orange-bg">
                             <div class="h3-wrapper">
-                                <span>Свадебный регистратор</span>
+                                <span>Оформление свадьбы</span>
                                 <h3></h3>
                             </div>
                         </div>
                         <nav class="nav-with-blue-links bottom-up-100 delay-5">
-                            <a href="on-site-marriage-registration.html">Выездная регистрация</a>
-                            <a href="#">Свадебный регистратор</a>
+                            <a href="#">Оформление свадьбы</a>
+                            <a href="">Оформление свадебного зала</a>
+                            <a href="">Свадебная фотозона</a>
+                            <a href="">Приглашения на свадьбу</a>
                         </nav>
                     </div>
                     <div class="container anim-item">
-                        <div class="text-with-lines bottom-up-25 delay-0">
+                        <div class="text-with-lines">
                             <div class="dividing-line"></div>
-                            <p>
-                                Мы предлагаем услуги профессиональных регистраторов, имеющих богатый опыт работы на&nbsp;мероприятиях.
-                                На&nbsp;этой странице Вы можете просмотреть их портфолио, ознакомиться со&nbsp;стоимостью услуг
-                                и&nbsp;отзывами об&nbsp;их работе.
+                            <p class="left-to-right-12 delay-0">
+                                Оформление свадебного зала - это один из&nbsp;самых важных вопросов, над&nbsp;которым задумываются
+                                молодожёны. Утончённый, продуманный до&nbsp;мелочей декор придаст свадебному торжеству индивидуальность
+                                и&nbsp;сделает вашу свадьбу совершенно непохожей на&nbsp;другие. Сказочная атмосфера, созданная
+                                декораторами, как правило, является первым, что видят ваши гости, прибыв на&nbsp;праздник. Поэтому важно,
+                                чтобы это первое впечатление задавало именно то&nbsp;настроение, о&nbsp;котором вы мечтали!
                             </p>
                             <div class="dividing-line"></div>
                         </div>
                     </div>
                 </section>
-                <section class="wedding-receptionist-section3">
-                    <div class="container anim-item">
-                        <h4>Ведущая выездной регистрации Гая</h4>
-                        <div class="wedding-receptionist-section3__photos bottom-up-15 delay-5">
-                            <a href="img/wedding-receptionist_section3-1.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-1.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-2.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-2.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-2.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-3.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-3.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-3.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-4.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-4.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-4.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-5.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-5.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-5.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-6.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-6.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-7.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-7.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-8.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-8.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-8.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-1.jpg" data-fancybox="gallery">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-1.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="cost-table2 with-brown-header bottom-up-25 delay-10">
-                            <div class="cost-table2__column">
-                                <div>
-                                    <span>Дни недели</span>
+                <section class="wedding-decoration-section3">
+                    <div class="container service-packages-container anim-item2">
+                        <h4>Стоимость готовых пакетов</h4>
+                        <div class="service-packages">
+                            <div class="service-package bottom-up-25 delay-5">
+                                <div class="service-package__name">
+                                    <picture>
+                                        <source srcset="img/wedding-decoration_section3-1.webp" type="image/webp">
+                                        <img src="img/wedding-decoration_section3-1.jpg" alt="">
+                                    </picture>
+                                    <h5>Пакет оформления "ЭТЮД"</h5>
                                 </div>
-                                <div>
-                                    <span>пн. - чт.</span>
+                                <div class="service-package__description">
+                                    <p>
+                                        Минимальный набор самых популярных элементов свадебного декора, которые помогут оживить зал
+                                        торжества и&nbsp;придать ему индивидуальности. Этот&nbsp;пакет оптимален для&nbsp;залов, которые сами
+                                        по&nbsp;себе уже достаточно наполненные и&nbsp;требуют добавления лишь нескольких&nbsp;штрихов.
+                                    </p>
+                                    <button class="etude-btn font-size-24" type="button">Подробнее</button>
                                 </div>
-                                <div>
-                                    <span>пт., сб., вс.</span>
-                                </div>
+                                <div class="service-package__cost">от<span>29 500</span>руб.</div>
                             </div>
-                            <div class="cost-table2__column">
-                                <div>Стоимость</div>
-                                <div class="font-size-24"><span>15 000</span> руб.</div>
-                                <div class="font-size-24"><span>18 000</span> руб.</div>
+                            <div class="service-package bottom-up-25 delay-10">
+                                <div class="service-package__name">
+                                    <picture>
+                                        <source srcset="img/wedding-decoration_section3-2.webp" type="image/webp">
+                                        <img src="img/wedding-decoration_section3-2.jpg" alt="">
+                                    </picture>
+                                    <h5>Пакет оформления "НОВЕЛЛА"</h5>
+                                </div>
+                                <div class="service-package__description">
+                                    <p>
+                                        Расширенный пакет декора для свадебного торжества. В&nbsp;него включены как основные пункты,
+                                        так и&nbsp;дополнительные бонусы, придающие залу особый шарм и&nbsp;торжественность. Этот&nbsp;пакет
+                                        открывает простор для&nbsp;фантазии и&nbsp;отражения неповторимого стиля&nbsp;свадьбы.
+                                    </p>
+                                    <button class="novella-btn font-size-24" type="button">Подробнее</button>
+                                </div>
+                                <div class="service-package__cost">от<span>41 500</span>руб.</div>
                             </div>
-                        </div>
-                        <div class="note-to-table transparency">
-                            <span>* Отдельно оплачивается выезд загород.</span>
-                        </div>
-                        <div class="text-with-lines bottom-up-25 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Ведущая, регистратор, распорядитель - буквально мастер на&nbsp;все руки! Закончив университет кино
-                                и&nbsp;телевидения, она, на&nbsp;радость нам, нашла свое призвание в&nbsp;праздничной индустрии.
-                                Гайка со&nbsp;свойственными ей одной легкостью, задором и&nbsp;тонким чувством юмора зарядит Вас
-                                своим позитивом и&nbsp;превратит церемонию в&nbsp;настоящий ураган чувств и&nbsp;эмоций!
-                            </p>
-                            <div class="dividing-line"></div>
+                            <div class="service-package bottom-up-25 delay-15">
+                                <div class="service-package__name">
+                                    <picture>
+                                        <source srcset="img/wedding-decoration_section3-3.webp" type="image/webp">
+                                        <img src="img/wedding-decoration_section3-3.jpg" alt="">
+                                    </picture>
+                                    <h5>Пакет оформления "ПОЭМА"</h5>
+                                </div>
+                                <div class="service-package__description">
+                                    <p>
+                                        Полный набор свадебных декораций для банкета, предполагающий богатое масштабное оформление.
+                                        Максимальный акцент на&nbsp;президиум, использование объемных и&nbsp;пышных цветочных композиций,
+                                        внимание к&nbsp;мелочам – вот главные достоинства&nbsp;«Поэмы».
+                                    </p>
+                                    <button class="poem-btn font-size-24" type="button">Подробнее</button>
+                                </div>
+                                <div class="service-package__cost">от<span>59 400</span>руб.</div>
+                            </div>
+                            <div class="service-package bottom-up-25 delay-20">
+                                <div class="service-package__name">
+                                    <picture>
+                                        <source srcset="img/wedding-decoration_section3-4.webp" type="image/webp">
+                                        <img src="img/wedding-decoration_section3-4.jpg" alt="">
+                                    </picture>
+                                    <h5>Оформление “под ключ”</h5>
+                                </div>
+                                <div class="service-package__description">
+                                    <p>
+                                        Мы с радостью воплотим в жизнь все Ваши самые фантастические задумки и&nbsp;вместе напишем
+                                        неповторимую историю Вашей волшебной свадьбы. По&nbsp;эскизу клиента мы создадим новые декорации,
+                                        соберем композиции и&nbsp;гирлянды из&nbsp;нужных цветов, разработаем стильный дизайн всей свадебной
+                                        полиграфии и&nbsp;прочих элементов, для&nbsp;того, чтобы каждое «слово» вашей свадьбы соответствовало
+                                        высокому стилю мероприятия и&nbsp;подчеркивало статус этого&nbsp;события.
+                                    </p>
+                                    <button class="turnkey-btn font-size-24" type="button">Подробнее</button>
+                                </div>
+                                <a class="service-package__cost font-size-25" href="">Рассчитать стоимость</a>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="saint-petersburg-section12 wedding-receptionist-section4" id="video-slider1">
-                    <div class="container anim-item">
-                        <h4>Видео с наших мероприятий</h4>
-                        <div class="saint-petersburg-section12__swiper bottom-up-15 delay-5">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide wedding-slide1">
-                                        <video preload="metadata" controls playsinline>
-                                            <source src="video/forest-symphony.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                    <div class="swiper-slide wedding-slide2">
-                                        <video preload="metadata" controls playsinline>
-                                            <source src="video/boho-style.webm" type="video/webm">
-                                            <source src="video/boho-style.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                    <div class="swiper-slide wedding-slide3">
-                                        <video preload="metadata" controls playsinline>
-                                            <source src="video/cuteness.webm" type="video/webm">
-                                            <source src="video/cuteness.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
+                <section class="wedding-decor-section4">
+                    <div class="container anim-item2">
+                        <h4>Как мы работаем?</h4>
+                        <div class="wedding-decor-section4__cards">
+                            <div class="card bottom-up-50 delay-5">
+                                <div>
+                                    <svg viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.6545 60.6237C34.2831 59.7729 39.7254 55.7255 42.0806 51.5603C43.3097 49.3674 43.6436 46.7669 43.0097 44.3235C42.6987 43.1113 42.1526 41.9754 41.4039 40.9834C40.6553 39.9915 39.7193 39.1637 38.6516 38.5494C36.5093 37.2933 33.9693 36.9523 31.5828 37.6005C30.3981 37.9187 29.288 38.4775 28.3186 39.2436C27.3492 40.0097 26.5403 40.9674 25.9399 42.0599C23.7958 45.788 22.8753 50.8058 23.6563 60.6237M23.6563 60.6237C20.2273 60.9145 16.2998 60.2563 13.5141 58.2103C3.29878 50.6114 3.65614 33.2908 7.43897 26.7836C9.29726 23.5674 11.7953 23.2767 13.5124 24.0794C15.7246 25.1033 16.2964 28.0269 16.8681 31.4607C17.154 33.1428 17.9385 35.7007 18.5835 36.796C20.2239 34.8231 22.8666 27.2938 24.5105 22.6916C28.438 11.5091 31.2952 3.54091 36.0106 5.2248C40.0811 6.68572 39.0822 13.0449 38.0816 19.3292C37.8514 20.6142 37.6607 21.9063 37.5098 23.2035C38.5801 21.5946 39.7952 19.4023 40.7243 17.7202C44.5821 10.7777 47.2946 6.09885 50.6521 5.2248C51.8653 4.85912 53.0089 5.07853 54.0095 5.66183C57.8656 8.00215 54.9369 14.4309 51.5812 21.8871C50.5091 24.1543 49.1529 27.2955 48.4381 29.4165C49.4963 28.224 50.4976 26.9798 51.4383 25.6884C55.0816 20.8632 58.793 15.8954 62.7222 18.2321C66.9356 20.717 63.5799 26.8567 60.0097 33.3622C58.9377 35.3333 57.2955 38.33 56.5808 40.2315C57.5082 39.5002 58.7232 38.2587 59.5094 37.381C62.5078 34.238 65.7223 30.7311 68.651 33.4353C70.2931 34.9694 70.436 37.5273 69.0798 41.036C65.1506 51.4141 48.5793 71 33.082 71C26.2973 71 24.371 64.6426 23.6563 60.6237Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
                                 </div>
+                                <span class="font-size-24">Первая встреча с дизайнером</span>
+                                <p>
+                                    в удобное для вас время в&nbsp;нашем офисе или на&nbsp;площадке. Вы&nbsp;можете пригласить дизайнера
+                                    посетить выбранные вами приоритетные свадебные залы, оформление которых стоит непременно учитывать
+                                    при&nbsp;создании индивидуального проекта вашего торжества.
+                                </p>
                             </div>
-                            <div class="swiper-btn-prev">&lt;</div>
-                            <div class="swiper-btn-next">&lt;</div>
-                        </div>
-                        <div class="video-title font-size-24 transparency">
-                            <span class="video-title1 _visible">Свадебный регистратор Гая</span>
-                            <span class="video-title2">Выездной регистратор Гая</span>
-                            <span class="video-title3">Ведущая выездной регистрации Гая</span>
+                            <div class="card bottom-up-50 delay-10">
+                                <div>
+                                    <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.1093 32.4926C24.6932 36.6607 25.5099 38.5676 30.3159 39.2713C25.6483 39.8838 24.5312 42.3172 24.1093 45.7951C23.3364 42.2784 22.8049 40.0897 17.9331 39.2713C22.653 38.2875 23.1643 36.6978 24.1093 32.4926ZM17.2361 15.3223C17.8116 19.8178 18.4376 23.537 25.4205 24.7048C19.1143 25.238 18.3532 28.8796 17.2361 33.7228C16.1308 28.8121 15.5655 25.3258 9.28125 24.7048C13.2452 23.2721 16.4042 22.0588 17.2361 15.3223ZM32.2329 23.4695C32.7054 26.8445 33.3686 28.392 37.2617 28.9623C33.4817 29.4568 32.5738 31.4311 32.2329 34.2476C31.6069 31.3991 31.1766 29.6238 27.2261 28.9623C31.0534 28.1658 31.4668 26.8766 32.2329 23.4695ZM59.1182 22.4908L66.6158 29.8314L44.3492 53.0379C39.879 57.6954 34.7507 61.0873 30.2552 63.1629L27.2835 60.4173C29.1735 55.5354 32.832 49.6376 36.8972 45.4391L59.1182 22.4908Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M30.2565 63.1627C29.3148 64.3068 27.0181 65.1911 25.2412 65.6771C25.5838 64.2596 25.9972 62.0709 27.2831 60.4171M66.4297 18.1976L70.8915 22.4906C73.2371 24.7485 70.0983 28.4626 67.5941 26.063L62.8404 21.5118C60.5606 19.3282 63.7314 15.6022 66.4297 18.1976Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-size-24">Подготовка индивидуального проекта</span>
+                                <p>
+                                    Дизайнер создает презентацию с&nbsp;различными идеями и&nbsp;примерами оформления, указывая в&nbsp;ней
+                                    конкретные цены. Данная презентация высылается вам в&nbsp;электронном виде для&nbsp;подробного
+                                    рассмотрения. Услуга оказывается бесплатно!
+                                </p>
+                            </div>
+                            <div class="card bottom-up-50 delay-15">
+                                <div>
+                                    <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M41.8488 24.4933C40.2728 23.8317 38.5551 23.5793 36.8555 23.7598" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M39.0157 27.9767C39.3674 27.9767 39.6525 27.6916 39.6525 27.3399C39.6525 26.9882 39.3674 26.7031 39.0157 26.7031C38.664 26.7031 38.3789 26.9882 38.3789 27.3399C38.3789 27.6916 38.664 27.9767 39.0157 27.9767Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M23.1699 48.2073C17.0784 50.7157 10.9053 53.1161 9.37695 61.8763M40.8332 44.8809L36.2103 61.8325L38.4751 61.8019L43.903 58.0132C41.9867 56.6613 39.9086 55.359 40.4803 54.3294C41.8803 51.8444 44.4907 49.9077 46.7599 47.7523C44.8611 46.6454 42.6328 44.9932 40.8317 44.8823" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M30.4253 51.0074C32.7441 52.0953 35.2174 52.826 38.8107 51.0074M46.8301 48.308C52.9216 50.8178 59.0947 53.2168 60.623 61.9785M28.5893 44.8795L33.2093 61.8297L30.9459 61.7991L25.518 58.0089C27.4343 56.6585 29.5124 55.3547 28.9407 54.3251C27.5407 51.8401 24.9303 49.9035 22.6611 47.7495C24.5599 46.6412 26.7882 44.9889 28.5893 44.8795ZM29.3301 33.6387C29.3899 39.3043 38.8866 39.2212 38.9201 33.6387H29.3301Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M29.2013 27.9181C29.5529 27.9181 29.838 27.633 29.838 27.2813C29.838 26.9296 29.5529 26.6445 29.2013 26.6445C28.8496 26.6445 28.5645 26.9296 28.5645 27.2813C28.5645 27.633 28.8496 27.9181 29.2013 27.9181Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M26.5449 24.5753C28.1209 23.9137 29.8386 23.6614 31.5383 23.8418" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M17.7539 50.4615C18.7018 48.7276 19.5856 47.3786 19.5433 44.3409C18.8272 37.3919 10.7481 7.55881 37.0637 8.02693C49.1547 10.0103 51.7827 20.9769 50.8245 30.354C50.1902 36.5738 49.6622 39.6363 49.7512 44.268C50.2879 47.6907 51.0812 48.0786 51.6397 50.1611" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M28.8852 44.5397L29.0368 41.1083C25.372 37.5339 22.3956 33.9143 22.5298 28.7649C23.1568 21.5724 27.281 16.0949 40.4162 15.0449C41.86 18.4662 43.2891 21.8233 45.4373 28.2443C44.9604 33.1195 42.7889 36.8383 39.9218 40.1939L40.7123 44.7264" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M28.9902 41.0629C32.3473 44.4229 37.3013 43.4196 40.2165 39.8379" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-size-24">Вторая встреча с дизайнером</span>
+                                <p>Обсуждение конкретных деталей, внесение корректировок, согласование проекта, согласование бюджета.</p>
+                            </div>
+                            <div class="card contract-card bottom-up-50 delay-20">
+                                <div>
+                                    <svg viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.875 64.6216C17.3285 59.8248 17.3285 59.7461 21.6387 59.0391C19.6717 61.6483 17.43 63.3003 18.3347 68.3963C23.6757 69.5058 28.7788 65.3531 33.4355 63.7886C32.0355 65.5981 29.771 69.3326 32.5307 70.0798C34.1306 70.1898 35.7334 69.9125 37.2032 69.2713M45.6032 62.7876L39.704 67.0401L41.6167 60.1206" stroke="rgba(148, 1, 29, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M62.5244 39.0998L45.6019 62.7878L41.6172 60.1208L56.8929 35.507M62.5244 39.0998L76.1254 16.2815C75.3747 14.8535 73.9082 13.94 72.2947 13.8945L56.8929 35.507M62.5244 39.0998L56.8929 35.507M74.9162 18.5443C75.5759 24.1163 69.8954 32.9975 67.5364 37.4548" stroke="rgba(148, 1, 29, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-size-24">Заключение договора</span>
+                            </div>
+                            <div class="card bottom-up-50 delay-25">
+                                <div>
+                                    <svg viewBox="0 0 85 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M42.5001 80.0065C62.2903 80.0065 78.3334 63.9634 78.3334 44.1732C78.3334 24.383 62.2903 8.33984 42.5001 8.33984C22.7099 8.33984 6.66675 24.383 6.66675 44.1732C6.66675 63.9634 22.7099 80.0065 42.5001 80.0065Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.3335 43.6456C23.3335 42.5585 23.6559 41.4958 24.2599 40.5919C24.8639 39.688 25.7223 38.9835 26.7267 38.5675C27.7311 38.1515 28.8362 38.0426 29.9025 38.2547C30.9687 38.4668 31.9481 38.9902 32.7168 39.7589L38.0702 45.1123L52.2868 30.8956C53.0558 30.128 54.0351 29.6054 55.1009 29.3941C56.1667 29.1827 57.2713 29.292 58.275 29.7081C59.2788 30.1241 60.1367 30.8284 60.7404 31.7318C61.3441 32.6353 61.6665 33.6974 61.6668 34.7839C61.6668 36.2423 61.0868 37.6406 60.0568 38.6723L40.8052 57.9223C40.446 58.2818 40.0196 58.5671 39.5501 58.7617C39.0807 58.9563 38.5775 59.0565 38.0693 59.0565C37.5611 59.0565 37.058 58.9563 36.5885 58.7617C36.1191 58.5671 35.6926 58.2818 35.3335 57.9223L24.9435 47.5339C23.9126 46.5025 23.3335 45.1039 23.3335 43.6456Z" stroke="#554874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="font-size-24">Контрольная встреча</span>
+                                <p>Внесение остатка по&nbsp;договору, передача необходимых аксессуаров.</p>
+                            </div>
+                            <div class="card bottom-up-50">
+                                <div>
+                                    <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M35.9537 50.6443C35.9537 57.7637 31.4762 63.6193 25.9637 63.6193C20.4512 63.6193 15.97 57.7637 15.97 50.6443V49.8418" stroke="#412C73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M74.3613 67.8681C75.3457 66.7919 76.3619 65.6837 76.9525 64.9956C79.48 62.1269 80.0538 58.1069 78.5613 54.5481C76.4932 49.7275 75.9194 49.7275 75.5744 43.5287C75.4619 39.97 72.7057 36.985 69.1432 36.64C69.1432 36.64 66.9625 34 62.2525 34C56.74 34 51.6869 36.985 50.425 41.6912C49.0469 46.5137 50.6538 48.4637 49.2757 52.1387C47.6688 56.2712 44.9125 59.9444 48.3569 65.11C48.6682 65.6219 50.0163 66.9813 51.0138 68.0725M13.5607 44.4475C14.2488 34.4594 21.8294 34.345 25.6169 34.9187C25.9638 35.0331 26.9969 34.9187 27.3419 34.9187C34.2325 34 37.6769 41.8056 37.6769 45.25C37.6769 46.5138 37.6769 49.6131 35.9538 51.3344C35.9538 51.3344 32.05 46.5137 31.8194 43.7594C31.8194 43.7594 18.7282 48.6944 17.8094 44.4475C17.8094 44.4475 16.8907 47.89 16.0863 48.8087V52.2531C16.0863 52.2531 13.2138 48.8069 13.5607 44.4475Z" stroke="#412C73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M46.75 77.2784V74.6384C46.75 70.3916 50.9988 66.9472 55.2475 66.9472C60.3006 71.1941 65.3538 71.1941 70.5213 66.9472C74.77 66.9472 79.0206 70.3897 79.0206 74.6384V77.2784M10 77.2784V74.6384C10 70.3916 14.2487 66.9472 18.4975 66.9472C23.5506 71.1941 28.6038 71.1941 33.7731 66.9472C38.0219 66.9472 42.2706 70.3897 42.2706 74.6384V77.2784M53.2956 51.4503C53.2956 58.3372 57.6606 63.5028 62.8281 63.5028C67.9956 63.5028 72.3588 58.3372 72.3588 51.4484C72.3588 47.0872 70.6375 44.5616 67.1913 41.1172C63.7469 44.5616 53.41 48.9228 53.41 50.6459L53.2956 51.4503Z" stroke="#412C73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M38.8834 12.0541C37.7126 12.0525 36.5653 12.3832 35.5749 13.0076C34.5845 13.6321 33.7916 14.5248 33.2883 15.5819C32.785 16.6391 32.592 17.8173 32.7317 18.9798C32.8714 20.1423 33.338 21.2413 34.0774 22.1491L43.9999 33.7951L53.825 22.2646L53.8744 22.2091L53.9224 22.1491C54.4595 21.5021 54.8592 20.7524 55.0971 19.9459C55.335 19.1393 55.4062 18.2928 55.3063 17.4578C55.2065 16.6228 54.9376 15.817 54.5161 15.0893C54.0946 14.3616 53.5294 13.7274 52.8549 13.2253C52.1803 12.7232 51.4106 12.3637 50.5926 12.1687C49.7746 11.9738 48.9254 11.9475 48.0969 12.0913C47.2684 12.2352 46.4779 12.5463 45.7735 13.0057C45.0692 13.465 44.4657 14.063 43.9999 14.7631C43.4337 13.929 42.672 13.246 41.7812 12.7738C40.8904 12.3017 39.8976 12.0546 38.8894 12.0541H38.8834Z" stroke="#412C73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="font-size-24">День свадьбы</span>
+                                <p>
+                                    Наши оформители уже на месте! Ещё&nbsp;немного, и&nbsp;этот зал станет именно таким,
+                                    о&nbsp;котором вы мечтали.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="wedding-receptionist-section3">
-                    <div class="container anim-item">
-                        <h4>Ведущая выездной регистрации Ксана</h4>
-                        <div class="wedding-receptionist-section3__photos bottom-up-15 delay-5">
-                            <a href="img/wedding-receptionist_section3-10.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-10.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-10.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-11.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-11.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-11.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-12.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-12.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-12.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-13.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-13.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-13.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-14.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <!-- <source srcset="img/wedding-receptionist_section3-14.webp" type="image/webp"> -->
-                                    <img src="img/wedding-receptionist_section3-14.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-15.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <!-- <source srcset="img/wedding-receptionist_section3-15.webp" type="image/webp"> -->
-                                    <img src="img/wedding-receptionist_section3-15.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-16.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <!-- <source srcset="img/wedding-receptionist_section3-16.webp" type="image/webp"> -->
-                                    <img src="img/wedding-receptionist_section3-16.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-17.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <!-- <source srcset="img/wedding-receptionist_section3-17.webp" type="image/webp"> -->
-                                    <img src="img/wedding-receptionist_section3-17.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-10.jpg" data-fancybox="gallery2">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-10.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-10.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="cost-table2 with-brown-header bottom-up-25 delay-10">
-                            <div class="cost-table2__column">
-                                <div>
-                                    <span>Дни недели</span>
-                                </div>
-                                <div>
-                                    <span>пн. - чт.</span>
-                                </div>
-                                <div>
-                                    <span>пт., сб., вс.</span>
-                                </div>
-                            </div>
-                            <div class="cost-table2__column">
-                                <div>Стоимость</div>
-                                <div class="font-size-24"><span>15 000</span> руб.</div>
-                                <div class="font-size-24"><span>18 000</span> руб.</div>
-                            </div>
-                        </div>
-                        <div class="note-to-table transparency">
-                            <span>* Отдельно оплачивается выезд загород.</span>
-                        </div>
-                        <div class="text-with-lines bottom-up-25 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Ксана - ведущая актриса театра Буфф, гуру своего дела и&nbsp;утонченная, возвышенная натура.
-                                Многогранность ее таланта в&nbsp;сочетании с&nbsp;профессиональными навыками позволяют превратить
-                                церемонию бракосочетания в&nbsp;настоящий спектакль по&nbsp;мотивам Шекспира, где&nbsp;у&nbsp;вас,
-                                дорогие молодожены, главные&nbsp;роли!
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
+                <section class="saint-petersburg-section7 anim-item">
+                    <div class="padding-30 transparency">
+                        <button class="form-open-btn orange-btn font-size-25" type="button">Записаться на встречу с декоратором</button>
                     </div>
                 </section>
-                <section class="saint-petersburg-section12 wedding-receptionist-section4" id="video-slider2">
+                <section class="about-company-section6">
                     <div class="container anim-item">
-                        <h4>Видео с наших мероприятий</h4>
-                        <div class="saint-petersburg-section12__swiper bottom-up-15 delay-5">
+                        <h4>Самое интересное из нашей свадебной&nbsp;биографии</h4>
+                        <div class="about-company-section6__swiper bottom-up-25 delay-5">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <video preload="metadata" controls playsinline>
-                                            <source src="video/boho-style.webm" type="video/webm">
-                                            <source src="video/boho-style.mp4" type="video/mp4">
-                                        </video>
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events1.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events1.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.06.2024</span>
+                                            <span class="swiper-slide__title">Катя и Женя: Как упоительны<br>в России вечера</span>
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swiper-btn-prev">&lt;</div>
-                            <div class="swiper-btn-next">&lt;</div>
-                        </div>
-                        <div class="video-title font-size-24 transparency">
-                            <span class="_visible">Выездной регистратор Ксана</span>
-                        </div>
-                    </div>
-                </section>
-                <section class="wedding-receptionist-section3">
-                    <div class="container anim-item">
-                        <h4>Ведущая выездной регистрации Ольга</h4>
-                        <div class="wedding-receptionist-section3__photos bottom-up-15 delay-5">
-                            <a href="img/wedding-receptionist_section3-19.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-19.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-20.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-20.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-20.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-21.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-21.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-21.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-22.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-22.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-23.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-23.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-23.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-24.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-24.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-24.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-25.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-25.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-25.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-26.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-26.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-26.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-19.jpg" data-fancybox="gallery3">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-19.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="cost-table2 with-brown-header bottom-up-25 delay-10">
-                            <div class="cost-table2__column">
-                                <div>
-                                    <span>Дни недели</span>
-                                </div>
-                                <div>
-                                    <span>пн. - чт.</span>
-                                </div>
-                                <div>
-                                    <span>пт., сб., вс.</span>
-                                </div>
-                                <div>
-                                    <span>+ образ</span>
-                                </div>
-                            </div>
-                            <div class="cost-table2__column">
-                                <div>Стоимость</div>
-                                <div class="font-size-24"><span>15 000</span> руб.</div>
-                                <div class="font-size-24"><span>18 000</span> руб.</div>
-                                <div class="font-size-24"><span>18 000 / 21 000</span> руб.</div>
-                            </div>
-                        </div>
-                        <div class="note-to-table transparency">
-                            <span>* Отдельно оплачивается выезд загород.</span>
-                        </div>
-                        <div class="text-with-lines bottom-up-25 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Ольга - трогательный и душевный выездной регистратор. История каждой пары неповторима, поэтому я создаю
-                                индивидуальный сценарий для&nbsp;каждой церемонии. Искренне провожу каждую выездную регистрацию так,
-                                чтобы она запомнилась на&nbsp;всю жизнь молодоженам, родителям и&nbsp;всем приглашенным гостям.
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
-                    </div>
-                </section>
-                <section class="saint-petersburg-section12 wedding-receptionist-section4" id="video-slider3">
-                    <div class="container anim-item">
-                        <h4>Видео с наших мероприятий</h4>
-                        <div class="saint-petersburg-section12__swiper bottom-up-15 delay-5">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <video preload="metadata" controls playsinline>
-                                            <source src="video/boho-style.webm" type="video/webm">
-                                            <source src="video/boho-style.mp4" type="video/mp4">
-                                        </video>
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events2.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events2.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">23.10.2021</span>
+                                            <span class="swiper-slide__title">Маша и Лёша:<br>осенние краски любви</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events3.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events3.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.10.2022</span>
+                                            <span class="swiper-slide__title">Владимир и Мария: легкость<br>и задор в разгаре осени</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events4.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events4.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">16.08.2024</span>
+                                            <span class="swiper-slide__title">Олег и Дарья:<br>красота в деталях</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events1.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events1.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.06.2024</span>
+                                            <span class="swiper-slide__title">Катя и Женя: Как упоительны<br>в России вечера</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events2.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events2.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">23.10.2021</span>
+                                            <span class="swiper-slide__title">Маша и Лёша:<br>осенние краски любви</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events3.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events3.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.10.2022</span>
+                                            <span class="swiper-slide__title">Владимир и Мария: легкость<br>и задор в разгаре осени</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events4.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events4.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">16.08.2024</span>
+                                            <span class="swiper-slide__title">Олег и Дарья:<br>красота в деталях</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events1.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events1.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">07.06.2024</span>
+                                            <span class="swiper-slide__title">Катя и Женя: Как упоительны<br>в России вечера</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <picture>
+                                                <source srcset="img/saint-petersburg_events2.webp" type="image/webp">
+                                                <img src="img/saint-petersburg_events2.jpg" alt="">
+                                            </picture>
+                                            <span class="swiper-slide__date">23.10.2021</span>
+                                            <span class="swiper-slide__title">Маша и Лёша:<br>осенние краски любви</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-btn-prev">&lt;</div>
                             <div class="swiper-btn-next">&lt;</div>
                         </div>
-                        <div class="video-title font-size-24 transparency">
-                            <span class="_visible">Выездной регистратор Ольга</span>
+                        <div class="underlined-link transparency">
+                            <a href="">Посмотреть все мероприятия</a>
                         </div>
                     </div>
                 </section>
-                <section class="wedding-receptionist-section3">
-                    <div class="container anim-item">
-                        <h4>Ведущая выездной регистрации Светлана</h4>
-                        <div class="wedding-receptionist-section3__photos bottom-up-15 delay-5">
-                            <a href="img/wedding-receptionist_section3-31.jpg" data-fancybox="gallery4">
+                <!-- <section class="wedding-anniversary-section3">
+                    <div class="container anim-item2">
+                        <h4>Праздник для двоих: 11 идей, которые помогут сделать этот день ярким!</h4>
+                        <div class="spoiler-cards">
+                            <div class="spoiler-card bottom-up-25 delay-5">
                                 <picture>
-                                    <source srcset="img/wedding-receptionist_section3-31.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-31.jpg" alt="">
+                                    <img src="img/wedding-anniversary_section3-1.jpg" alt="">
                                 </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-28.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-28.webp" type="image/webp">
-                                    <img class="position-top" src="img/wedding-receptionist_section3-28.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-29.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-29.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-29.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-30.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-30.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-30.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-32.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-32.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-32.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-33.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-33.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-33.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-34.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-34.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-34.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-35.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <img src="img/wedding-receptionist_section3-35.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-31.jpg" data-fancybox="gallery4">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-31.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-31.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="cost-table2 with-brown-header bottom-up-25 delay-10">
-                            <div class="cost-table2__column">
+                                <h5>Романтический ужин</h5>
                                 <div>
-                                    <span>Дни недели</span>
-                                </div>
-                                <div>
-                                    <span>пн. - чт.</span>
-                                </div>
-                                <div>
-                                    <span>пт., сб., вс.</span>
+                                    <p>
+                                        Помимо классического гастрономического варианта, есть масса интересных и&nbsp;необычных мест:
+                                        панорамные рестораны на&nbsp;крышах, ужин на&nbsp;теплоходе под&nbsp;сладкие звуки саксофона,
+                                        свидание в&nbsp;абсолютной темноте или&nbsp;же милый пикник на&nbsp;природе.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="cost-table2__column">
-                                <div>Стоимость</div>
-                                <div class="font-size-24"><span>25 000</span> руб.</div>
-                                <div class="font-size-24"><span>27 000</span> руб.</div>
-                            </div>
-                        </div>
-                        <div class="note-to-table transparency">
-                            <span>* Отдельно оплачивается выезд загород.</span>
-                        </div>
-                        <div class="text-with-lines bottom-up-25 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Светлана очень любит свою работу и&nbsp;поэтому всегда искренне радуется за&nbsp;вас и&nbsp;переживает
-                                с&nbsp;вами эти торжественные и&nbsp;волнительные моменты! Выездная регистрация с&nbsp;ней будет
-                                для&nbsp;вас особенной: индивидуальный авторский сценарий церемонии и&nbsp;стиль музыкального оформления,
-                                гармоничный образ под&nbsp;стилистику торжества. Все свадебные атрибуты будут подобраны для&nbsp;вас
-                                с&nbsp;любовью: подушечки, коробочки для&nbsp;колец, свидетельство о&nbsp;браке, папка, ручка и&nbsp;указка.
-                                Церемонию можно провести как на&nbsp;русском, так и&nbsp;на&nbsp;английском языке!
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
-                    </div>
-                </section>
-                <section class="wedding-receptionist-section3 olesya-section">
-                    <div class="container anim-item">
-                        <h4>Ведущая выездной регистрации Олеся</h4>
-                        <div class="wedding-receptionist-section3__photos bottom-up-15 delay-5">
-                            <a href="img/wedding-receptionist_section3-38.jpg" data-fancybox="gallery5">
+                            <div class="spoiler-card bottom-up-25 delay-5">
                                 <picture>
-                                    <source srcset="img/wedding-receptionist_section3-38.webp" type="image/webp">
-                                    <img class="position-top" src="img/wedding-receptionist_section3-38.jpg" alt="">
+                                    <source srcset="img/wedding-anniversary_section3-2.webp" type="image/webp">
+                                    <img src="img/wedding-anniversary_section3-2.jpg" alt="">
                                 </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-37.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-37.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-37.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-39.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-39.webp" type="image/webp">
-                                    <img class="position-top" src="img/wedding-receptionist_section3-39.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-40.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-40.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-40.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-41.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-41.webp" type="image/webp">
-                                    <img class="position-top" src="img/wedding-receptionist_section3-41.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-42.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-42.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-42.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-43.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-43.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-43.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-44.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-44.webp" type="image/webp">
-                                    <img src="img/wedding-receptionist_section3-44.jpg" alt="">
-                                </picture>
-                            </a>
-                            <a href="img/wedding-receptionist_section3-38.jpg" data-fancybox="gallery5">
-                                <picture>
-                                    <source srcset="img/wedding-receptionist_section3-38.webp" type="image/webp">
-                                    <img class="position-top" src="img/wedding-receptionist_section3-38.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="cost-table2 with-brown-header bottom-up-25 delay-10">
-                            <div class="cost-table2__column">
+                                <h5>Фотосессия</h5>
                                 <div>
-                                    <span>Дни недели</span>
-                                </div>
-                                <div>
-                                    <span>пн. - чт.</span>
-                                </div>
-                                <div>
-                                    <span>пт., сб., вс.</span>
+                                    <p>
+                                        В зависимости от погоды на&nbsp;улице, можно устроить фотосессию на&nbsp;заливе или в&nbsp;парке,
+                                        а&nbsp;можно снять фотостудию или отправиться вместе с&nbsp;фотографом в&nbsp;атмосферный музей
+                                        или&nbsp;ресторан. Также интересным вариантом может стать костюмированная фотосессия.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="cost-table2__column">
-                                <div>Стоимость</div>
-                                <div class="font-size-24"><span>15 000</span> руб.</div>
-                                <div class="font-size-24"><span>18 000</span> руб.</div>
+                            <div class="spoiler-card bottom-up-25 delay-5">
+                                <picture>
+                                    <source srcset="img/wedding-anniversary_section3-3.webp" type="image/webp">
+                                    <img src="img/wedding-anniversary_section3-3.jpg" alt="">
+                                </picture>
+                                <h5>Увлекательный квест</h5>
+                                <div>
+                                    <p>
+                                        Это может быть готовый сюжет в&nbsp;квест&#8209;комнате или&nbsp;же ряд головоломок, подготовленных
+                                        одним из&nbsp;Вас, ведущих к&nbsp;приятному подарку.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-10">
+                                <picture>
+                                    <source srcset="img/wedding-anniversary_section3-4.webp" type="image/webp">
+                                    <img src="img/wedding-anniversary_section3-4.jpg" alt="">
+                                </picture>
+                                <h5>Авто- или велоэкскурсия</h5>
+                                <div>
+                                    <p>
+                                        Возьмите на прокат велосипед тандем, ролики или&nbsp;белый кабриолет и&nbsp;прокатитесь
+                                        с&nbsp;ветерком по&nbsp;площадям и&nbsp;улочкам Петербурга, где проходили Ваши первые
+                                        свидания, встречи и&nbsp;прогулки.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-10">
+                                <picture>
+                                    <source srcset="img/wedding-anniversary_section3-5.webp" type="image/webp">
+                                    <img src="img/wedding-anniversary_section3-5.jpg" alt="">
+                                </picture>
+                                <h5>Мастер-класс</h5>
+                                <div>
+                                    <p>
+                                        Кулинарные курсы, уроки сальсы или&nbsp;бачаты, мастер&#8209;класс по&nbsp;гончарному или
+                                        кузнечному делу и&nbsp;многое другое.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-10">
+                                <picture>
+                                    <img src="img/wedding-anniversary_section3-6.jpg" alt="">
+                                </picture>
+                                <h5>Спортивное развлечение</h5>
+                                <div>
+                                    <p>Прогулка на лошадях, катание на&nbsp;гидроциклах, поход в&nbsp;батутный центр или&nbsp;аквапарк.</p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-15">
+                                <picture>
+                                    <img src="img/wedding-anniversary_section3-7.jpg" alt="">
+                                </picture>
+                                <h5>Отдых для души</h5>
+                                <div>
+                                    <p>Спа, массаж и ванна с&nbsp;лепестками роз. (Тут&nbsp;Вы и&nbsp;без&nbsp;нас справитесь &#128521;)</p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-15">
+                                <picture>
+                                    <img src="img/wedding-anniversary_section3-8.jpg" alt="">
+                                </picture>
+                                <h5>Всплеск эмоций</h5>
+                                <div>
+                                    <p>
+                                        Полет в аэротрубе или на&nbsp;самолете, прыжок с&nbsp;парашютом, урок дайвинга
+                                        или&nbsp;вейкбординга.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card bottom-up-25 delay-15">
+                                <picture>
+                                    <source srcset="img/wedding-anniversary_section3-11.webp" type="image/webp">
+                                    <img src="img/wedding-anniversary_section3-11.jpg" alt="">
+                                </picture>
+                                <h5>Париж в Петербурге</h5>
+                                <div>
+                                    <p>
+                                        Если Вы давно мечтаете о&nbsp;поездке в&nbsp;Париж, но&nbsp;такой возможности пока
+                                        не&nbsp;представляется, мы можем устроить это путешествие в&nbsp;рамках нашего славного города.
+                                        Мы&nbsp;разработаем увлекательную квест&#8209;экскурсию, в&nbsp;процессе которой Вы узнаете
+                                        о&nbsp;множестве интересных французских мест. Также программа может быть построена по&nbsp;мотивам
+                                        английского или итальянского путешествий.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card centered-card bottom-up-50 delay-20">
+                                <picture>
+                                    <img src="img/wedding-anniversary_section3-10.jpg" alt="">
+                                </picture>
+                                <h5>Cюрприз&nbsp;для&nbsp;второй половинки</h5>
+                                <div>
+                                    <p>
+                                        Это может быть карета, запряженная белыми лошадьми, поданная к&nbsp;дверям офиса; танцевальный
+                                        флешмоб с&nbsp;одним из&nbsp;Вас в&nbsp;главной роли или&nbsp;серенада под&nbsp;окнами.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="spoiler-card centered-card bottom-up-50 delay-20">
+                                <picture>
+                                    <source srcset="img/wedding-anniversary_section3-9.webp" type="image/webp">
+                                    <img src="img/wedding-anniversary_section3-9.jpg" alt="">
+                                </picture>
+                                <h5>Мини-версия медового&nbsp;месяца</h5>
+                                <div>
+                                    <p>
+                                        Если у Вас выпадает парочка выходных на&nbsp;эту романтическую дату, пакуйте чемоданы
+                                        и&nbsp;отправляйтесь вдвоем на&nbsp;медовый уик&#8209;энд. Это&nbsp;может быть тур выходного дня
+                                        на&nbsp;пароме, маленькая сказка в&nbsp;Париже или&nbsp;в&nbsp;Праге. Ну&nbsp;а&nbsp;если
+                                        у&nbsp;Вас нет возможности уехать далеко, Вы можете насладиться природой Карельского перешейка
+                                        или прокатиться на&nbsp;Валаам.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="note-to-table transparency">
-                            <span>* Отдельно оплачивается выезд загород.</span>
-                        </div>
-                        <div class="text-with-lines bottom-up-25 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Олеся - искренний регистратор‌ с&nbsp;доброй светлой ‌энергетикой! В&nbsp;профессии по&nbsp;призванию
-                                с&nbsp;2000&nbsp;года, ‌и&nbsp;это больше, чем работа для&nbsp;нее - это любимое дело всей жизни.
-                                Ленинградка, с&nbsp;чувством такта и&nbsp;стиля, ‌ведет очень душевно и&nbsp;ненавязчиво - ‌это два
-                                главных слова, которые всегда звучат в&nbsp;отзывах благодарных заказчиков.
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
                     </div>
-                </section>
-                <section class="wedding-receptionist-section5">
-                    <div class="container anim-item">
-                        <h4>В чем же плюсы выездной регистрации?</h4>
-                        <div class="text-with-lines bottom-up-25 delay-5">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Мода на выездные регистрации брака пришла в&nbsp;нашу страну с&nbsp;Запада. С&nbsp;каждым годом
-                                всё больше влюбленных пар выбирают для&nbsp;себя формат бракосочетания, не&nbsp;ограниченный
-                                строгими рамками официального ЗАГСа. Они предпочитают церемонию, написанную по&nbsp;их сценарию,
-                                с&nbsp;учетом всех нюансов и&nbsp;пожеланий. Неужели официальная церемония в&nbsp;ЗАГСе действительно
-                                так сильно проигрывает выездной?
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
-                        <ul class="orange-marker bottom-up-25 delay-10">
-                            <li>
-                                Свобода в выборе площадки - Вы не&nbsp;привязываетесь к&nbsp;конкретному ЗАГСу и&nbsp;конкретному времени.
-                                Вы не&nbsp;боитесь опоздать и&nbsp;не&nbsp;ломаете голову, как развлекать гостей между росписью
-                                и&nbsp;банкетом - эти действия могут идти сразу друг за&nbsp;другом.
-                            </li>
-                            <li>
-                                Внешний вид и манера речи свадебного регистратора - престарелые дамы с&nbsp;голубыми тенями и&nbsp;томными
-                                голосами больше не&nbsp;будут Вашим ночным кошмаром. Заказывая выездного регистратора на&nbsp;свою свадьбу,
-                                Вы можете заранее просмотреть всех кандидатов и&nbsp;выбрать идеальный для&nbsp;себя тембр голоса, формат
-                                подачи и,&nbsp;конечно&nbsp;же, внешний&nbsp;вид.
-                            </li>
-                            <li>
-                                Индивидуальный текст церемонии. Долой шаблонные речи! Ваша история любви наверняка насчитывает столько
-                                интересных моментов и&nbsp;красочных воспоминаний, что по&nbsp;ней можно составить не&nbsp;только текст
-                                для&nbsp;выездного регистратора, но&nbsp;и&nbsp;целый любовный роман! Так&nbsp;пусть&nbsp;же все гости
-                                проникнутся этой историей благодаря красивому сценарию, написанному специально для&nbsp;Вас.
-                            </li>
-                            <li>
-                                Неповторимое оформление церемонии. Если Ваш брак будет заключен не&nbsp;в&nbsp;стенах ЗАГСа,
-                                а&nbsp;на&nbsp;выезде, то&nbsp;стиль этого торжественного события будет полностью зависеть от&nbsp;Ваших
-                                пожеланий. Цвет, стилистика, масштабы – только Вы решаете, как это будет выглядеть.
-                            </li>
-                            <li>
-                                Потрясающие фотографии. Выездная регистрация подарит Вам не&nbsp;только сказочные ощущения,
-                                но&nbsp;и&nbsp;оставит след на&nbsp;долгие годы в&nbsp;виде волшебных фотографий и&nbsp;видео.
-                                Солнце, зелень, вода и&nbsp;море цветов – вот лишь часть выездных прелестей, недоступных
-                                для&nbsp;ЗАГСов, которая сделает Ваш семейный архив ярким и&nbsp;красочным.
-                            </li>
-                            <li>
-                                Возможность добавить интересные традиции. По&nbsp;желанию молодоженов в&nbsp;сценарий регистрации
-                                можно включить произнесение клятв, проведение песочной церемонии или закладку вина на&nbsp;первую
-                                годовщину свадьбы.
-                            </li>
-                        </ul>
-                        <div class="text-with-lines bottom-up-25 delay-15">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Итак, допустим, мы убедили Вас, что выездная регистрация - это здорово, и&nbsp;Вы уже готовы взяться
-                                за&nbsp;ее подготовку. Для&nbsp;начала необходимо выбрать
-                                <a href="on-site-marriage-registration.html">стиль оформления</a> и&nbsp;площадку. А&nbsp;следующим
-                                пунктом следует тот самый выездной регистратор. На&nbsp;сегодняшний день выбор свадебных регистраторов
-                                в&nbsp;СПб довольно велик.
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
-                    </div>
-                </section>
-                <section class="wedding-receptionist-section6">
-                    <div class="container anim-item">
-                        <h4>Подбирая данного специалиста, обращайте внимание на&nbsp;следующие&nbsp;пункты:</h4>
-                        <ul class="orange-marker bottom-up-25 delay-5">
-                            <li>внешний вид;</li>
-                            <li>грамотность речи;</li>
-                            <li>чтение текста с листа или по памяти;</li>
-                            <li>манера ведения: официальная, романтичная или&nbsp;юмористическая;</li>
-                            <li>способность к импровизации.</li>
-                        </ul>
-                        <div class="text-with-lines bottom-up-25 delay-10">
-                            <div class="dividing-line"></div>
-                            <p>
-                                Чтобы уточнить все вышеперечисленные детали, Вы можете просмотреть фото и&nbsp;видео-материалы
-                                с&nbsp;участием кандидата, проконсультироваться с&nbsp;представителем свадебного агентства или
-                                назначить личную встречу. В&nbsp;любом случае, советуем Вам не&nbsp;спешить и&nbsp;крайне тщательно
-                                подходить к&nbsp;выбору, ведь регистратор на&nbsp;свадьбу - это именно тот человек, от&nbsp;которого
-                                всецело зависит атмосфера и&nbsp;настроение Вашей торжественной церемонии.
-                            </p>
-                            <div class="dividing-line"></div>
-                        </div>
-                    </div>
-                </section>
+                </section> -->
             </main>
             <footer>
                 <div class="container">

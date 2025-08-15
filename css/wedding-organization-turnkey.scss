@@ -55,7 +55,7 @@
 
 .turnkey-section7 {
     margin-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     .container {
         padding: 0 60px;
         h4 {color: $violet1;}
@@ -252,7 +252,7 @@
     }
     .turnkey-section7 {
         margin-top: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)));
-        padding-bottom: calc(5px + (15 - 5) * ((100vw - 321px) / (1300 - 321)));
+        padding-bottom: calc(5px + (10 - 5) * ((100vw - 321px) / (1300 - 321)));
         .container {
             padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
             .turnkey-section7__cards {

@@ -29,7 +29,7 @@
 .saint-petersburg-section7, .saint-petersburg-section9, .saint-petersburg-section11, .saint-petersburg-section15 {padding: 60px;}
 
 .saint-petersburg-section7 {
-    background: url('../img/saint-petersburg_section7-bg.png'), $white;
+    background-color: rgb(237, 111, 89, 0.15);
     div {transition: opacity 0.8s, visibility 0.8s;}
 }
 
@@ -132,7 +132,7 @@
 
 .saint-petersburg-section17 {
     padding: 50px 60px 60px 60px;
-    background: url('../img/saint-petersburg_section7-bg.png'), $white;
+    background-color: rgb(237, 111, 89, 0.15);
     h4 {
         text-align: center;
         color: $violet1;
@@ -253,10 +253,6 @@
             }
         }
     }
-}
-
-@media (max-width: 600.9px) {
-    .saint-petersburg-section7, .saint-petersburg-section17 {background-size: cover;}
 }
 
 @media (max-width: 480.9px) {
