@@ -1,0 +1,431 @@
+.wedding-invitations-section2, .wedding-invitations-section3, .wedding-invitations-section4 {
+    .container {
+        .photos-of-invitations {
+            display: grid;
+            column-gap: 20px;
+            div {
+                padding: 10px;
+                background-color: $white;
+                border-radius: 5px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+                picture {
+                    display: block;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wedding-invitations-section2 {
+    margin: 60px 0 55px 0;
+    .wedding-invitations-section2__top {
+        nav {grid-template-columns: repeat(4, auto);}
+    }
+    .container {
+        margin-top: 60px;
+        .text-with-lines {max-width: 664px;}
+        .photos-of-invitations {
+            max-width: 1090px;
+            margin: 40px auto 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            div {
+                picture {padding-bottom: 66.667%;}
+            }
+        }
+    }
+}
+
+.wedding-invitations-section3, .wedding-invitations-section4 {
+    .container {
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .orange-marker {
+            max-width: 950px;
+            margin: 30px auto 42px auto;
+            text-align: justify;
+        }
+        .photos-of-invitations {
+            max-width: 1020px;
+            margin: 0 auto;
+            grid-template-columns: repeat(4, 1fr);
+            div {
+                picture {padding-bottom: 100%;}
+            }
+        }
+    }
+}
+
+.wedding-invitations-section3 {
+    .container {
+        h4 {max-width: 746px;}
+    }
+}
+
+.wedding-invitations-section4 {
+    margin: 55px 0;
+    .container {
+        h4 {max-width: 634px;}
+        .orange-marker {
+            li {
+                color: $brown1;
+                span {
+                    display: block;
+                    margin-bottom: 8px;
+                    text-align: left;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.wedding-invitations-section5, .wedding-invitations-section7 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $violet1;
+        }
+    }
+}
+
+.wedding-invitations-section6, .wedding-invitations-section8 {
+    .container:not(.photo-on-the-left, .photo-on-the-right) {
+        padding: 0 60px;
+        h4 {
+            margin-bottom: 50px;
+            text-align: center;
+            color: $red2;
+        }
+    }
+}
+
+.wedding-invitations-section6 {margin: 55px 0 65px 0;}
+
+.wedding-invitations-section7 {
+    .container {
+        .text-with-lines {
+            max-width: 874px;
+            margin-top: 40px;
+        }
+    }
+}
+
+.wedding-invitations-section8 {
+    margin: 50px 0 74px 0;
+    .container {
+        h4 {max-width: 470px;}
+    }
+}
+
+.wedding-invitations-section10 {
+    margin: 50px 0 58px 0;
+    .container {
+        padding: 0 105px;
+        h4 {color: $red2;}
+        .wedding-invitations-section10__swiper {
+            will-change: transform;
+            max-width: 1070px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            .swiper {
+                padding: 10px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        height: auto;
+                        padding: 10px 10px 0 10px;
+                        border-radius: 5px;
+                        background-color: $white;
+                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+                        a {
+                            picture {
+                                display: block;
+                                position: relative;
+                                padding-bottom: 66.667%;
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            span {
+                                display: block;
+                                font-size: 18px;
+                                line-height: 110%;
+                                text-align: center;
+                                margin: 12px 0 16px 0;
+                                color: $brown2;
+                            }
+                        }
+                        @media (hover: hover) and (pointer: fine) {
+                            a {
+                                picture {
+                                    overflow: hidden;
+                                    img {
+                                        transform: translate3d(0, 0, 0) scale(1);
+                                        opacity: 0.9;
+                                        transition: transform 0.3s, opacity 0.3s;
+                                    }
+                                }
+                            }
+                            a:hover {
+                                picture {
+                                    img {
+                                        transform: translate3d(0, 0, 0) scale(1.05);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-btn-prev {left: -10px;}
+            .swiper-btn-next {right: -10px;}
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .wedding-invitations-section2, .wedding-invitations-section3, .wedding-invitations-section4,
+    .wedding-invitations-section5, .wedding-invitations-section7 {
+        .container {padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    }
+    .wedding-invitations-section2 {
+        margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(28px + (55 - 28) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            margin-top: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+            .text-with-lines {max-width: calc(332px + (664 - 332) * ((100vw - 321px) / (1300 - 321)));}
+            .photos-of-invitations {margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;}
+        }
+    }
+    .wedding-invitations-section3, .wedding-invitations-section4 {
+        .container {
+            .orange-marker {
+                max-width: calc(475px + (950 - 475) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(22px + (42 - 22) * ((100vw - 321px) / (1300 - 321))) auto;
+            }
+        }
+    }
+    .wedding-invitations-section3 {
+        .container {
+            h4 {max-width: calc(373px + (746 - 373) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-invitations-section4 {
+        margin: calc(28px + (55 - 28) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            h4 {max-width: calc(317px + (634 - 317) * ((100vw - 321px) / (1300 - 321)));}
+            .orange-marker {
+                li {
+                    span {margin-bottom: calc(5px + (8 - 5) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+        }
+    }
+    .wedding-invitations-section6, .wedding-invitations-section8 {
+        .container:not(.photo-on-the-left, .photo-on-the-right) {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            h4 {margin-bottom: calc(26px + (50 - 26) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-invitations-section6 {
+        margin: calc(28px + (55 - 28) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(30px + (65 - 30) * ((100vw - 321px) / (1300 - 321))) 0;
+    }
+    .wedding-invitations-section7 {
+        .container {
+            .text-with-lines {
+                max-width: calc(437px + (874 - 437) * ((100vw - 321px) / (1300 - 321)));
+                margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+            }
+        }
+    }
+    .wedding-invitations-section8 {
+        margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(37px + (74 - 37) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            h4 {max-width: calc(235px + (470 - 235) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-invitations-section10 {
+        margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(26px + (58 - 26) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(40px + (105 - 40) * ((100vw - 321px) / (1300 - 321)));
+            .wedding-invitations-section10__swiper {
+                margin-top: calc(5px + (20 - 5) * ((100vw - 321px) / (1300 - 321)));
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            a {
+                                span {
+                                    font-size: calc(12px + (18 - 12) * ((100vw - 321px) / (1300 - 321)));
+                                    margin: calc(10px + (12 - 10) * ((100vw - 321px) / (1300 - 321))) 0
+                                            calc(12px + (16 - 12) * ((100vw - 321px) / (1300 - 321))) 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-btn-prev {left: calc(-2px + (-10 + 2) * ((100vw - 321px) / (1300 - 321)));}
+                .swiper-btn-next {right: calc(-2px + (-10 + 2) * ((100vw - 321px) / (1300 - 321)));}
+            }
+        }
+    }
+}
+
+@media (max-width: 1200.9px) {
+    .wedding-invitations-section10 {
+        .container {
+            .wedding-invitations-section10__swiper {max-width: 810px;}
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    .wedding-invitations-section2 {
+        .container {
+            .photos-of-invitations {
+                max-width: 720px;
+                grid-template-columns: 1fr 1fr;
+                div:first-child {display: none;}
+            }
+        }
+    }
+    .wedding-invitations-section3, .wedding-invitations-section4 {
+        .container {
+            .photos-of-invitations {
+                max-width: 760px;
+                grid-template-columns: repeat(3, 1fr);
+                div:nth-child(4) {display: none;}
+            }
+        }
+    }
+}
+
+@media (max-width: 767.9px) {
+    .wedding-invitations-section2 {
+        .wedding-invitations-section2__top {
+            nav {
+                grid-template-columns: 1fr 1fr;
+                transform: translate3d(0, 50%, 0);
+                a {text-align: center;}
+            }
+        }
+    }
+}
+
+@media (max-width: 600.9px) {
+    .wedding-invitations-section10 {
+        .container {
+            .wedding-invitations-section10__swiper {max-width: 340px;}
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .wedding-invitations-section2 {
+        .wedding-invitations-section2__top {
+            nav {
+                grid-template-columns: 1fr;
+                transform: translate3d(0, 25%, 0);
+            }
+        }
+        .container {
+            .photos-of-invitations {
+                max-width: 350px;
+                grid-template-columns: 1fr;
+                div:nth-child(3) {display: none;}
+            }
+        }
+    }
+    .wedding-invitations-section3, .wedding-invitations-section4 {
+        .container {
+            .photos-of-invitations {
+                grid-template-columns: 1fr 1fr;
+                div:nth-child(3) {display: none;}
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .wedding-invitations-section2, .wedding-invitations-section3, .wedding-invitations-section4,
+    .wedding-invitations-section5, .wedding-invitations-section7 {
+        .container {padding: 0 20px;}
+    }
+    .wedding-invitations-section2 {
+        margin: 30px 0 28px 0;
+        .container {
+            margin-top: 30px;
+            .photos-of-invitations {margin: 20px auto 0 auto;}
+        }
+    }
+    .wedding-invitations-section3, .wedding-invitations-section4 {
+        .container {
+            .orange-marker {margin: 15px auto 22px auto;}
+        }
+    }
+    .wedding-invitations-section4 {
+        margin: 28px 0;
+        .container {
+            .orange-marker {
+                li {
+                    span {margin-bottom: 5px;}
+                }
+            }
+        }
+    }
+    .wedding-invitations-section6, .wedding-invitations-section8 {
+        .container:not(.photo-on-the-left, .photo-on-the-right) {
+            padding: 0 20px;
+            h4 {margin-bottom: 26px;}
+        }
+    }
+    .wedding-invitations-section6 {margin: 28px 0 30px 0;}
+    .wedding-invitations-section7 {
+        .container {
+            .text-with-lines {margin-top: 20px;}
+        }
+    }
+    .wedding-invitations-section8 {margin: 25px 0 37px 0;}
+    .wedding-invitations-section10 {
+        margin: 25px 0 26px 0;
+        .container {
+            padding: 0 40px;
+            .wedding-invitations-section10__swiper {
+                margin-top: 5px;
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            a {
+                                span {
+                                    font-size: 12px;
+                                    margin: 10px 0 12px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-btn-prev {left: -2px;}
+                .swiper-btn-next {right: -2px;}
+            }
+        }
+    }
+}

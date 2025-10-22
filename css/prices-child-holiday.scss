@@ -1,0 +1,188 @@
+.child-holiday-section2, .child-holiday-section3 {
+    margin-bottom: 50px;
+    .container {
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .cost-table2 {
+            width: 100%;
+            max-width: 1040px;
+            margin-bottom: 50px;
+        }
+        .text-with-lines {
+            p {color: $brown2;}
+        }
+    }
+}
+
+.child-holiday-section2 {
+    margin-top: 60px;
+    .container {
+        h4 {
+            transition: opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+            margin-top: 50px;
+            margin-bottom: 35px;
+        }
+        .cost-table2 {
+            grid-template-columns: repeat(5, 1fr);
+            margin-top: 45px;
+            .cost-table2__column:first-child {
+                div {padding: 0 6px;}
+            }
+        }
+        .text-with-lines {max-width: 650px;}
+    }
+}
+
+.child-holiday-section3 {
+    .container {
+        h4 {max-width: 628px;}
+        .cost-table2 {
+            grid-template-columns: 1fr auto;
+            margin-top: 40px;
+            .cost-table2__column {
+                div {padding: 0 50px;}
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .child-holiday-section2, .child-holiday-section3 {
+        margin-bottom: calc(24px + (50 - 24) * ((100vw - 321px) / (1300 - 321)));
+        .container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .cost-table2 {
+                max-width: calc(694px + (1040 - 694) * ((100vw - 321px) / (1300 - 321)));
+                margin-bottom: calc(26px + (50 - 26) * ((100vw - 321px) / (1300 - 321)));
+            }
+        }
+    }
+    .child-holiday-section2 {
+        margin-top: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+        .container {
+            h4 {
+                margin-top: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321)));
+                margin-bottom: calc(15px + (35 - 15) * ((100vw - 321px) / (1300 - 321)));
+            }
+            .cost-table2 {margin-top: calc(22px + (45 - 22) * ((100vw - 321px) / (1300 - 321)));}
+            .text-with-lines {max-width: calc(325px + (650 - 325) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .child-holiday-section3 {
+        .container {
+            h4 {max-width: calc(314px + (628 - 314) * ((100vw - 321px) / (1300 - 321)));}
+            .cost-table2 {
+                margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+                .cost-table2__column {
+                    div {padding: 0 calc(6px + (50 - 6) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600.9px) and (min-width: 321px) {
+    .child-holiday-section2, .child-holiday-section3 {
+        .container {
+            h4, .text-with-lines {
+                margin-left: calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+                margin-right: calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            }
+            .cost-table2 {
+                .cost-table2__column {
+                    .font-size-24 {font-size: calc(9px + (13 - 9) * ((100vw - 321px) / (600 - 321)));}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        span {font-size: calc(9px + (13 - 9) * ((100vw - 321px) / (600 - 321)));}
+                    }
+                }
+            }
+        }
+    }
+    .child-holiday-section2 {
+        .container {
+            ul {
+                margin-left: calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+                margin-right: calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            }
+            .cost-table2 {
+                .cost-table2__column:not(.cost-table2__column:first-child) {
+                    div:first-child {font-size: calc(9px + (13 - 9) * ((100vw - 321px) / (600 - 321)));}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600.9px) {
+    .child-holiday-section2, .child-holiday-section3 {
+        .container {
+            padding: 0;
+            .cost-table2 {border-radius: 0;}
+        }
+    }
+    .child-holiday-section2 {
+        .container {
+            .cost-table2 {grid-template-columns: auto repeat(4, 1fr);}
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .child-holiday-section2, .child-holiday-section3 {
+        margin-bottom: 24px;
+        .container {
+            h4, .text-with-lines {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .cost-table2 {
+                margin-bottom: 26px;
+                .cost-table2__column {
+                    .font-size-24 {font-size: 9px;}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        span {font-size: 9px;}
+                    }
+                }
+            }
+        }
+    }
+    .child-holiday-section2 {
+        margin-top: 30px;
+        .container {
+            h4 {
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
+            ul {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .cost-table2 {
+                margin-top: 22px;
+                .cost-table2__column:not(.cost-table2__column:first-child) {
+                    div:first-child {font-size: 9px;}
+                }
+            }
+        }
+    }
+    .child-holiday-section3 {
+        .container {
+            .cost-table2 {
+                margin-top: 20px;
+                .cost-table2__column {
+                    div {padding: 0 6px;}
+                }
+            }
+        }
+    }
+}

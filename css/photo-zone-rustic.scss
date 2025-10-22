@@ -1,0 +1,249 @@
+.rustic-section2 {
+    margin: 34px 0 40px 0;
+    .container {
+        padding: 0 60px;
+        .h3-wrapper {
+            h3 {color: $red2;}
+        }
+    }
+}
+
+.rustic-section3 {
+    padding: 5px 0 7px 0;
+    background-color: $orange2;
+    .coverflow-container {
+        .slider-with-coverflow-effect {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        border: 8px solid $white;
+                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rustic-section4 {
+    padding: 15px 0 22px 0;
+    background-color: $brown3;
+    .container {
+        p {
+            transform: translate3d(0, 0, 0);
+            transition: opacity 1s, visibility 1s;
+            max-width: 894px;
+            margin: 0 auto;
+            line-height: 125%;
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: $white;
+        }
+    }
+}
+
+.rustic-section5 {
+    margin-bottom: 60px;
+    .container {
+        .rustic-section5__photo-zone-info-wrapper {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 42px 105px 60px 105px;
+            background-color: $white;
+            .photo-zone-info-wrapper__photo-zone-info {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                column-gap: 60px;
+                row-gap: 20px;
+                .photo-zone-info__title {
+                    display: flex;
+                    align-items: center;
+                    svg {width: 60px;}
+                    span {
+                        font-family: "AmaticSC-Regular";
+                        font-size: 40px;
+                        letter-spacing: 0.02em;
+                        margin-left: 20px;
+                        color: $red2;
+                    }
+                }
+                .photo-zone-info__equipment {
+                    font-size: 15px;
+                    line-height: 133%;
+                    max-width: 450px;
+                }
+                .photo-zone-info__data {line-height: 133%;}
+                .photo-zone-info__rental-price {
+                    .rental-price__cost {
+                        font-size: 32px;
+                        margin-right: 5px;
+                        color: $red1;
+                        span {font-family: "NewsCycle-Bold";}
+                    }
+                    .rental-price__note {
+                        display: inline-block;
+                        font-size: 15px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .transparency {
+                transform: translate3d(0, 0, 0);
+                transition: opacity 0.8s 0.5s, visibility 0.8s 0.5s;
+                width: fit-content;
+                margin: 42px auto 0 auto;
+                button {box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);}
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .rustic-section2 {
+        margin: calc(18px + (34 - 18) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    }
+    .rustic-section3 {
+        .coverflow-container {
+            margin: calc(-23px + (0 + 23) * ((100vw - 321px) / (1300 - 321))) 0;
+            .slider-with-coverflow-effect {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {border: calc(5px + (8 - 5) * ((100vw - 321px) / (1300 - 321))) solid $white;}
+                    }
+                }
+            }
+        }
+    }
+    .rustic-section4 {
+        padding: calc(12px + (15 - 12) * ((100vw - 321px) / (1300 - 321))) 0
+                 calc(15px + (22 - 15) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            p {max-width: calc(447px + (894 - 447) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .rustic-section5 {
+        margin-bottom: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+        .container {
+            padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+            .rustic-section5__photo-zone-info-wrapper {
+                padding-top: calc(20px + (42 - 20) * ((100vw - 321px) / (1300 - 321)));
+                padding-bottom: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+                .photo-zone-info-wrapper__photo-zone-info {
+                    row-gap: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
+                    .photo-zone-info__title {
+                        svg {width: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));}
+                        span {
+                            font-size: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));
+                            margin-left: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
+                        }
+                    }
+                    .photo-zone-info__equipment {
+                        font-size: calc(10px + (15 - 10) * ((100vw - 321px) / (1300 - 321)));
+                        max-width: calc(300px + (450 - 300) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                    .photo-zone-info__data {font-size: calc(12px + (20 - 12) * ((100vw - 321px) / (1300 - 321)));}
+                    .photo-zone-info__rental-price {
+                        .rental-price__cost {font-size: calc(16px + (32 - 16) * ((100vw - 321px) / (1300 - 321)));}
+                        .rental-price__note {font-size: calc(10px + (15 - 10) * ((100vw - 321px) / (1300 - 321)));}
+                    }
+                }
+                .transparency {margin: calc(28px + (42 - 28) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;}
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 768px) {
+    .rustic-section5 {
+        .container {
+            .rustic-section5__photo-zone-info-wrapper {
+                padding-left: calc(30px + (105 - 30) * ((100vw - 768px) / (1300 - 768)));
+                padding-right: calc(30px + (105 - 30) * ((100vw - 768px) / (1300 - 768)));
+                .photo-zone-info-wrapper__photo-zone-info {column-gap: calc(40px + (60 - 40) * ((100vw - 768px) / (1300 - 768)));}
+            }
+        }
+    }
+}
+
+@media (max-width: 767.9px) and (min-width: 321px) {
+    .rustic-section5 {
+        .container {
+            .rustic-section5__photo-zone-info-wrapper {
+                padding-left: calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+                padding-right: calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));
+                .photo-zone-info-wrapper__photo-zone-info {
+                    .photo-zone-info__title:not(.photo-zone-info__title:first-child) {
+                        padding-top: calc(10px + (20 - 10) * ((100vw - 321px) / (1300 - 321)));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.9px) {
+    .rustic-section5 {
+        .container {
+            .rustic-section5__photo-zone-info-wrapper {
+                .photo-zone-info-wrapper__photo-zone-info {
+                    grid-template-columns: 1fr;
+                    .photo-zone-info__title:not(.photo-zone-info__title:first-child) {border-top: 1px solid $violet2;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .rustic-section2 {
+        margin: 18px 0 20px 0;
+        .container {padding: 0 20px;}
+    }
+    .rustic-section3 {
+        .coverflow-container {
+            margin: -23px 0;
+            .slider-with-coverflow-effect {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {border: 5px solid $white;}
+                    }
+                }
+            }
+        }
+    }
+    .rustic-section4 {
+        padding: 12px 0 15px 0;
+        .container {padding: 0 20px;}
+    }
+    .rustic-section5 {
+        margin-bottom: 30px;
+        .container {
+            padding: 0 20px;
+            .rustic-section5__photo-zone-info-wrapper {
+                padding: 20px 20px 30px 20px;
+                .photo-zone-info-wrapper__photo-zone-info {
+                    row-gap: 10px;
+                    .photo-zone-info__title {
+                        svg {width: 30px;}
+                        span {
+                            font-size: 20px;
+                            margin-left: 10px;
+                        }
+                    }
+                    .photo-zone-info__title:not(.photo-zone-info__title:first-child) {padding-top: 10px;}
+                    .photo-zone-info__equipment {font-size: 10px;}
+                    .photo-zone-info__data {font-size: 12px;}
+                    .photo-zone-info__rental-price {
+                        .rental-price__cost {font-size: 16px;}
+                        .rental-price__note {font-size: 10px;}
+                    }
+                }
+                .transparency {margin: 28px auto 0 auto;}
+            }
+        }
+    }
+}

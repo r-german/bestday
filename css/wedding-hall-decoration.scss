@@ -1,0 +1,176 @@
+.wedding-hall-section2 {
+    .container {
+        .orange-marker {
+            max-width: 544px;
+            margin: 31px auto 0 auto;
+        }
+    }
+}
+
+.wedding-hall-section3 {
+    .container {
+        .orange-marker {margin: 40px auto 42px auto;}
+    }
+}
+
+.wedding-hall-section3, .wedding-hall-section4, .wedding-hall-section5, .wedding-hall-section6 {
+    .container {
+        .orange-marker, .text-with-lines {max-width: 932px;}
+    }
+}
+
+.wedding-hall-section3, .wedding-hall-section4, .wedding-hall-section6 {
+    .container {
+        .orange-marker {text-align: justify;}
+    }
+}
+
+.wedding-hall-section4, .wedding-hall-section5, .wedding-hall-section6 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+    }
+}
+
+.wedding-hall-section4 {
+    margin: 50px 0 48px 0;
+    .container {
+        h4 {max-width: 504px;}
+        .orange-marker {margin: 30px auto 0 auto;}
+    }
+}
+
+.wedding-hall-section5 {
+    .container {
+        .text-with-lines {margin-top: 40px;}
+    }
+}
+
+.wedding-hall-section6 {
+    margin: 50px 0 60px 0;
+    .container {
+        .orange-marker {
+            margin: 30px auto 0 auto;
+            li {
+                color: $brown1;
+                span {
+                    display: block;
+                    margin-bottom: 8px;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .wedding-hall-section2 {
+        .container {
+            .orange-marker {
+                max-width: calc(280px + (544 - 280) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(15px + (31 - 15) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
+            }
+        }
+    }
+    .wedding-hall-section3 {
+        .container {
+            .orange-marker {
+                margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(22px + (42 - 22) * ((100vw - 321px) / (1300 - 321))) auto;
+            }
+        }
+    }
+    .wedding-hall-section3, .wedding-hall-section4, .wedding-hall-section5, .wedding-hall-section6 {
+        .container {
+            .orange-marker, .text-with-lines {max-width: calc(466px + (932 - 466) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-hall-section4, .wedding-hall-section5, .wedding-hall-section6 {
+        .container {padding: 0 calc(20px + (60 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    }
+    .wedding-hall-section4 {
+        margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(23px + (48 - 23) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            h4 {max-width: calc(252px + (504 - 252) * ((100vw - 321px) / (1300 - 321)));}
+            .orange-marker {margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;}
+        }
+    }
+    .wedding-hall-section5 {
+        .container {
+            .text-with-lines {margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .wedding-hall-section6 {
+        margin: calc(25px + (50 - 25) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            .orange-marker {
+                margin: calc(15px + (30 - 15) * ((100vw - 321px) / (1300 - 321))) auto 0 auto;
+                li {
+                    span {margin-bottom: calc(5px + (8 - 5) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    .wedding-hall-section3 {
+        .container {
+            .orange-marker {transition: transform 0.8s 2s, opacity 0.8s 2s, visibility 0.8s 2s;}
+            .text-with-lines {transition: transform 0.8s 2.5s, opacity 0.8s 2.5s, visibility 0.8s 2.5s;}
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .wedding-hall-section3 {
+        .container {
+            .orange-marker {transition: transform 0.8s 1s, opacity 0.8s 1s, visibility 0.8s 1s;}
+            .text-with-lines {transition: transform 0.8s 1.5s, opacity 0.8s 1.5s, visibility 0.8s 1.5s;}
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .wedding-hall-section2 {
+        .container {
+            .orange-marker {margin: 15px auto 0 auto;}
+        }
+    }
+    .wedding-hall-section3 {
+        .container {
+            .orange-marker {margin: 20px auto 22px auto;}
+        }
+    }
+    .wedding-hall-section4, .wedding-hall-section5, .wedding-hall-section6 {
+        .container {padding: 0 20px;}
+    }
+    .wedding-hall-section4 {
+        margin: 25px 0 23px 0;
+        .container {
+            h4 {max-width: 252px;}
+            .orange-marker {margin: 15px auto 0 auto;}
+        }
+    }
+    .wedding-hall-section5 {
+        .container {
+            .text-with-lines {margin-top: 20px;}
+        }
+    }
+    .wedding-hall-section6 {
+        margin: 25px 0 30px 0;
+        .container {
+            .orange-marker {
+                margin: 15px auto 0 auto;
+                li {
+                    span {margin-bottom: 5px;}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+.wedding-photo-zone-section2 {
+    margin: 60px 0 62px 0;
+    .wedding-photo-zone-section2__top {
+        nav {
+            grid-template-columns: repeat(4, 1fr);
+            a {text-align: center;}
+        }
+    }
+    .container {
+        .text-with-lines {
+            max-width: 778px;
+            margin-top: 60px;
+        }
+    }
+    .photo-zones-container {
+        .photo-zones {
+            max-width: 1130px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            a {
+                .photo-zone {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px 10px 0 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+                    background-color: #FFFFFF;
+                    picture {
+                        position: relative;
+                        width: 100%;
+                        padding-bottom: 100%;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .photo-zone__title {
+                        flex: 1 1 auto;
+                        margin: 11px 0 14px 0;
+                        text-align: center;
+                        color: $red2;
+                    }
+                    .photo-zone__cost {
+                        margin: 12px 0 10px 0;
+                        color: $brown2;
+                        span {font-family: "NewsCycle-Bold";}
+                    }
+                    .photo-zone__article-number {
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        color: $brown2;
+                    }
+                }
+            }
+            @media (hover: hover) and (pointer: fine) {
+                a {
+                    .photo-zone {
+                        transform: translate3d(0, 0, 0);
+                        transition: transform 0.3s, box-shadow 0.3s;
+                    }
+                }
+                a:hover {
+                    .photo-zone {
+                        transform: translate3d(0, -10px, 0);
+                        box-shadow: 0 4px 4px rgba(148, 1, 29, 0.3);
+                    }
+                }
+            }
+        }
+    }
+    .photo-zones-container1 {margin-top: 40px;}
+    .photo-zones-container:not(.photo-zones-container1) {margin-top: 30px;}
+}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .wedding-photo-zone-section2 {
+        margin: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                calc(33px + (62 - 33) * ((100vw - 321px) / (1300 - 321))) 0;
+        .container {
+            .text-with-lines {
+                max-width: calc(389px + (778 - 389) * ((100vw - 321px) / (1300 - 321)));
+                margin-top: calc(30px + (60 - 30) * ((100vw - 321px) / (1300 - 321)));
+            }
+        }
+        .photo-zones-container {
+            .photo-zones {
+                a {
+                    .photo-zone {
+                        padding: calc(5px + (10 - 5) * ((100vw - 321px) / (1300 - 321)))
+                                 calc(5px + (10 - 5) * ((100vw - 321px) / (1300 - 321)))
+                                 0
+                                 calc(5px + (10 - 5) * ((100vw - 321px) / (1300 - 321)));
+                        .photo-zone__title {
+                            margin: calc(8px + (11 - 8) * ((100vw - 321px) / (1300 - 321))) 0
+                                    calc(9px + (14 - 9) * ((100vw - 321px) / (1300 - 321))) 0;
+                        }
+                        .photo-zone__cost {
+                            font-size: calc(12px + (20 - 12) * ((100vw - 321px) / (1300 - 321)));
+                            margin: calc(9px + (12 - 9) * ((100vw - 321px) / (1300 - 321))) 0
+                                    calc(8px + (10 - 8) * ((100vw - 321px) / (1300 - 321))) 0;
+                        }
+                        .photo-zone__article-number {
+                            font-size: calc(10px + (14 - 10) * ((100vw - 321px) / (1300 - 321)));
+                            margin-bottom: calc(12px + (20 - 12) * ((100vw - 321px) / (1300 - 321)));
+                        }
+                    }
+                }
+            }
+        }
+        .photo-zones-container1 {margin-top: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321)));}
+    }
+}
+
+@media (max-width: 1300.9px) and (min-width: 992px) {
+    .wedding-photo-zone-section2 {
+        .photo-zones-container {
+            padding: 0 calc(16px + (30 - 16) * ((100vw - 992px) / (1300 - 992)));
+            .photo-zones {gap: calc(16px + (30 - 16) * ((100vw - 992px) / (1300 - 992)));}
+        }
+        .photo-zones-container:not(.photo-zones-container1) {margin-top: calc(16px + (30 - 16) * ((100vw - 992px) / (1300 - 992)));}
+    }
+}
+
+@media (max-width: 991.9px) and (min-width: 321px) {
+    .wedding-photo-zone-section2 {
+        .container {padding: 0 calc(15px + (24 - 15) * ((100vw - 321px) / (991 - 321)));}
+        .photo-zones-container {
+            padding: 0 calc(15px + (24 - 15) * ((100vw - 321px) / (991 - 321)));
+            .photo-zones {gap: calc(15px + (24 - 15) * ((100vw - 321px) / (991 - 321)));}
+        }
+        .photo-zones-container:not(.photo-zones-container1) {margin-top: calc(15px + (24 - 15) * ((100vw - 321px) / (991 - 321)));}
+    }
+}
+
+@media (max-width: 991.9px) {
+    .wedding-photo-zone-section2 {
+        .wedding-photo-zone-section2__top {
+            nav {grid-template-columns: repeat(4, auto);}
+        }
+        .photo-zones-container {
+            .photo-zones {
+                max-width: 470px;
+                grid-template-columns: 1fr 1fr;
+                transform: translate3d(0, 15%, 0);
+            }
+        }
+    }
+}
+
+@media (max-width: 767.9px) {
+    .wedding-photo-zone-section2 {
+        .wedding-photo-zone-section2__top {
+            nav {grid-template-columns: repeat(3, auto);}
+        }
+    }
+}
+
+@media (max-width: 600.9px) {
+    .wedding-photo-zone-section2 {
+        .wedding-photo-zone-section2__top {
+            nav {
+                transform: translate3d(0, 15%, 0);
+                width: min-content;
+                a {line-height: 110%;}
+            }
+        }
+    }
+}
+
+@media (max-width: 370.9px) {
+    .wedding-photo-zone-section2 {
+        .wedding-photo-zone-section2__top {
+            nav {
+                grid-template-columns: auto auto;
+                .current-page {display: none;}
+            }
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .wedding-photo-zone-section2 {
+        margin: 30px 0 33px 0;
+        .container {
+            padding: 0 15px;
+            .text-with-lines {margin-top: 30px;}
+        }
+        .photo-zones-container {
+            padding: 0 15px;
+            .photo-zones {
+                gap: 15px;
+                a {
+                    .photo-zone {
+                        padding: 5px 5px 0 5px;
+                        .photo-zone__title {margin: 8px 0 9px 0;}
+                        .photo-zone__cost {
+                            font-size: 12px;
+                            margin: 9px 0 8px 0;
+                        }
+                        .photo-zone__article-number {
+                            font-size: 10px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .photo-zones-container1 {margin-top: 20px;}
+        .photo-zones-container:not(.photo-zones-container1) {margin-top: 15px;}
+    }
+}

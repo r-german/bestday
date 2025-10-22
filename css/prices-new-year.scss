@@ -1,0 +1,150 @@
+.wedding-organization-section2 {
+    .text-with-lines {
+        p {
+            text-align: center;
+            a {color: $red1;}
+            @media (hover: hover) and (pointer: fine) {
+                a {
+                    display: inline-block;
+                    transform: translate3d(0, 0, 0);
+                    transition: color 0.3s;
+                }
+                a:hover {color: $red2;}
+            }
+        }
+    }
+}
+
+.new-year-section3, .new-year-section4 {
+    .container {
+        padding: 0 60px;
+        h4 {
+            text-align: center;
+            color: $red2;
+        }
+        .cost-table2 {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1040px;
+            margin: 40px auto 42px auto;
+            .cost-table2__column {
+                div {padding: 0 30px;}
+            }
+        }
+        ul {
+            max-width: 786px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.new-year-section3 {
+    .container {
+        .cost-table2 {
+            .cost-table2__column {
+                div:last-child {height: 190px;}
+            }
+            .cost-table2__column:first-child {
+                div {
+                    span {
+                        a {display: block;}
+                        a:not(a:first-child) {margin-top: 10px;}
+                        a:last-child:not(a:first-child) {margin-bottom: 2px;}
+                    }
+                }
+            }
+        }
+        .transparency {
+            margin-top: 44px;
+            transition: opacity 0.8s 1.7s, visibility 0.8s 1.7s;
+        }
+    }
+}
+
+.new-year-section4 {padding: 55px 0 45px 0;}
+
+@media (max-width: 1300.9px) and (min-width: 321px) {
+    .new-year-section3, .new-year-section4 {
+        .container {
+            padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));
+            .cost-table2 {
+                max-width: calc(694px + (1040 - 694) * ((100vw - 321px) / (1300 - 321)));
+                margin: calc(20px + (40 - 20) * ((100vw - 321px) / (1300 - 321))) auto
+                        calc(24px + (42 - 24) * ((100vw - 321px) / (1300 - 321))) auto;
+                .cost-table2__column {
+                    div {padding: 0 calc(6px + (30 - 6) * ((100vw - 321px) / (1300 - 321)));}
+                }
+            }
+            ul {max-width: calc(393px + (786 - 393) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .new-year-section3 {
+        .container {
+            .cost-table2 {
+                .cost-table2__column {
+                    div:last-child {height: calc(138px + (190 - 138) * ((100vw - 321px) / (1300 - 321)));}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        span {
+                            a:not(a:first-child) {margin-top: calc(8px + (10 - 8) * ((100vw - 321px) / (1300 - 321)));}
+                        }
+                    }
+                }
+            }
+            .transparency {margin-top: calc(24px + (44 - 24) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+    .new-year-section4 {
+        padding: calc(30px + (55 - 30) * ((100vw - 321px) / (1300 - 321))) 0
+                 calc(25px + (45 - 25) * ((100vw - 321px) / (1300 - 321))) 0;
+    }
+}
+
+@media (max-width: 480.9px) and (min-width: 321px) {
+    .new-year-section3, .new-year-section4 {
+        .container {
+            h4, ul {padding: 0 calc(15px + (60 - 15) * ((100vw - 321px) / (1300 - 321)));}
+        }
+    }
+}
+
+@media (max-width: 480.9px) {
+    .new-year-section3, .new-year-section4 {
+        .container {
+            padding: 0;
+            .cost-table2 {border-radius: 0;}
+        }
+    }
+}
+
+@media (max-width: 320.9px) {
+    .new-year-section3, .new-year-section4 {
+        .container {
+            .cost-table2 {
+                margin: 20px auto 24px auto;
+                .cost-table2__column {
+                    div {padding: 0 6px;}
+                }
+            }
+            h4, ul {padding: 0 15px;}
+        }
+    }
+    .new-year-section3 {
+        .container {
+            .cost-table2 {
+                .cost-table2__column {
+                    div:last-child {height: 138px;}
+                }
+                .cost-table2__column:first-child {
+                    div {
+                        span {
+                            a:not(a:first-child) {margin-top: 8px;}
+                        }
+                    }
+                }
+            }
+            .transparency {margin-top: 24px;}
+        }
+    }
+    .new-year-section4 {padding: 30px 0 25px 0;}
+}
